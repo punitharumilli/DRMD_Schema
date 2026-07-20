@@ -5,8 +5,8 @@ import os
 
 xsd_path = r'c:\Users\parumill\Downloads\schema\drmd.xsd'
 sch_path = r'c:\Users\parumill\Downloads\schema\drmd-business-rules.sch'
-out_dir = r'c:\Users\parumill\Downloads\schema\docs\assets\data'
-out_file = os.path.join(out_dir, 'schema_data.json')
+out_dir = r'c:\Users\parumill\Downloads\schema\docs\schema_data'
+out_file = os.path.join(out_dir, 'schema.json')
 
 os.makedirs(out_dir, exist_ok=True)
 

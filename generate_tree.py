@@ -13,6 +13,11 @@ def get_annotation(component):
             return " ".join([d.text for d in docs if d.text]).replace('\n', ' ').strip()
     return ""
 
+def get_short_name(name):
+    if name and '}' in name:
+        return name.split('}')[-1]
+    return name
+
 def generate_markdown(element, depth=0, processed=None):
     if processed is None:
         processed = set()
@@ -22,13 +27,13 @@ def generate_markdown(element, depth=0, processed=None):
     
     # Avoid infinite recursion (e.g. recursive schemas)
     if element in processed:
-        return f"{indent}- **(Recursive)** `{element.prefixed_name}`\n"
+        return f"{indent}- **(Recursive)** `{get_short_name(element.name)}`\n"
     
     processed.add(element)
     
     # Get basic info
-    name = element.prefixed_name
-    type_name = element.type.prefixed_name if element.type and hasattr(element.type, 'prefixed_name') else 'complexType'
+    name = get_short_name(element.name)
+    type_name = get_short_name(element.type.name) if element.type and hasattr(element.type, 'name') else 'complexType'
     
     # Cardinality
     min_occurs = element.min_occurs if hasattr(element, 'min_occurs') else 1
@@ -54,18 +59,19 @@ def generate_markdown(element, depth=0, processed=None):
     if hasattr(element.type, 'attributes'):
         for attr_name, attr in element.type.attributes.items():
             if attr_name is None: continue
-            attr_type = attr.type.prefixed_name if attr.type and hasattr(attr.type, 'prefixed_name') else 'simpleType'
+            attr_type = get_short_name(attr.type.name) if attr.type and hasattr(attr.type, 'name') else 'simpleType'
             use_str = attr.use if hasattr(attr, 'use') else 'optional'
             attr_doc = get_annotation(attr)
             doc_str = f" - *{attr_doc}*" if attr_doc else ""
-            md += f"{indent_inner}- 🟡 `@` `{attr_name}` : `{attr_type}` ({use_str}){doc_str}\n"
+            md += f"{indent_inner}- 🟡 `@` `{get_short_name(attr_name)}` : `{attr_type}` ({use_str}){doc_str}\n"
 
     md += "\n"
 
     # Handle children
-    if hasattr(element.type, 'iter_elements'):
-        for child in element.type.iter_elements():
-            md += generate_markdown(child, depth + 1, processed.copy())
+    if element.type and element.type.is_complex() and hasattr(element.type, 'content'):
+        if hasattr(element.type.content, 'iter_elements'):
+            for child in element.type.content.iter_elements():
+                md += generate_markdown(child, depth + 1, processed.copy())
             
     return md
 

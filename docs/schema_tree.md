@@ -1,15 +1,31 @@
 ---
 hide:
+  - navigation
   - toc
 ---
 
 # 🌳 Schema Interactive Tree
 
 <style>
-/* 3-Pane Layout */
+/* Aggressively hide MkDocs sidebars on this specific page */
+.md-sidebar { display: none !important; }
+.md-sidebar--primary { display: none !important; }
+.md-sidebar--secondary { display: none !important; }
+
+/* Force container to allow full width */
+.md-main__inner { margin: 0 !important; max-width: 100% !important; }
+.md-content { max-width: 100% !important; width: 100% !important; }
+
+/* 3-Pane Layout - Breakout of container trick */
 .schema-explorer {
     display: flex;
-    height: 80vh;
+    height: 85vh;
+    width: 96vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -48vw;
+    margin-right: -48vw;
     border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 8px;
     overflow: hidden;

@@ -581,13 +581,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let selectedNode = null;
 
     // Fetch data
-    fetch("schema_data/schema.json")
-        .then(response => response.json())
+    fetch("../schema_data/schema.json")
+        .then(response => {
+            if (!response.ok) throw new Error("HTTP error " + response.status);
+            return response.json();
+        })
         .then(data => {
             globalData = data;
             initNavTree(data);
             initD3Graph(data);
             selectNode(data); // select root by default
+        })
+        .catch(err => {
+            console.error("Error loading schema:", err);
+            document.getElementById("d3-graph").innerHTML = `<div style="color:red; padding:20px;">Failed to load schema data. Check console.</div>`;
         });
 
     // ==========================================

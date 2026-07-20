@@ -54,7 +54,8 @@ def build_dict(element, processed=None, current_path=""):
     
     new_path = f"{current_path}/{name}" if current_path else name
     
-    if element in processed:
+    depth = current_path.count('/')
+    if element in processed or depth > 8:
         return {"name": name, "type": type_name, "recursive": True}
         
     processed.add(element)

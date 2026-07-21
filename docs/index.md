@@ -41,6 +41,7 @@ This guide provides comprehensive instructions for machine manufacturers, refere
     font-size: 0.9rem;
     line-height: 1.5;
     color: #333;
+    text-align: justify;
 }
 @media (max-width: 768px) {
     .drmd-acronym-container {

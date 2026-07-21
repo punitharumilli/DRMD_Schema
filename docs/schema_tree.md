@@ -205,6 +205,25 @@ hide:
     font-size: 0.85em;
 }
 .rule-error { background: #ffebee; border-left-color: #f44336; }
+
+.bp-link {
+    display: inline-block;
+    margin: 10px 0 15px 0;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(63,81,181,0.3);
+}
+.bp-link:hover {
+    background: linear-gradient(135deg, #303f9f, #3f51b5);
+    box-shadow: 0 4px 8px rgba(63,81,181,0.4);
+    transform: translateY(-1px);
+}
 </style>
 
 <div class="schema-explorer">
@@ -246,25 +265,67 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("d3-graph").innerHTML = `<div style="color:red; padding:20px;">Failed to load schema data. Check console.</div>`;
         });
 
-    // ==========================================
-    // RIGHT PANE: DETAILS
-    // ==========================================
+    // Best Practice deep-link mapping (element name → anchor on admin page)
+    const bestPracticeLinks = {
+        'administrativeData': 'administrative_data/#structure-at-a-glance',
+        'coreData': 'administrative_data/#31-core-data-coredata',
+        'titleOfTheDocument': 'administrative_data/#311-title-of-the-document-titleofthedocument',
+        'uniqueIdentifier': 'administrative_data/#312-unique-identifier-uniqueidentifier',
+        'documentVersion': 'administrative_data/#313-document-version-documentversion',
+        'documentIdentifiers': 'administrative_data/#314-document-identifiers-documentidentifiers',
+        'documentIdentifier': 'administrative_data/#314-document-identifiers-documentidentifiers',
+        'scheme': 'administrative_data/#314-document-identifiers-documentidentifiers',
+        'value': 'administrative_data/#314-document-identifiers-documentidentifiers',
+        'validity': 'administrative_data/#315-validity-validity',
+        'untilRevoked': 'administrative_data/#315-validity-validity',
+        'timeAfterDispatch': 'administrative_data/#315-validity-validity',
+        'specificTime': 'administrative_data/#315-validity-validity',
+        'dispatchDate': 'administrative_data/#315-validity-validity',
+        'period': 'administrative_data/#315-validity-validity',
+        'referenceMaterialProducer': 'administrative_data/#32-reference-material-producer-referencematerialproducer',
+        'name': 'administrative_data/#321-name',
+        'contact': 'administrative_data/#322-contact',
+        'descriptionData': 'administrative_data/#323-descriptiondata-optional-attachment',
+        'cryptElectronicSeal': 'administrative_data/#324-cryptographic-capability-flags-optional-booleans',
+        'cryptElectronicSignature': 'administrative_data/#324-cryptographic-capability-flags-optional-booleans',
+        'cryptElectronicTimeStamp': 'administrative_data/#324-cryptographic-capability-flags-optional-booleans',
+        'organizationIdentifiers': 'administrative_data/#325-organization-identifiers-optional-list',
+        'organizationIdentifier': 'administrative_data/#325-organization-identifiers-optional-list',
+        'respPersons': 'administrative_data/#33-responsible-persons-resppersons',
+        'respPerson': 'administrative_data/#331-responsible-person-entry-respperson',
+        'person': 'administrative_data/#332-person-details-dccperson',
+        'mainSigner': 'administrative_data/#331-responsible-person-entry-respperson',
+        'role': 'administrative_data/#331-responsible-person-entry-respperson',
+    };
+
     function selectNode(d) {
-        // d might be raw data or d3 hierarchy node. Normalize to raw data.
         const data = d.data || d;
         selectedNode = data;
         
-        // Update DOM
         const panel = document.getElementById("details-panel");
         let html = `<div class="details-title">${data.name || 'Unnamed Element'}</div>`;
         html += `<div class="badges">`;
         if (data.type) html += `<span class="badge badge-type">Type: ${data.type}</span>`;
         if (data.cardinality) html += `<span class="badge badge-cardinality">Cardinality: ${data.cardinality}</span>`;
+        if (data.base) html += `<span class="badge" style="background:#e8f5e9; color:#2e7d32;">Base: ${data.base}</span>`;
         html += `</div>`;
         
         html += `<div class="details-desc">${data.description || '<i>No description available.</i>'}</div>`;
+
+        // Best Practice link
+        const bpLink = bestPracticeLinks[data.name];
+        if (bpLink) {
+            html += `<a href="../${bpLink}" class="bp-link" target="_blank">See Best Practice &rarr;</a>`;
+        }
         
-        // Attributes
+        if (data.enumerations && data.enumerations.length > 0) {
+            html += `<h3>Enumerations</h3><ul>`;
+            data.enumerations.forEach(en => {
+                html += `<li><code>${en}</code></li>`;
+            });
+            html += `</ul>`;
+        }
+        
         if (data.attributes && data.attributes.length > 0) {
             html += `<h3>Attributes</h3><ul>`;
             data.attributes.forEach(attr => {
@@ -273,7 +334,6 @@ document.addEventListener("DOMContentLoaded", function() {
             html += `</ul>`;
         }
 
-        // Rules
         if (data.rules && data.rules.length > 0) {
             html += `<h3>Business Rules</h3>`;
             data.rules.forEach(rule => {
@@ -286,7 +346,6 @@ document.addEventListener("DOMContentLoaded", function() {
         
         panel.innerHTML = html;
         
-        // Highlight in left nav
         document.querySelectorAll('.tree-nav li').forEach(li => li.classList.remove('selected'));
         const navEl = document.getElementById(`nav-${data.name}`);
         if(navEl) navEl.classList.add('selected');
@@ -300,8 +359,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const nav = document.createElement('div');
         nav.className = "tree-nav";
         
-        function buildUL(nodeData) {
+        function buildUL(nodeData, isRoot = false) {
             const ul = document.createElement('ul');
+            // Hide all children by default unless it's the very first root UL wrapper
+            if (!isRoot) {
+                ul.style.display = 'none';
+            }
+            
             const li = document.createElement('li');
             li.id = `nav-${nodeData.name}`;
             
@@ -311,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const exp = document.createElement('span');
             exp.className = 'expander';
             if (hasChildren) {
-                exp.innerText = '▼';
+                exp.innerText = '▶'; // Start closed
                 exp.onclick = (e) => {
                     e.stopPropagation();
                     const childUl = li.querySelector('ul');
@@ -381,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return ul;
         }
         
-        nav.appendChild(buildUL(data));
+        nav.appendChild(buildUL(data, true));
         container.appendChild(nav);
     }
 

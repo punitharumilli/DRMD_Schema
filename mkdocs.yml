@@ -38,6 +38,7 @@ theme:
 nav:
   - Home: index.md
   - Overview & Architecture: architecture.md
+  - Administrative Data: administrative_data.md
   - Schema Interactive Tree: schema_tree.md
 
 markdown_extensions:

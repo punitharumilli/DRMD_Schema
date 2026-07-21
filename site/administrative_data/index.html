@@ -1,0 +1,2273 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Best Practice Guidelines for the DRMD XML Schema (ISO 33401:2024)">
+      
+      
+        <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
+      
+      
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/administrative_data/">
+      
+      
+        <link rel="prev" href="../architecture/">
+      
+      
+        <link rel="next" href="../schema_tree/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Administrative Data - Digital Reference Material Document (DRMD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#administrative-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Reference Material Document (DRMD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administrative Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview & Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administrative Data
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../schema_tree/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Schema Interactive Tree
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Digital Reference Material Document (DRMD)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview & Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administrative Data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administrative Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-core-data-coredata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Core Data (coreData)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Core Data (coreData)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-title-of-the-document-titleofthedocument" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Title of the Document (titleOfTheDocument)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-unique-identifier-uniqueidentifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Unique Identifier (uniqueIdentifier)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-document-version-documentversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 Document Version (documentVersion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-document-identifiers-documentidentifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 Document Identifiers (documentIdentifiers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-validity-validity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.5 Validity (validity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-reference-material-producer-referencematerialproducer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Reference Material Producer (referenceMaterialProducer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Reference Material Producer (referenceMaterialProducer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 Contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-descriptiondata-optional-attachment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3 descriptionData (Optional Attachment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-cryptographic-capability-flags-optional-booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4 Cryptographic Capability Flags (Optional Booleans)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-organization-identifiers-optional-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5 Organization Identifiers (Optional List)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-responsible-persons-resppersons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Responsible Persons (respPersons)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Responsible Persons (respPersons)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-responsible-person-entry-respperson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 Responsible Person Entry (respPerson)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-person-details-dccperson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 Person Details (dcc:person)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-complete-responsible-persons-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 Complete Responsible Persons Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-administrative-data-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Administrative Data Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema Interactive Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-core-data-coredata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Core Data (coreData)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Core Data (coreData)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-title-of-the-document-titleofthedocument" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Title of the Document (titleOfTheDocument)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-unique-identifier-uniqueidentifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Unique Identifier (uniqueIdentifier)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-document-version-documentversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 Document Version (documentVersion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-document-identifiers-documentidentifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 Document Identifiers (documentIdentifiers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-validity-validity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.5 Validity (validity)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-reference-material-producer-referencematerialproducer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Reference Material Producer (referenceMaterialProducer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Reference Material Producer (referenceMaterialProducer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 Contact
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-descriptiondata-optional-attachment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3 descriptionData (Optional Attachment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-cryptographic-capability-flags-optional-booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4 Cryptographic Capability Flags (Optional Booleans)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-organization-identifiers-optional-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5 Organization Identifiers (Optional List)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-responsible-persons-resppersons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Responsible Persons (respPersons)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Responsible Persons (respPersons)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-responsible-person-entry-respperson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 Responsible Person Entry (respPerson)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-person-details-dccperson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 Person Details (dcc:person)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-complete-responsible-persons-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 Complete Responsible Persons Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-administrative-data-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Administrative Data Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="administrative-data">Administrative Data<a class="headerlink" href="#administrative-data" title="Permanent link">&para;</a></h1>
+<p>The <strong>Administrative Data</strong> block (<code>administrativeData</code>) is the structural backbone of every DRMD document. It serves as the <strong>"digital container"</strong> for the material, ensuring that any software, analytical instrument, or regulatory body can verify the document's authenticity, identify its producer, and confirm its valid lifespan — all <strong>before</strong> processing any technical measurement data.</p>
+<hr />
+<h2 id="structure-at-a-glance">Structure at a Glance<a class="headerlink" href="#structure-at-a-glance" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    AD["administrativeData"]
+    CD["coreData"]
+    RMP["referenceMaterialProducer"]
+    RP["respPersons"]
+
+    AD --&gt; CD
+    AD --&gt; RMP
+    AD --&gt; RP
+
+    CD --&gt; TOD["titleOfTheDocument"]
+    CD --&gt; UID["uniqueIdentifier"]
+    CD --&gt; DV["documentVersion"]
+    CD --&gt; DI["documentIdentifiers"]
+    CD --&gt; VAL["validity"]
+
+    RMP --&gt; NAME1["name"]
+    RMP --&gt; CONT["contact"]
+    RMP --&gt; CS["cryptElectronicSeal"]
+    RMP --&gt; CSig["cryptElectronicSignature"]
+    RMP --&gt; CTS["cryptElectronicTimeStamp"]
+    RMP --&gt; OI["organizationIdentifiers"]
+
+    RP --&gt; RP1["respPerson"]
+    RP1 --&gt; PERSON["person"]
+    RP1 --&gt; DESC["description"]
+    RP1 --&gt; ROLE["role"]
+    RP1 --&gt; MS["mainSigner"]
+
+    style AD fill:#3f51b5,color:#fff,stroke:#283593
+    style CD fill:#5c6bc0,color:#fff,stroke:#3949ab
+    style RMP fill:#5c6bc0,color:#fff,stroke:#3949ab
+    style RP fill:#5c6bc0,color:#fff,stroke:#3949ab</code></pre>
+<p>The three pillars are:</p>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Path</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Core Data</strong></td>
+<td><code>coreData</code></td>
+<td><code>drmd:coreDataType</code></td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><strong>Reference Material Producer</strong></td>
+<td><code>referenceMaterialProducer</code></td>
+<td><code>drmd:referenceMaterialProducerType</code></td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td><strong>Responsible Persons</strong></td>
+<td><code>respPersons</code></td>
+<td><code>dcc:respPersonListType</code></td>
+<td>CRM: Mandatory / RM: Optional</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Dual Validation Required</p>
+<p>The DRMD schema uses a <strong>dual-profile architecture</strong>. The XSD defines the structure, but profile-specific mandatory requirements (e.g., <code>respPersons</code> for CRM documents) are enforced by the companion <strong>Schematron business rules</strong> (<code>drmd-business-rules.sch</code>). Full compliance requires passing <strong>both</strong> validations.</p>
+</div>
+<hr />
+<h2 id="31-core-data-coredata">3.1 Core Data (<code>coreData</code>)<a class="headerlink" href="#31-core-data-coredata" title="Permanent link">&para;</a></h2>
+<p>The <code>coreData</code> pillar contains the primary metadata that identifies the document and its legal status. Think of it as the document's <strong>passport</strong>.</p>
+<pre class="mermaid"><code>graph LR
+    CD["coreData"] --&gt; TOD["titleOfTheDocument&lt;br/&gt;&lt;i&gt;drmd:titleOfDocumentType&lt;/i&gt;"]
+    CD --&gt; UID["uniqueIdentifier&lt;br/&gt;&lt;i&gt;dcc:notEmptyStringType&lt;/i&gt;"]
+    CD --&gt; DV["documentVersion&lt;br/&gt;&lt;i&gt;dcc:notEmptyStringType&lt;/i&gt;"]
+    CD --&gt; DI["documentIdentifiers&lt;br/&gt;&lt;i&gt;drmd:documentIdentifierListType&lt;/i&gt;"]
+    CD --&gt; VAL["validity&lt;br/&gt;&lt;i&gt;drmd:ValidityType&lt;/i&gt;"]
+
+    style CD fill:#3f51b5,color:#fff
+    style TOD fill:#e8eaf6,stroke:#3f51b5
+    style UID fill:#e8eaf6,stroke:#3f51b5
+    style DV fill:#e8eaf6,stroke:#3f51b5
+    style DI fill:#e8eaf6,stroke:#3f51b5
+    style VAL fill:#e8eaf6,stroke:#3f51b5</code></pre>
+<hr />
+<h3 id="311-title-of-the-document-titleofthedocument">3.1.1 Title of the Document (<code>titleOfTheDocument</code>)<a class="headerlink" href="#311-title-of-the-document-titleofthedocument" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../coreData/drmd:titleOfTheDocument</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:titleOfDocumentType</code> (restricts <code>xs:string</code>)</td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+<tr>
+<td><strong>Enumerations</strong></td>
+<td><code>referenceMaterialCertificate</code>, <code>productInformationSheet</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A mandatory classification that defines the <strong>metrological level</strong> of the document. It tells analytical instrument software how to weigh the data contained within.</p>
+<details class="info" open="open">
+<summary>Understanding the Two Document Profiles</summary>
+<p>The <code>titleOfTheDocument</code> value drives the entire validation behavior of the DRMD. Choosing the wrong profile can lead to validation failures or, worse, incorrect interpretation of measurement data.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">referenceMaterialCertificate (CRM)</label><label for="__tabbed_1_2">productInformationSheet (RM)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Identifies a <strong>Certified Reference Material</strong> per ISO 33401:2024</li>
+<li>Values are <strong>certified</strong> with full traceability and uncertainty budgets</li>
+<li>Downstream data systems treat properties as suitable for <strong>calibration</strong></li>
+<li><strong>Additional mandatory requirements</strong> are activated via Schematron:<ul>
+<li><code>respPersons</code> with approving officer (RMC-010)</li>
+<li><code>metrologicalTraceability</code> statement (RMC-001)</li>
+<li>At least one <code>properties</code> block with <code>@isCertified="true"</code> (RMC-002)</li>
+<li>Material <code>description</code> (RMC-011)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Identifies an informative <strong>Reference Material</strong> per ISO 33401:2024</li>
+<li>Values are valid measurement results but <strong>not certified</strong></li>
+<li>Should <strong>not</strong> be used as a primary anchor for calibration</li>
+<li>Fewer mandatory requirements — <code>respPersons</code> is optional</li>
+<li><code>@isCertified</code> MUST NOT be set to <code>"true"</code> (PIS-001)</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<p><strong>XML Examples:</strong></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- For a Certified Reference Material (CRM) --&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;drmd:titleOfTheDocument&gt;</span>referenceMaterialCertificate<span class="nt">&lt;/drmd:titleOfTheDocument&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm">&lt;!-- For an informative Reference Material (RM) --&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">&lt;drmd:titleOfTheDocument&gt;</span>productInformationSheet<span class="nt">&lt;/drmd:titleOfTheDocument&gt;</span>
+</span></code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-001</p>
+<p>Every DRMD document <strong>MUST</strong> declare a <code>titleOfTheDocument</code> in <code>coreData</code>, specifying either <code>referenceMaterialCertificate</code> or <code>productInformationSheet</code>. Severity: <strong>Error</strong> — document is non-compliant without this element.</p>
+</div>
+<hr />
+<h3 id="312-unique-identifier-uniqueidentifier">3.1.2 Unique Identifier (<code>uniqueIdentifier</code>)<a class="headerlink" href="#312-unique-identifier-uniqueidentifier" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../coreData/drmd:uniqueIdentifier</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A mandatory string that serves as the document's <strong>digital fingerprint</strong>. It prevents "ID collisions" in global databases and is used by Laboratory Information Management Systems (LIMS) for version control.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Use a standard <strong>UUID v4</strong> format. If the certificate is updated or re-issued, a <strong>new</strong> UUID must be generated — never reuse identifiers across revisions.</p>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;drmd:uniqueIdentifier&gt;</span>84d58aee-4f81-460f-993e-a594ce3a8d60<span class="nt">&lt;/drmd:uniqueIdentifier&gt;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="313-document-version-documentversion">3.1.3 Document Version (<code>documentVersion</code>)<a class="headerlink" href="#313-document-version-documentversion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../coreData/drmd:documentVersion</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A mandatory version string identifying the revision of this document. Enables recipients to verify they hold the current version (ISO 33401:2024, §5.2.13).</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;drmd:documentVersion&gt;</span>1.0.0<span class="nt">&lt;/drmd:documentVersion&gt;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="314-document-identifiers-documentidentifiers">3.1.4 Document Identifiers (<code>documentIdentifiers</code>)<a class="headerlink" href="#314-document-identifiers-documentidentifiers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../coreData/drmd:documentIdentifiers</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:documentIdentifierListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> The digital <strong>"Linkage Hub"</strong> for the certificate, allowing it to be indexed and verified across different global and internal databases.</p>
+<pre class="mermaid"><code>graph TD
+    DI["documentIdentifiers"] --&gt; DI1["documentIdentifier"]
+    DI --&gt; DI2["documentIdentifier"]
+
+    DI1 --&gt; S1["scheme: DOI"]
+    DI1 --&gt; V1["value: 10.1234/BAM.M308a.2026"]
+    DI1 --&gt; L1["link: https://doi.org/..."]
+
+    DI2 --&gt; S2["scheme: Internal_ERP"]
+    DI2 --&gt; V2["value: BATCH-2026-X99"]
+
+    style DI fill:#3f51b5,color:#fff
+    style DI1 fill:#e3f2fd,stroke:#1565c0
+    style DI2 fill:#e3f2fd,stroke:#1565c0</code></pre>
+<p>Each <code>documentIdentifier</code> contains:</p>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scheme</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>The naming system or authority (e.g., <code>"DOI"</code>, <code>"Internal_ERP"</code>)</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>The actual unique code assigned by the authority</td>
+</tr>
+<tr>
+<td><code>link</code></td>
+<td><code>xs:anyURI</code></td>
+<td>No</td>
+<td>A URI/URL for immediate verification of origin</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Technical Attributes:</strong> <code>@id</code> (internal XML label), <code>@refId</code> (pointer to another ID), <code>@refType</code> (categorizes the nature — e.g., <code>basic_certificateIdentification</code>).</p>
+<details class="example" open="open">
+<summary>Complete XML Example</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;drmd:documentIdentifiers&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="cm">&lt;!-- Global DOI Identification --&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&lt;drmd:documentIdentifier</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ID_01&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&lt;drmd:scheme&gt;</span>DOI<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">&lt;drmd:value&gt;</span>10.1234/BAM.M308a.2026<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">&lt;drmd:link&gt;</span>https://doi.org/10.1234/BAM.M308a.2026<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">&lt;/drmd:documentIdentifier&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="cm">&lt;!-- Internal Business Tracking --&gt;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="nt">&lt;drmd:documentIdentifier</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ID_02&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">&lt;drmd:scheme&gt;</span>Internal_ERP<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nt">&lt;drmd:value&gt;</span>BATCH-2026-X99<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="nt">&lt;/drmd:documentIdentifier&gt;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nt">&lt;/drmd:documentIdentifiers&gt;</span>
+</span></code></pre></div>
+</details>
+<hr />
+<h3 id="315-validity-validity">3.1.5 Validity (<code>validity</code>)<a class="headerlink" href="#315-validity-validity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../coreData/drmd:validity</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:ValidityType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A mandatory <strong>choice</strong> that establishes the operational lifespan of the certificate. Producers must select <strong>exactly one</strong> of three methods. Instruments match this data block against real-time evaluation dates to automatically lock out expired materials.</p>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-012</p>
+<p>Every DRMD document <strong>MUST</strong> specify a validity period or condition (ISO 33401:2024, §5.2.8). Severity: <strong>Error</strong>.</p>
+</div>
+<pre class="mermaid"><code>graph TD
+    VAL["validity&lt;br/&gt;&lt;i&gt;Choose exactly one&lt;/i&gt;"]
+    ST["specificTime&lt;br/&gt;&lt;i&gt;xs:date&lt;/i&gt;&lt;br/&gt;Fixed expiration"]
+    TAD["timeAfterDispatch&lt;br/&gt;&lt;i&gt;Relative validity&lt;/i&gt;"]
+    UR["untilRevoked&lt;br/&gt;&lt;i&gt;xs:boolean, fixed=true&lt;/i&gt;&lt;br/&gt;Permanent"]
+
+    VAL --&gt;|Option 1| ST
+    VAL --&gt;|Option 2| TAD
+    VAL --&gt;|Option 3| UR
+
+    TAD --&gt; DD["dispatchDate&lt;br/&gt;&lt;i&gt;xs:date [0..1]&lt;/i&gt;"]
+    TAD --&gt; PER["period&lt;br/&gt;&lt;i&gt;xs:duration [1..1]&lt;/i&gt;"]
+
+    style VAL fill:#3f51b5,color:#fff
+    style ST fill:#fff3e0,stroke:#ff9800
+    style TAD fill:#e8f5e9,stroke:#4caf50
+    style UR fill:#e3f2fd,stroke:#1565c0</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">specificTime (Fixed Expiration)</label><label for="__tabbed_2_2">timeAfterDispatch (Relative Validity)</label><label for="__tabbed_2_3">untilRevoked (Permanent Until Notice)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A hard expiration date using the <code>YYYY-MM-DD</code> format. Provides a <strong>"Hard Stop"</strong> for safety — automated instruments compare this to the current date and <strong>lock out</strong> the material if expired.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;drmd:validity&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&lt;drmd:specificTime&gt;</span>2040-12-31<span class="nt">&lt;/drmd:specificTime&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">&lt;/drmd:validity&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>A dynamic duration defined by an optional <code>dispatchDate</code> and a mandatory ISO 8601 <code>period</code> (e.g., <code>P3Y</code> for 3 years). Accommodates materials where shelf-life only begins once shipped. Systems parse the period to <strong>automatically calculate</strong> a unique expiration date.</p>
+<div class="admonition note">
+<p class="admonition-title">Policy Option</p>
+<p>If DRMD's legal issuance is defined as the act of signing (not printing/dispatching), set <code>dispatchDate</code> to the date of the signing event. Only do this when signing time is explicitly your issuance time by regulation/process.</p>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;drmd:validity&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&lt;drmd:timeAfterDispatch&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">&lt;drmd:dispatchDate&gt;</span>2026-04-20<span class="nt">&lt;/drmd:dispatchDate&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">&lt;drmd:period&gt;</span>P3Y2M<span class="nt">&lt;/drmd:period&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Valid for 3 years, 2 months --&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">&lt;/drmd:timeAfterDispatch&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nt">&lt;/drmd:validity&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>A boolean element fixed to the value <code>true</code>. Used for inherently stable materials that do not require a predetermined expiration date. The certificate remains active until a <strong>revocation or updated version</strong> is issued.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;drmd:validity&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&lt;drmd:untilRevoked&gt;</span>true<span class="nt">&lt;/drmd:untilRevoked&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">&lt;/drmd:validity&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="32-reference-material-producer-referencematerialproducer">3.2 Reference Material Producer (<code>referenceMaterialProducer</code>)<a class="headerlink" href="#32-reference-material-producer-referencematerialproducer" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../administrativeData/drmd:referenceMaterialProducer</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:referenceMaterialProducerType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>This block identifies the organization <strong>legally and operationally responsible</strong> for producing (or issuing) the reference material and its documentation (e.g., BAM, NIST, IRMM).</p>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-010</p>
+<p>Every DRMD document <strong>MUST</strong> identify the <code>referenceMaterialProducer</code> (ISO 33401:2024, §5.2.5). Severity: <strong>Error</strong>.</p>
+</div>
+<pre class="mermaid"><code>graph TD
+    RMP["referenceMaterialProducer"]
+    NAME["name&lt;br/&gt;&lt;i&gt;dcc:textType [1..1]&lt;/i&gt;"]
+    CONTACT["contact&lt;br/&gt;&lt;i&gt;dcc:contactType [1..1]&lt;/i&gt;"]
+    SEAL["cryptElectronicSeal&lt;br/&gt;&lt;i&gt;xs:boolean [0..1]&lt;/i&gt;"]
+    SIG["cryptElectronicSignature&lt;br/&gt;&lt;i&gt;xs:boolean [0..1]&lt;/i&gt;"]
+    TS["cryptElectronicTimeStamp&lt;br/&gt;&lt;i&gt;xs:boolean [0..1]&lt;/i&gt;"]
+    OI["organizationIdentifiers&lt;br/&gt;&lt;i&gt;drmd:organizationIdentifierListType [0..1]&lt;/i&gt;"]
+
+    RMP --&gt; NAME
+    RMP --&gt; CONTACT
+    RMP --&gt; SEAL
+    RMP --&gt; SIG
+    RMP --&gt; TS
+    RMP --&gt; OI
+
+    CONTACT --&gt; CN["name&lt;br/&gt;&lt;i&gt;dcc:textType&lt;/i&gt;"]
+    CONTACT --&gt; EM["eMail"]
+    CONTACT --&gt; PH["phone"]
+    CONTACT --&gt; FAX["fax"]
+    CONTACT --&gt; LN["link"]
+    CONTACT --&gt; LOC["location"]
+
+    style RMP fill:#3f51b5,color:#fff
+    style NAME fill:#c5cae9,stroke:#3f51b5
+    style CONTACT fill:#c5cae9,stroke:#3f51b5
+    style SEAL fill:#e8eaf6,stroke:#9fa8da
+    style SIG fill:#e8eaf6,stroke:#9fa8da
+    style TS fill:#e8eaf6,stroke:#9fa8da
+    style OI fill:#e8eaf6,stroke:#9fa8da</code></pre>
+<details class="abstract">
+<summary>Who Uses This Block?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RM Producer / Issuing Organization</strong></td>
+<td>Provides authoritative identity; enables consistent re-use of metadata across many DRMDs</td>
+</tr>
+<tr>
+<td><strong>Laboratories / Customers</strong></td>
+<td>Verifies the issuer and finds official contact details to confirm provenance</td>
+</tr>
+<tr>
+<td><strong>Software Developers</strong></td>
+<td>Renders the "Producer block" consistently; uses identifiers as stable keys for deduplication</td>
+</tr>
+<tr>
+<td><strong>Machine / Instrument Manufacturers</strong></td>
+<td>Links results to producer identity for QA workflows and LIMS integration</td>
+</tr>
+<tr>
+<td><strong>Auditors / Regulators</strong></td>
+<td>Validates issuer identity and supports regulatory compliance</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h3 id="321-name">3.2.1 Name<a class="headerlink" href="#321-name" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../referenceMaterialProducer/drmd:name</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:textType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>A multilingual "human-friendly" name of the producer. As a <code>dcc:textType</code>, it holds one or more <code>dcc:content</code> elements where the <code>@lang</code> attribute follows ISO-639-1.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Provide at least one <code>dcc:content</code></li>
+<li>For international publications, provide multiple languages (e.g., <code>en</code>, <code>de</code>)</li>
+<li>Use the official long form; avoid abbreviations unless included separately</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;drmd:name&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Federal<span class="w"> </span>Institute<span class="w"> </span>for<span class="w"> </span>Materials<span class="w"> </span>Research<span class="w"> </span>and<span class="w"> </span>Testing<span class="w"> </span>(BAM)<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>Bundesanstalt<span class="w"> </span>fuer<span class="w"> </span>Materialforschung<span class="w"> </span>und<span class="w"> </span>-pruefung<span class="w"> </span>(BAM)<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nt">&lt;/drmd:name&gt;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="322-contact">3.2.2 Contact<a class="headerlink" href="#322-contact" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../referenceMaterialProducer/drmd:contact</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:contactType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>A structured contact block essential for requesting value clarifications, handling instructions, or additional documentation.</p>
+<p><strong>Contact sub-elements:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcc:name</code></td>
+<td><code>dcc:textType</code></td>
+<td>Yes</td>
+<td>Department or team name</td>
+</tr>
+<tr>
+<td><code>dcc:eMail</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td>Always provide at least email or phone</td>
+</tr>
+<tr>
+<td><code>dcc:phone</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dcc:fax</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td>Legacy, but schema-supported</td>
+</tr>
+<tr>
+<td><code>dcc:link</code></td>
+<td><code>xs:anyURI</code></td>
+<td>No</td>
+<td>Organization website</td>
+</tr>
+<tr>
+<td><code>dcc:location</code></td>
+<td><code>dcc:locationType</code></td>
+<td>Yes</td>
+<td>Physical address with <code>countryCode</code> (ISO 3166-1) recommended</td>
+</tr>
+</tbody>
+</table>
+<details class="example" open="open">
+<summary>Complete Contact XML Example</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&lt;drmd:contact&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>BAM<span class="w"> </span>Sales<span class="w"> </span>/<span class="w"> </span>CRM<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="nt">&lt;dcc:eMail&gt;</span>sales.crm@bam.de<span class="nt">&lt;/dcc:eMail&gt;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="nt">&lt;dcc:phone&gt;</span>+49<span class="w"> </span>30<span class="w"> </span>8104<span class="w"> </span>2061<span class="nt">&lt;/dcc:phone&gt;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nt">&lt;dcc:fax&gt;</span>+49<span class="w"> </span>30<span class="w"> </span>8104<span class="w"> </span>72061<span class="nt">&lt;/dcc:fax&gt;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nt">&lt;dcc:link&gt;</span>https://www.bam.de/<span class="nt">&lt;/dcc:link&gt;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="nt">&lt;dcc:location&gt;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nt">&lt;dcc:street&gt;</span>Richard-Willstaetter-Str.<span class="nt">&lt;/dcc:street&gt;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="nt">&lt;dcc:streetNo&gt;</span>11<span class="nt">&lt;/dcc:streetNo&gt;</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="nt">&lt;dcc:postCode&gt;</span>12489<span class="nt">&lt;/dcc:postCode&gt;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="nt">&lt;dcc:city&gt;</span>Berlin<span class="nt">&lt;/dcc:city&gt;</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nt">&lt;dcc:countryCode&gt;</span>DE<span class="nt">&lt;/dcc:countryCode&gt;</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nt">&lt;dcc:positionCoordinates&gt;</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">      </span><span class="nt">&lt;dcc:positionCoordinateSystem&gt;</span>WGS84<span class="nt">&lt;/dcc:positionCoordinateSystem&gt;</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">      </span><span class="nt">&lt;dcc:positionCoordinate1&gt;</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="nt">&lt;si:label&gt;</span>latitude<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">        </span><span class="nt">&lt;si:value&gt;</span>52.4319<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="nt">&lt;si:unit&gt;</span>deg<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">      </span><span class="nt">&lt;/dcc:positionCoordinate1&gt;</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">      </span><span class="nt">&lt;dcc:positionCoordinate2&gt;</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">        </span><span class="nt">&lt;si:label&gt;</span>longitude<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">        </span><span class="nt">&lt;si:value&gt;</span>13.5330<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">        </span><span class="nt">&lt;si:unit&gt;</span>deg<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">      </span><span class="nt">&lt;/dcc:positionCoordinate2&gt;</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">    </span><span class="nt">&lt;/dcc:positionCoordinates&gt;</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">  </span><span class="nt">&lt;/dcc:location&gt;</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="nt">&lt;/drmd:contact&gt;</span>
+</span></code></pre></div>
+</details>
+<hr />
+<h3 id="323-descriptiondata-optional-attachment">3.2.3 descriptionData (Optional Attachment)<a class="headerlink" href="#323-descriptiondata-optional-attachment" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../contact/dcc:descriptionData</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:byteDataType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Used to attach small binary artifacts such as a <strong>vCard</strong> (<code>text/vcard</code>) or an organization <strong>logo</strong> (PNG/SVG).</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;dcc:descriptionData&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&lt;dcc:fileName&gt;</span>producer-contact.vcf<span class="nt">&lt;/dcc:fileName&gt;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&lt;dcc:mimeType&gt;</span>text/vcard<span class="nt">&lt;/dcc:mimeType&gt;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">&lt;dcc:dataBase64&gt;</span>BASE64_ENCODED_BYTES_HERE==<span class="nt">&lt;/dcc:dataBase64&gt;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nt">&lt;/dcc:descriptionData&gt;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="324-cryptographic-capability-flags-optional-booleans">3.2.4 Cryptographic Capability Flags (Optional Booleans)<a class="headerlink" href="#324-cryptographic-capability-flags-optional-booleans" title="Permanent link">&para;</a></h3>
+<p>These flags are <strong>capability / policy hints</strong>, not proofs. They help consumers know what to expect from the producer's trust infrastructure.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cryptElectronicSeal</code></td>
+<td><code>xs:boolean</code></td>
+<td>Organization-level sealing (often for automated issuing)</td>
+</tr>
+<tr>
+<td><code>cryptElectronicSignature</code></td>
+<td><code>xs:boolean</code></td>
+<td>Person-based signing workflows</td>
+</tr>
+<tr>
+<td><code>cryptElectronicTimeStamp</code></td>
+<td><code>xs:boolean</code></td>
+<td>Time-stamping services used for long-term validity</td>
+</tr>
+</tbody>
+</table>
+<details class="abstract">
+<summary>Who Uses These Flags?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producers</strong></td>
+<td>Declare available trust mechanisms</td>
+</tr>
+<tr>
+<td><strong>Consumers</strong></td>
+<td>Decide if additional manual verification is needed</td>
+</tr>
+<tr>
+<td><strong>Software Developers</strong></td>
+<td>Decide whether to show validation UI and "digitally signed" expectations</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Use <code>true</code>/<code>false</code> explicitly only when you are confident. <strong>Omit the element</strong> if unknown rather than guessing.</p>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;drmd:cryptElectronicSeal&gt;</span>true<span class="nt">&lt;/drmd:cryptElectronicSeal&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nt">&lt;drmd:cryptElectronicSignature&gt;</span>false<span class="nt">&lt;/drmd:cryptElectronicSignature&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">&lt;drmd:cryptElectronicTimeStamp&gt;</span>true<span class="nt">&lt;/drmd:cryptElectronicTimeStamp&gt;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="325-organization-identifiers-optional-list">3.2.5 Organization Identifiers (Optional List)<a class="headerlink" href="#325-organization-identifiers-optional-list" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../referenceMaterialProducer/drmd:organizationIdentifiers</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:organizationIdentifierListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>A mechanism to assign <strong>stable external identifiers</strong> to the organization, enabling unambiguous machine linking across global systems.</p>
+<p>Each <code>organizationIdentifier</code> contains: <code>scheme</code> (Required), <code>value</code> (Required), <code>link</code> (Optional), plus <code>@id</code>, <code>@refId</code>, <code>@refType</code> attributes.</p>
+<p><strong>Recommended Schemes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scheme</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ROR</code></td>
+<td>Research Organization Registry</td>
+<td><code>02h2x7d13</code></td>
+</tr>
+<tr>
+<td><code>VAT</code></td>
+<td>EU VAT Number</td>
+<td><code>DE123456789</code></td>
+</tr>
+<tr>
+<td><code>LEI</code></td>
+<td>Legal Entity Identifier</td>
+<td><code>529900T8BM49AURSDO55</code></td>
+</tr>
+<tr>
+<td>National registers</td>
+<td>Company register or authority IDs</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Prefer globally resolvable IDs (e.g., ROR + link)</li>
+<li>Use <code>link</code> whenever there is a canonical resolver URL</li>
+<li>Keep the <code>scheme</code> short and stable; do not use long prose</li>
+</ul>
+</div>
+<details class="example" open="open">
+<summary>Organization Identifiers XML</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;drmd:organizationIdentifiers&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&lt;drmd:organizationIdentifier&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">&lt;drmd:scheme&gt;</span>ROR<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">&lt;drmd:value&gt;</span>02h2x7d13<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nt">&lt;drmd:link&gt;</span>https://ror.org/02h2x7d13<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="nt">&lt;/drmd:organizationIdentifier&gt;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nt">&lt;drmd:organizationIdentifier&gt;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="nt">&lt;drmd:scheme&gt;</span>VAT<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="nt">&lt;drmd:value&gt;</span>DE123456789<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="nt">&lt;/drmd:organizationIdentifier&gt;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nt">&lt;/drmd:organizationIdentifiers&gt;</span>
+</span></code></pre></div>
+</details>
+<hr />
+<h2 id="33-responsible-persons-resppersons">3.3 Responsible Persons (<code>respPersons</code>)<a class="headerlink" href="#33-responsible-persons-resppersons" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../administrativeData/drmd:respPersons</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:respPersonListType</code> (imported from DCC schema)</td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td>CRM: <strong>Mandatory</strong> / RM: <strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Responsible Persons</strong> block records the human (or organizational) accountability for the DRMD: who prepared it, who approved it, and who is authorized to perform electronic signatures.</p>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: RMC-010</p>
+<p>Reference Material Certificates <strong>MUST</strong> list responsible persons including the name and function of the RM producer's approving officer (ISO 33401:2024, §5.3.5). Severity: <strong>Error</strong>. This rule does <strong>not</strong> apply to <code>productInformationSheet</code> documents.</p>
+</div>
+<pre class="mermaid"><code>graph TD
+    RP["respPersons&lt;br/&gt;&lt;i&gt;dcc:respPersonListType&lt;/i&gt;"]
+    RP1["respPerson&lt;br/&gt;&lt;i&gt;@id, @refId, @refType&lt;/i&gt;"]
+    RP2["respPerson&lt;br/&gt;&lt;i&gt;@id, @refId, @refType&lt;/i&gt;"]
+
+    RP --&gt; RP1
+    RP --&gt; RP2
+
+    RP1 --&gt; P1["person&lt;br/&gt;&lt;i&gt;dcc:contactNotStrictType&lt;/i&gt;"]
+    RP1 --&gt; D1["description&lt;br/&gt;&lt;i&gt;dcc:richContentType&lt;/i&gt;"]
+    RP1 --&gt; R1["role&lt;br/&gt;&lt;i&gt;dcc:notEmptyStringType&lt;/i&gt;"]
+    RP1 --&gt; MS1["mainSigner&lt;br/&gt;&lt;i&gt;xs:boolean&lt;/i&gt;"]
+    RP1 --&gt; CS1["cryptElectronicSeal"]
+    RP1 --&gt; CSig1["cryptElectronicSignature"]
+    RP1 --&gt; CTS1["cryptElectronicTimeStamp"]
+
+    P1 --&gt; PN["name"]
+    P1 --&gt; PE["eMail"]
+    P1 --&gt; PP["phone"]
+    P1 --&gt; PL["link"]
+
+    style RP fill:#3f51b5,color:#fff
+    style RP1 fill:#c5cae9,stroke:#3f51b5
+    style RP2 fill:#c5cae9,stroke:#3f51b5
+    style P1 fill:#e8eaf6,stroke:#9fa8da</code></pre>
+<details class="abstract">
+<summary>Who Uses This Block?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RM Producer</strong></td>
+<td>Internal governance, traceability of approvals, auditability, and responsibility assignment</td>
+</tr>
+<tr>
+<td><strong>Regulators / Accreditation Bodies / Auditors</strong></td>
+<td>Clear accountability and roles</td>
+</tr>
+<tr>
+<td><strong>Software Developers / Platform Operators</strong></td>
+<td>Consistent identity anchors (<code>@id</code>) and re-use via references (<code>@refId</code>) across sections</td>
+</tr>
+<tr>
+<td><strong>Downstream Users (Labs, Customers)</strong></td>
+<td>Know who approved/certified the DRMD and how to reach them</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h3 id="331-responsible-person-entry-respperson">3.3.1 Responsible Person Entry (<code>respPerson</code>)<a class="headerlink" href="#331-responsible-person-entry-respperson" title="Permanent link">&para;</a></h3>
+<p>Each <code>dcc:respPerson</code> entry captures <strong>who is responsible</strong> and optionally <strong>what role they play</strong>.</p>
+<p><strong>Attributes (identity &amp; linking):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@id</code></td>
+<td><code>xs:ID</code></td>
+<td>Unique identifier within the XML document (e.g., <code>respPerson_1</code>)</td>
+</tr>
+<tr>
+<td><code>@refId</code></td>
+<td><code>xs:IDREFS</code></td>
+<td>References IDs defined elsewhere to avoid duplication</td>
+</tr>
+<tr>
+<td><code>@refType</code></td>
+<td><code>dcc:refTypesType</code></td>
+<td>Classifies the reference relationship</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Child Elements:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcc:person</code></td>
+<td><code>dcc:contactNotStrictType</code></td>
+<td><strong>Yes</strong></td>
+<td>Identity and contact data (location is optional)</td>
+</tr>
+<tr>
+<td><code>dcc:description</code></td>
+<td><code>dcc:richContentType</code></td>
+<td>No</td>
+<td>Human-readable responsibilities, expertise, department</td>
+</tr>
+<tr>
+<td><code>dcc:role</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td>Short role label (e.g., <code>"Head of Department 1"</code>)</td>
+</tr>
+<tr>
+<td><code>dcc:mainSigner</code></td>
+<td><code>xs:boolean</code></td>
+<td>No</td>
+<td>Flags the primary signer among multiple persons</td>
+</tr>
+<tr>
+<td><code>dcc:cryptElectronicSeal</code></td>
+<td><code>xs:boolean</code></td>
+<td>No</td>
+<td>Workflow hint: sealing capability</td>
+</tr>
+<tr>
+<td><code>dcc:cryptElectronicSignature</code></td>
+<td><code>xs:boolean</code></td>
+<td>No</td>
+<td>Workflow hint: signing capability</td>
+</tr>
+<tr>
+<td><code>dcc:cryptElectronicTimeStamp</code></td>
+<td><code>xs:boolean</code></td>
+<td>No</td>
+<td>Workflow hint: timestamping capability</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>If you have a signing workflow, set exactly <strong>one</strong> <code>mainSigner=true</code>. Always set <code>@id</code> so other elements can reference the person consistently.</p>
+</div>
+<hr />
+<h3 id="332-person-details-dccperson">3.3.2 Person Details (<code>dcc:person</code>)<a class="headerlink" href="#332-person-details-dccperson" title="Permanent link">&para;</a></h3>
+<p>The <code>dcc:person</code> element uses type <code>dcc:contactNotStrictType</code>, meaning <strong>location is optional</strong> (unlike <code>dcc:contactType</code> where location is required).</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dcc:name</code></td>
+<td><code>dcc:textType</code></td>
+<td><strong>Yes</strong></td>
+<td>Multilingual structured text</td>
+</tr>
+<tr>
+<td><code>dcc:eMail</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td>Email contact</td>
+</tr>
+<tr>
+<td><code>dcc:phone</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td>Phone contact</td>
+</tr>
+<tr>
+<td><code>dcc:fax</code></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>No</td>
+<td>Fax (legacy, supported)</td>
+</tr>
+<tr>
+<td><code>dcc:link</code></td>
+<td><code>xs:anyURI</code></td>
+<td>No</td>
+<td>ORCID page, institutional directory, etc.</td>
+</tr>
+<tr>
+<td><code>dcc:location</code></td>
+<td><code>dcc:locationType</code></td>
+<td>No</td>
+<td>Optional address/affiliation</td>
+</tr>
+<tr>
+<td><code>dcc:descriptionData</code></td>
+<td><code>dcc:byteDataType</code></td>
+<td>No</td>
+<td>Binary attachment (vCard, mandate PDF, etc.)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="333-complete-responsible-persons-example">3.3.3 Complete Responsible Persons Example<a class="headerlink" href="#333-complete-responsible-persons-example" title="Permanent link">&para;</a></h3>
+<details class="example" open="open">
+<summary>Full XML Example with Two Responsible Persons</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">&lt;drmd:respPersons&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="cm">&lt;!-- Primary Approving Officer --&gt;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">&lt;dcc:respPerson</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;respPerson_1&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">&lt;dcc:person&gt;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">      </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Dr.<span class="w"> </span>F.<span class="w"> </span>Emmerling<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="nt">&lt;dcc:eMail&gt;</span>f.emmerling@example.org<span class="nt">&lt;/dcc:eMail&gt;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">      </span><span class="nt">&lt;dcc:phone&gt;</span>+49<span class="w"> </span>30<span class="w"> </span>8104<span class="w"> </span>0000<span class="nt">&lt;/dcc:phone&gt;</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">      </span><span class="nt">&lt;dcc:link&gt;</span>https://www.example.org/staff/emmerling<span class="nt">&lt;/dcc:link&gt;</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="nt">&lt;/dcc:person&gt;</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="nt">&lt;dcc:description&gt;</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Analytical<span class="w"> </span>Chemistry;<span class="w"> </span>Reference<span class="w"> </span>Materials<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="nt">&lt;/dcc:description&gt;</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="nt">&lt;dcc:role&gt;</span>Head<span class="w"> </span>of<span class="w"> </span>Department<span class="w"> </span>1<span class="nt">&lt;/dcc:role&gt;</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">    </span><span class="nt">&lt;dcc:mainSigner&gt;</span>true<span class="nt">&lt;/dcc:mainSigner&gt;</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="nt">&lt;dcc:cryptElectronicSeal&gt;</span>true<span class="nt">&lt;/dcc:cryptElectronicSeal&gt;</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="nt">&lt;dcc:cryptElectronicSignature&gt;</span>true<span class="nt">&lt;/dcc:cryptElectronicSignature&gt;</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="nt">&lt;dcc:cryptElectronicTimeStamp&gt;</span>true<span class="nt">&lt;/dcc:cryptElectronicTimeStamp&gt;</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">  </span><span class="nt">&lt;/dcc:respPerson&gt;</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">  </span><span class="cm">&lt;!-- Secondary Technical Reviewer --&gt;</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">  </span><span class="nt">&lt;dcc:respPerson</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;respPerson_2&quot;</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">                  </span><span class="na">refId=</span><span class="s">&quot;respPerson_1&quot;</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">                  </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">    </span><span class="nt">&lt;dcc:person&gt;</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">      </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">        </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Dr.<span class="w"> </span>S.<span class="w"> </span>Recknagel<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">      </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">      </span><span class="nt">&lt;dcc:eMail&gt;</span>sebastian.recknagel@example.org<span class="nt">&lt;/dcc:eMail&gt;</span>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">      </span><span class="nt">&lt;dcc:phone&gt;</span>+49<span class="w"> </span>30<span class="w"> </span>8104<span class="w"> </span>1160<span class="nt">&lt;/dcc:phone&gt;</span>
+</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">    </span><span class="nt">&lt;/dcc:person&gt;</span>
+</span><span id="__span-12-33"><a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">    </span><span class="nt">&lt;dcc:description&gt;</span>
+</span><span id="__span-12-34"><a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Specialist<span class="w"> </span>in<span class="w"> </span>Inorganic<span class="w"> </span>Reference<span class="w"> </span>Materials<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-12-35"><a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">    </span><span class="nt">&lt;/dcc:description&gt;</span>
+</span><span id="__span-12-36"><a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">    </span><span class="nt">&lt;dcc:role&gt;</span>Head<span class="w"> </span>of<span class="w"> </span>Division<span class="w"> </span>1.6<span class="nt">&lt;/dcc:role&gt;</span>
+</span><span id="__span-12-37"><a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">    </span><span class="nt">&lt;dcc:mainSigner&gt;</span>false<span class="nt">&lt;/dcc:mainSigner&gt;</span>
+</span><span id="__span-12-38"><a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="w">    </span><span class="nt">&lt;dcc:cryptElectronicSignature&gt;</span>true<span class="nt">&lt;/dcc:cryptElectronicSignature&gt;</span>
+</span><span id="__span-12-39"><a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="w">    </span><span class="nt">&lt;dcc:cryptElectronicTimeStamp&gt;</span>true<span class="nt">&lt;/dcc:cryptElectronicTimeStamp&gt;</span>
+</span><span id="__span-12-40"><a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a><span class="w">  </span><span class="nt">&lt;/dcc:respPerson&gt;</span>
+</span><span id="__span-12-41"><a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="nt">&lt;/drmd:respPersons&gt;</span>
+</span></code></pre></div>
+</details>
+<hr />
+<h2 id="business-rules-summary">Business Rules Summary<a class="headerlink" href="#business-rules-summary" title="Permanent link">&para;</a></h2>
+<p>The following Schematron business rules apply specifically to the <strong>Administrative Data</strong> block. Full compliance requires passing both XSD and Schematron validation.</p>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DRMD-001</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Must declare <code>titleOfTheDocument</code></td>
+</tr>
+<tr>
+<td><strong>DRMD-010</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Must identify <code>referenceMaterialProducer</code></td>
+</tr>
+<tr>
+<td><strong>DRMD-012</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Must specify a <code>validity</code> period or condition</td>
+</tr>
+<tr>
+<td><strong>RMC-010</strong></td>
+<td>CRM only</td>
+<td>Error</td>
+<td>Must list <code>respPersons</code> with approving officer</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Validation Pipeline</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Step 1: Validate against drmd.xsd         → Structural validation
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Step 2: Validate against drmd-business-rules.sch → Business rule validation
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Both steps MUST pass for a document to be considered fully compliant.
+</span></code></pre></div>
+</div>
+<hr />
+<h2 id="complete-administrative-data-example">Complete Administrative Data Example<a class="headerlink" href="#complete-administrative-data-example" title="Permanent link">&para;</a></h2>
+<details class="example">
+<summary>Full administrativeData Block (Click to Expand)</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">&lt;drmd:administrativeData&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="cm">&lt;!-- === Core Data === --&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&lt;drmd:coreData&gt;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&lt;drmd:titleOfTheDocument&gt;</span>referenceMaterialCertificate<span class="nt">&lt;/drmd:titleOfTheDocument&gt;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nt">&lt;drmd:uniqueIdentifier&gt;</span>84d58aee-4f81-460f-993e-a594ce3a8d60<span class="nt">&lt;/drmd:uniqueIdentifier&gt;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nt">&lt;drmd:documentVersion&gt;</span>1.0.0<span class="nt">&lt;/drmd:documentVersion&gt;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="nt">&lt;drmd:documentIdentifiers&gt;</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">      </span><span class="nt">&lt;drmd:documentIdentifier</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ID_01&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="nt">&lt;drmd:scheme&gt;</span>DOI<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">        </span><span class="nt">&lt;drmd:value&gt;</span>10.1234/BAM.M308a.2026<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="nt">&lt;drmd:link&gt;</span>https://doi.org/10.1234/BAM.M308a.2026<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">      </span><span class="nt">&lt;/drmd:documentIdentifier&gt;</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="nt">&lt;/drmd:documentIdentifiers&gt;</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">    </span><span class="nt">&lt;drmd:validity&gt;</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">      </span><span class="nt">&lt;drmd:untilRevoked&gt;</span>true<span class="nt">&lt;/drmd:untilRevoked&gt;</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">    </span><span class="nt">&lt;/drmd:validity&gt;</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">  </span><span class="nt">&lt;/drmd:coreData&gt;</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">  </span><span class="cm">&lt;!-- === Reference Material Producer === --&gt;</span>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">  </span><span class="nt">&lt;drmd:referenceMaterialProducer&gt;</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">    </span><span class="nt">&lt;drmd:name&gt;</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Federal<span class="w"> </span>Institute<span class="w"> </span>for<span class="w"> </span>Materials<span class="w"> </span>Research<span class="w"> </span>and<span class="w"> </span>Testing<span class="w"> </span>(BAM)<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>Bundesanstalt<span class="w"> </span>fuer<span class="w"> </span>Materialforschung<span class="w"> </span>und<span class="w"> </span>-pruefung<span class="w"> </span>(BAM)<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">    </span><span class="nt">&lt;/drmd:name&gt;</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">    </span><span class="nt">&lt;drmd:contact&gt;</span>
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">      </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">        </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>BAM<span class="w"> </span>Sales<span class="w"> </span>/<span class="w"> </span>CRM<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">      </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">      </span><span class="nt">&lt;dcc:eMail&gt;</span>sales.crm@bam.de<span class="nt">&lt;/dcc:eMail&gt;</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">      </span><span class="nt">&lt;dcc:phone&gt;</span>+49<span class="w"> </span>30<span class="w"> </span>8104<span class="w"> </span>2061<span class="nt">&lt;/dcc:phone&gt;</span>
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">      </span><span class="nt">&lt;dcc:link&gt;</span>https://www.bam.de/<span class="nt">&lt;/dcc:link&gt;</span>
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">      </span><span class="nt">&lt;dcc:location&gt;</span>
+</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">        </span><span class="nt">&lt;dcc:street&gt;</span>Richard-Willstaetter-Str.<span class="nt">&lt;/dcc:street&gt;</span>
+</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">        </span><span class="nt">&lt;dcc:streetNo&gt;</span>11<span class="nt">&lt;/dcc:streetNo&gt;</span>
+</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">        </span><span class="nt">&lt;dcc:postCode&gt;</span>12489<span class="nt">&lt;/dcc:postCode&gt;</span>
+</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="w">        </span><span class="nt">&lt;dcc:city&gt;</span>Berlin<span class="nt">&lt;/dcc:city&gt;</span>
+</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="w">        </span><span class="nt">&lt;dcc:countryCode&gt;</span>DE<span class="nt">&lt;/dcc:countryCode&gt;</span>
+</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">      </span><span class="nt">&lt;/dcc:location&gt;</span>
+</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="w">    </span><span class="nt">&lt;/drmd:contact&gt;</span>
+</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>
+</span><span id="__span-14-44"><a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="w">    </span><span class="nt">&lt;drmd:cryptElectronicSeal&gt;</span>true<span class="nt">&lt;/drmd:cryptElectronicSeal&gt;</span>
+</span><span id="__span-14-45"><a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="w">    </span><span class="nt">&lt;drmd:cryptElectronicSignature&gt;</span>false<span class="nt">&lt;/drmd:cryptElectronicSignature&gt;</span>
+</span><span id="__span-14-46"><a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="w">    </span><span class="nt">&lt;drmd:cryptElectronicTimeStamp&gt;</span>true<span class="nt">&lt;/drmd:cryptElectronicTimeStamp&gt;</span>
+</span><span id="__span-14-47"><a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>
+</span><span id="__span-14-48"><a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a><span class="w">    </span><span class="nt">&lt;drmd:organizationIdentifiers&gt;</span>
+</span><span id="__span-14-49"><a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a><span class="w">      </span><span class="nt">&lt;drmd:organizationIdentifier&gt;</span>
+</span><span id="__span-14-50"><a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a><span class="w">        </span><span class="nt">&lt;drmd:scheme&gt;</span>ROR<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-14-51"><a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a><span class="w">        </span><span class="nt">&lt;drmd:value&gt;</span>02h2x7d13<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-14-52"><a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a><span class="w">        </span><span class="nt">&lt;drmd:link&gt;</span>https://ror.org/02h2x7d13<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-14-53"><a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a><span class="w">      </span><span class="nt">&lt;/drmd:organizationIdentifier&gt;</span>
+</span><span id="__span-14-54"><a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a><span class="w">    </span><span class="nt">&lt;/drmd:organizationIdentifiers&gt;</span>
+</span><span id="__span-14-55"><a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a><span class="w">  </span><span class="nt">&lt;/drmd:referenceMaterialProducer&gt;</span>
+</span><span id="__span-14-56"><a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>
+</span><span id="__span-14-57"><a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a><span class="w">  </span><span class="cm">&lt;!-- === Responsible Persons === --&gt;</span>
+</span><span id="__span-14-58"><a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a><span class="w">  </span><span class="nt">&lt;drmd:respPersons&gt;</span>
+</span><span id="__span-14-59"><a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a><span class="w">    </span><span class="nt">&lt;dcc:respPerson</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;respPerson_1&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-14-60"><a id="__codelineno-14-60" name="__codelineno-14-60" href="#__codelineno-14-60"></a><span class="w">      </span><span class="nt">&lt;dcc:person&gt;</span>
+</span><span id="__span-14-61"><a id="__codelineno-14-61" name="__codelineno-14-61" href="#__codelineno-14-61"></a><span class="w">        </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-14-62"><a id="__codelineno-14-62" name="__codelineno-14-62" href="#__codelineno-14-62"></a><span class="w">          </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Dr.<span class="w"> </span>F.<span class="w"> </span>Emmerling<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-63"><a id="__codelineno-14-63" name="__codelineno-14-63" href="#__codelineno-14-63"></a><span class="w">        </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-14-64"><a id="__codelineno-14-64" name="__codelineno-14-64" href="#__codelineno-14-64"></a><span class="w">        </span><span class="nt">&lt;dcc:eMail&gt;</span>f.emmerling@example.org<span class="nt">&lt;/dcc:eMail&gt;</span>
+</span><span id="__span-14-65"><a id="__codelineno-14-65" name="__codelineno-14-65" href="#__codelineno-14-65"></a><span class="w">      </span><span class="nt">&lt;/dcc:person&gt;</span>
+</span><span id="__span-14-66"><a id="__codelineno-14-66" name="__codelineno-14-66" href="#__codelineno-14-66"></a><span class="w">      </span><span class="nt">&lt;dcc:role&gt;</span>Head<span class="w"> </span>of<span class="w"> </span>Department<span class="w"> </span>1<span class="nt">&lt;/dcc:role&gt;</span>
+</span><span id="__span-14-67"><a id="__codelineno-14-67" name="__codelineno-14-67" href="#__codelineno-14-67"></a><span class="w">      </span><span class="nt">&lt;dcc:mainSigner&gt;</span>true<span class="nt">&lt;/dcc:mainSigner&gt;</span>
+</span><span id="__span-14-68"><a id="__codelineno-14-68" name="__codelineno-14-68" href="#__codelineno-14-68"></a><span class="w">    </span><span class="nt">&lt;/dcc:respPerson&gt;</span>
+</span><span id="__span-14-69"><a id="__codelineno-14-69" name="__codelineno-14-69" href="#__codelineno-14-69"></a><span class="w">  </span><span class="nt">&lt;/drmd:respPersons&gt;</span>
+</span><span id="__span-14-70"><a id="__codelineno-14-70" name="__codelineno-14-70" href="#__codelineno-14-70"></a><span class="nt">&lt;/drmd:administrativeData&gt;</span>
+</span></code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../architecture/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview &amp; Architecture">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview & Architecture
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../schema_tree/" class="md-footer__link md-footer__link--next" aria-label="Next: Schema Interactive Tree">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Schema Interactive Tree
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

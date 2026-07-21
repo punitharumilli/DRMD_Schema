@@ -41,8 +41,22 @@ def get_annotation(component):
     return ""
 
 def get_short_name(name):
-    if name and '}' in name:
+    if not name: return ""
+    if '}' in name:
         return name.split('}')[-1]
+    return name
+
+def get_prefixed_name(name):
+    if not name: return ""
+    if '}' in name:
+        uri, local = name.split('}', 1)
+        uri = uri.strip('{')
+        if 'www.w3.org' in uri: prefix = 'xs'
+        elif 'dcc' in uri: prefix = 'dcc'
+        elif 'si' in uri: prefix = 'si'
+        elif 'drmd' in uri: prefix = 'drmd'
+        else: prefix = 'ns'
+        return f"{prefix}:{local}"
     return name
 
 def build_dict(element, processed=None, current_path=""):
@@ -50,7 +64,10 @@ def build_dict(element, processed=None, current_path=""):
         processed = set()
         
     name = get_short_name(element.name)
-    type_name = get_short_name(element.type.name) if element.type and hasattr(element.type, 'name') else 'complexType'
+    type_name = get_prefixed_name(element.type.name) if element.type and hasattr(element.type, 'name') else 'complexType'
+    base_name = get_prefixed_name(element.type.base_type.name) if getattr(element.type, 'base_type', None) and getattr(element.type.base_type, 'name', None) else ""
+    
+    enums = getattr(element.type, 'enumeration', None)
     
     new_path = f"{current_path}/{name}" if current_path else name
     
@@ -81,6 +98,8 @@ def build_dict(element, processed=None, current_path=""):
     node = {
         "name": name,
         "type": type_name,
+        "base": base_name,
+        "enumerations": enums,
         "cardinality": f"[{min_occurs}..{max_str}]",
         "description": doc,
         "path": new_path,
@@ -92,7 +111,7 @@ def build_dict(element, processed=None, current_path=""):
     if hasattr(element.type, 'attributes'):
         for attr_name, attr in element.type.attributes.items():
             if attr_name is None: continue
-            attr_type = get_short_name(attr.type.name) if attr.type and hasattr(attr.type, 'name') else 'simpleType'
+            attr_type = get_prefixed_name(attr.type.name) if attr.type and hasattr(attr.type, 'name') else 'simpleType'
             use_str = attr.use if hasattr(attr, 'use') else 'optional'
             attr_doc = get_annotation(attr)
             

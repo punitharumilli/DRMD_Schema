@@ -2,7 +2,6 @@
 
 The **Administrative Data** block (`administrativeData`) is the structural backbone of every DRMD document. It serves as the **"digital container"** for the material, ensuring that any software, analytical instrument, or regulatory body can verify the document's authenticity, identify its producer, and confirm its valid lifespan — all **before** processing any technical measurement data.
 
----
 
 ## Structure at a Glance
 
@@ -36,10 +35,10 @@ graph TD
     RP1 --> ROLE["role"]
     RP1 --> MS["mainSigner"]
 
-    style AD fill:#3f51b5,color:#fff,stroke:#283593
-    style CD fill:#5c6bc0,color:#fff,stroke:#3949ab
-    style RMP fill:#5c6bc0,color:#fff,stroke:#3949ab
-    style RP fill:#5c6bc0,color:#fff,stroke:#3949ab
+    style AD fill:#e8eaf6,color:#000,stroke:#283593
+    style CD fill:#c5cae9,color:#000,stroke:#3949ab
+    style RMP fill:#c5cae9,color:#000,stroke:#3949ab
+    style RP fill:#c5cae9,color:#000,stroke:#3949ab
 ```
 
 The three pillars are:
@@ -48,12 +47,11 @@ The three pillars are:
 |--------|------|------|----------|
 | **Core Data** | `coreData` | `drmd:coreDataType` | Mandatory |
 | **Reference Material Producer** | `referenceMaterialProducer` | `drmd:referenceMaterialProducerType` | Mandatory |
-| **Responsible Persons** | `respPersons` | `dcc:respPersonListType` | CRM: Mandatory / RM: Optional |
+| **Responsible Persons** | `respPersons` | `dcc:respPersonListType` | CRM: Mandatory / PIS: Optional |
 
 !!! warning "Dual Validation Required"
     The DRMD schema uses a **dual-profile architecture**. The XSD defines the structure, but profile-specific mandatory requirements (e.g., `respPersons` for CRM documents) are enforced by the companion **Schematron business rules** (`drmd-business-rules.sch`). Full compliance requires passing **both** validations.
 
----
 
 ## 3.1 Core Data (`coreData`)
 
@@ -67,7 +65,7 @@ graph LR
     CD --> DI["documentIdentifiers<br/><i>drmd:documentIdentifierListType</i>"]
     CD --> VAL["validity<br/><i>drmd:ValidityType</i>"]
 
-    style CD fill:#3f51b5,color:#fff
+    style CD fill:#e8eaf6,color:#000,stroke:#3f51b5
     style TOD fill:#e8eaf6,stroke:#3f51b5
     style UID fill:#e8eaf6,stroke:#3f51b5
     style DV fill:#e8eaf6,stroke:#3f51b5
@@ -75,7 +73,6 @@ graph LR
     style VAL fill:#e8eaf6,stroke:#3f51b5
 ```
 
----
 
 ### 3.1.1 Title of the Document (`titleOfTheDocument`)
 
@@ -103,7 +100,7 @@ graph LR
             - At least one `properties` block with `@isCertified="true"` (RMC-002)
             - Material `description` (RMC-011)
 
-    === "productInformationSheet (RM)"
+    === "productInformationSheet"
 
         - Identifies an informative **Reference Material** per ISO 33401:2024
         - Values are valid measurement results but **not certified**
@@ -124,7 +121,6 @@ graph LR
 !!! danger "Schematron Rule: DRMD-001"
     Every DRMD document **MUST** declare a `titleOfTheDocument` in `coreData`, specifying either `referenceMaterialCertificate` or `productInformationSheet`. Severity: **Error** — document is non-compliant without this element.
 
----
 
 ### 3.1.2 Unique Identifier (`uniqueIdentifier`)
 
@@ -143,7 +139,6 @@ graph LR
 <drmd:uniqueIdentifier>84d58aee-4f81-460f-993e-a594ce3a8d60</drmd:uniqueIdentifier>
 ```
 
----
 
 ### 3.1.3 Document Version (`documentVersion`)
 
@@ -159,7 +154,6 @@ graph LR
 <drmd:documentVersion>1.0.0</drmd:documentVersion>
 ```
 
----
 
 ### 3.1.4 Document Identifiers (`documentIdentifiers`)
 
@@ -183,7 +177,7 @@ graph TD
     DI2 --> S2["scheme: Internal_ERP"]
     DI2 --> V2["value: BATCH-2026-X99"]
 
-    style DI fill:#3f51b5,color:#fff
+    style DI fill:#e8eaf6,color:#000,stroke:#3f51b5
     style DI1 fill:#e3f2fd,stroke:#1565c0
     style DI2 fill:#e3f2fd,stroke:#1565c0
 ```
@@ -217,7 +211,6 @@ Each `documentIdentifier` contains:
     </drmd:documentIdentifiers>
     ```
 
----
 
 ### 3.1.5 Validity (`validity`)
 
@@ -246,7 +239,7 @@ graph TD
     TAD --> DD["dispatchDate<br/><i>xs:date [0..1]</i>"]
     TAD --> PER["period<br/><i>xs:duration [1..1]</i>"]
 
-    style VAL fill:#3f51b5,color:#fff
+    style VAL fill:#e8eaf6,color:#000,stroke:#3f51b5
     style ST fill:#fff3e0,stroke:#ff9800
     style TAD fill:#e8f5e9,stroke:#4caf50
     style UR fill:#e3f2fd,stroke:#1565c0
@@ -288,7 +281,6 @@ graph TD
     </drmd:validity>
     ```
 
----
 
 ## 3.2 Reference Material Producer (`referenceMaterialProducer`)
 
@@ -327,7 +319,7 @@ graph TD
     CONTACT --> LN["link"]
     CONTACT --> LOC["location"]
 
-    style RMP fill:#3f51b5,color:#fff
+    style RMP fill:#e8eaf6,color:#000,stroke:#3f51b5
     style NAME fill:#c5cae9,stroke:#3f51b5
     style CONTACT fill:#c5cae9,stroke:#3f51b5
     style SEAL fill:#e8eaf6,stroke:#9fa8da
@@ -346,7 +338,6 @@ graph TD
     | **Machine / Instrument Manufacturers** | Links results to producer identity for QA workflows and LIMS integration |
     | **Auditors / Regulators** | Validates issuer identity and supports regulatory compliance |
 
----
 
 ### 3.2.1 Name
 
@@ -370,7 +361,6 @@ A multilingual "human-friendly" name of the producer. As a `dcc:textType`, it ho
 </drmd:name>
 ```
 
----
 
 ### 3.2.2 Contact
 
@@ -427,7 +417,6 @@ A structured contact block essential for requesting value clarifications, handli
     </drmd:contact>
     ```
 
----
 
 ### 3.2.3 descriptionData (Optional Attachment)
 
@@ -447,7 +436,6 @@ Used to attach small binary artifacts such as a **vCard** (`text/vcard`) or an o
 </dcc:descriptionData>
 ```
 
----
 
 ### 3.2.4 Cryptographic Capability Flags (Optional Booleans)
 
@@ -476,7 +464,6 @@ These flags are **capability / policy hints**, not proofs. They help consumers k
 <drmd:cryptElectronicTimeStamp>true</drmd:cryptElectronicTimeStamp>
 ```
 
----
 
 ### 3.2.5 Organization Identifiers (Optional List)
 
@@ -521,7 +508,6 @@ Each `organizationIdentifier` contains: `scheme` (Required), `value` (Required),
     </drmd:organizationIdentifiers>
     ```
 
----
 
 ## 3.3 Responsible Persons (`respPersons`)
 
@@ -529,7 +515,7 @@ Each `organizationIdentifier` contains: `scheme` (Required), `value` (Required),
 |----------|-------|
 | **Path** | `.../administrativeData/drmd:respPersons` |
 | **Type** | `dcc:respPersonListType` (imported from DCC schema) |
-| **Cardinality** | CRM: **Mandatory** / RM: **Optional** `[0..1]` |
+| **Cardinality** | CRM: **Mandatory** / ProductInformationSheet: **Optional** `[0..1]` |
 
 The **Responsible Persons** block records the human (or organizational) accountability for the DRMD: who prepared it, who approved it, and who is authorized to perform electronic signatures.
 
@@ -558,7 +544,7 @@ graph TD
     P1 --> PP["phone"]
     P1 --> PL["link"]
 
-    style RP fill:#3f51b5,color:#fff
+    style RP fill:#e8eaf6,color:#000,stroke:#3f51b5
     style RP1 fill:#c5cae9,stroke:#3f51b5
     style RP2 fill:#c5cae9,stroke:#3f51b5
     style P1 fill:#e8eaf6,stroke:#9fa8da
@@ -573,7 +559,6 @@ graph TD
     | **Software Developers / Platform Operators** | Consistent identity anchors (`@id`) and re-use via references (`@refId`) across sections |
     | **Downstream Users (Labs, Customers)** | Know who approved/certified the DRMD and how to reach them |
 
----
 
 ### 3.3.1 Responsible Person Entry (`respPerson`)
 
@@ -602,7 +587,6 @@ Each `dcc:respPerson` entry captures **who is responsible** and optionally **wha
 !!! tip "Best Practice"
     If you have a signing workflow, set exactly **one** `mainSigner=true`. Always set `@id` so other elements can reference the person consistently.
 
----
 
 ### 3.3.2 Person Details (`dcc:person`)
 
@@ -618,7 +602,6 @@ The `dcc:person` element uses type `dcc:contactNotStrictType`, meaning **locatio
 | `dcc:location` | `dcc:locationType` | No | Optional address/affiliation |
 | `dcc:descriptionData` | `dcc:byteDataType` | No | Binary attachment (vCard, mandate PDF, etc.) |
 
----
 
 ### 3.3.3 Complete Responsible Persons Example
 
@@ -668,7 +651,6 @@ The `dcc:person` element uses type `dcc:contactNotStrictType`, meaning **locatio
     </drmd:respPersons>
     ```
 
----
 
 ## Business Rules Summary
 
@@ -688,7 +670,6 @@ The following Schematron business rules apply specifically to the **Administrati
     Both steps MUST pass for a document to be considered fully compliant.
     ```
 
----
 
 ## Complete Administrative Data Example
 

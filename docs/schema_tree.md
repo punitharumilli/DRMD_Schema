@@ -244,7 +244,10 @@ hide:
 <!-- Load D3.js -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+function initSchemaTree() {
+    // Prevent double initialization if navigating back
+    if (document.querySelector("#tree-nav").innerHTML.trim() !== "") return;
+
     let globalData = null;
     let selectedNode = null;
 
@@ -635,5 +638,14 @@ document.addEventListener("DOMContentLoaded", function() {
                       ${d.y} ${d.x}`;
         }
     }
-});
+}
+
+// Hook into MkDocs Material instant loading, or use DOMContentLoaded as fallback
+if (typeof document$ !== "undefined") {
+    document$.subscribe(function() {
+        initSchemaTree();
+    });
+} else {
+    document.addEventListener("DOMContentLoaded", initSchemaTree);
+}
 </script>

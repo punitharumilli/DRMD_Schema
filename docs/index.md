@@ -4,6 +4,76 @@ Welcome to the **Best Practice Guidelines** for the **Digital Reference Material
 
 This guide provides comprehensive instructions for machine manufacturers, reference material producers, and software developers to ensure consistent, interoperable, and automated handling of DRMD certificates across different platforms.
 
+<style>
+.drmd-acronym-container {
+    display: flex;
+    gap: 40px;
+    margin: 50px 0;
+    align-items: flex-start;
+}
+.drmd-column {
+    flex: 1;
+}
+.drmd-letter-heading {
+    border-bottom: 3px solid #000;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+}
+.drmd-big-letter {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #d32f2f;
+    line-height: 0.8;
+}
+.drmd-rest-word {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    margin-left: 2px;
+}
+.drmd-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #212121;
+}
+@media (max-width: 768px) {
+    .drmd-acronym-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+</style>
+
+<div class="drmd-acronym-container">
+    <div class="drmd-column">
+        <div class="drmd-letter-heading">
+            <span class="drmd-big-letter">D</span><span class="drmd-rest-word">igital</span>
+        </div>
+        <div class="drmd-desc">
+            The term Digital represents our process of converting standard PDF formats into fully machine-readable formats for automated data processing.
+        </div>
+    </div>
+    <div class="drmd-column">
+        <div class="drmd-letter-heading">
+            <span class="drmd-big-letter">R</span><span class="drmd-rest-word">eference</span>
+            <span class="drmd-big-letter" style="margin-left: 12px;">M</span><span class="drmd-rest-word">aterial</span>
+        </div>
+        <div class="drmd-desc">
+            The Reference Material forms the core engine of this project, acting as the foundational source of truth for all data verification.
+        </div>
+    </div>
+    <div class="drmd-column">
+        <div class="drmd-letter-heading">
+            <span class="drmd-big-letter">D</span><span class="drmd-rest-word">ocument</span>
+        </div>
+        <div class="drmd-desc">
+            The Document signifies the final structured layout specifically designed to output Certified Reference Materials (CRM) and Product Information Sheets.
+        </div>
+    </div>
+</div>
 !!! info "What is the DRMD?"
     The DRMD is a standardized XML-based format designed to digitally represent reference material certificates in strict compliance with **ISO 17034** (Competence of reference material producers) and **ISO 33401** (Reference materials - Guidance for characterization and assessment of homogeneity and stability).
 

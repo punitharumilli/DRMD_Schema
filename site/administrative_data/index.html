@@ -974,7 +974,6 @@
 
 <h1 id="administrative-data">Administrative Data<a class="headerlink" href="#administrative-data" title="Permanent link">&para;</a></h1>
 <p>The <strong>Administrative Data</strong> block (<code>administrativeData</code>) is the structural backbone of every DRMD document. It serves as the <strong>"digital container"</strong> for the material, ensuring that any software, analytical instrument, or regulatory body can verify the document's authenticity, identify its producer, and confirm its valid lifespan — all <strong>before</strong> processing any technical measurement data.</p>
-<hr />
 <h2 id="structure-at-a-glance">Structure at a Glance<a class="headerlink" href="#structure-at-a-glance" title="Permanent link">&para;</a></h2>
 <pre class="mermaid"><code>graph TD
     AD["administrativeData"]
@@ -1005,10 +1004,10 @@
     RP1 --&gt; ROLE["role"]
     RP1 --&gt; MS["mainSigner"]
 
-    style AD fill:#3f51b5,color:#fff,stroke:#283593
-    style CD fill:#5c6bc0,color:#fff,stroke:#3949ab
-    style RMP fill:#5c6bc0,color:#fff,stroke:#3949ab
-    style RP fill:#5c6bc0,color:#fff,stroke:#3949ab</code></pre>
+    style AD fill:#e8eaf6,color:#000,stroke:#283593
+    style CD fill:#c5cae9,color:#000,stroke:#3949ab
+    style RMP fill:#c5cae9,color:#000,stroke:#3949ab
+    style RP fill:#c5cae9,color:#000,stroke:#3949ab</code></pre>
 <p>The three pillars are:</p>
 <table>
 <thead>
@@ -1036,7 +1035,7 @@
 <td><strong>Responsible Persons</strong></td>
 <td><code>respPersons</code></td>
 <td><code>dcc:respPersonListType</code></td>
-<td>CRM: Mandatory / RM: Optional</td>
+<td>CRM: Mandatory / ProductInformationSheet: Optional</td>
 </tr>
 </tbody>
 </table>
@@ -1044,7 +1043,6 @@
 <p class="admonition-title">Dual Validation Required</p>
 <p>The DRMD schema uses a <strong>dual-profile architecture</strong>. The XSD defines the structure, but profile-specific mandatory requirements (e.g., <code>respPersons</code> for CRM documents) are enforced by the companion <strong>Schematron business rules</strong> (<code>drmd-business-rules.sch</code>). Full compliance requires passing <strong>both</strong> validations.</p>
 </div>
-<hr />
 <h2 id="31-core-data-coredata">3.1 Core Data (<code>coreData</code>)<a class="headerlink" href="#31-core-data-coredata" title="Permanent link">&para;</a></h2>
 <p>The <code>coreData</code> pillar contains the primary metadata that identifies the document and its legal status. Think of it as the document's <strong>passport</strong>.</p>
 <pre class="mermaid"><code>graph LR
@@ -1054,13 +1052,12 @@
     CD --&gt; DI["documentIdentifiers&lt;br/&gt;&lt;i&gt;drmd:documentIdentifierListType&lt;/i&gt;"]
     CD --&gt; VAL["validity&lt;br/&gt;&lt;i&gt;drmd:ValidityType&lt;/i&gt;"]
 
-    style CD fill:#3f51b5,color:#fff
+    style CD fill:#e8eaf6,color:#000,stroke:#3f51b5
     style TOD fill:#e8eaf6,stroke:#3f51b5
     style UID fill:#e8eaf6,stroke:#3f51b5
     style DV fill:#e8eaf6,stroke:#3f51b5
     style DI fill:#e8eaf6,stroke:#3f51b5
     style VAL fill:#e8eaf6,stroke:#3f51b5</code></pre>
-<hr />
 <h3 id="311-title-of-the-document-titleofthedocument">3.1.1 Title of the Document (<code>titleOfTheDocument</code>)<a class="headerlink" href="#311-title-of-the-document-titleofthedocument" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1092,7 +1089,7 @@
 <details class="info" open="open">
 <summary>Understanding the Two Document Profiles</summary>
 <p>The <code>titleOfTheDocument</code> value drives the entire validation behavior of the DRMD. Choosing the wrong profile can lead to validation failures or, worse, incorrect interpretation of measurement data.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">referenceMaterialCertificate (CRM)</label><label for="__tabbed_1_2">productInformationSheet (RM)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">referenceMaterialCertificate (CRM)</label><label for="__tabbed_1_2">productInformationSheet</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1131,7 +1128,6 @@
 <p class="admonition-title">Schematron Rule: DRMD-001</p>
 <p>Every DRMD document <strong>MUST</strong> declare a <code>titleOfTheDocument</code> in <code>coreData</code>, specifying either <code>referenceMaterialCertificate</code> or <code>productInformationSheet</code>. Severity: <strong>Error</strong> — document is non-compliant without this element.</p>
 </div>
-<hr />
 <h3 id="312-unique-identifier-uniqueidentifier">3.1.2 Unique Identifier (<code>uniqueIdentifier</code>)<a class="headerlink" href="#312-unique-identifier-uniqueidentifier" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1162,7 +1158,6 @@
 </div>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;drmd:uniqueIdentifier&gt;</span>84d58aee-4f81-460f-993e-a594ce3a8d60<span class="nt">&lt;/drmd:uniqueIdentifier&gt;</span>
 </span></code></pre></div>
-<hr />
 <h3 id="313-document-version-documentversion">3.1.3 Document Version (<code>documentVersion</code>)<a class="headerlink" href="#313-document-version-documentversion" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1189,7 +1184,6 @@
 <p><strong>Purpose:</strong> A mandatory version string identifying the revision of this document. Enables recipients to verify they hold the current version (ISO 33401:2024, §5.2.13).</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;drmd:documentVersion&gt;</span>1.0.0<span class="nt">&lt;/drmd:documentVersion&gt;</span>
 </span></code></pre></div>
-<hr />
 <h3 id="314-document-identifiers-documentidentifiers">3.1.4 Document Identifiers (<code>documentIdentifiers</code>)<a class="headerlink" href="#314-document-identifiers-documentidentifiers" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1225,7 +1219,7 @@
     DI2 --&gt; S2["scheme: Internal_ERP"]
     DI2 --&gt; V2["value: BATCH-2026-X99"]
 
-    style DI fill:#3f51b5,color:#fff
+    style DI fill:#e8eaf6,color:#000,stroke:#3f51b5
     style DI1 fill:#e3f2fd,stroke:#1565c0
     style DI2 fill:#e3f2fd,stroke:#1565c0</code></pre>
 <p>Each <code>documentIdentifier</code> contains:</p>
@@ -1278,7 +1272,6 @@
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nt">&lt;/drmd:documentIdentifiers&gt;</span>
 </span></code></pre></div>
 </details>
-<hr />
 <h3 id="315-validity-validity">3.1.5 Validity (<code>validity</code>)<a class="headerlink" href="#315-validity-validity" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1320,7 +1313,7 @@
     TAD --&gt; DD["dispatchDate&lt;br/&gt;&lt;i&gt;xs:date [0..1]&lt;/i&gt;"]
     TAD --&gt; PER["period&lt;br/&gt;&lt;i&gt;xs:duration [1..1]&lt;/i&gt;"]
 
-    style VAL fill:#3f51b5,color:#fff
+    style VAL fill:#e8eaf6,color:#000,stroke:#3f51b5
     style ST fill:#fff3e0,stroke:#ff9800
     style TAD fill:#e8f5e9,stroke:#4caf50
     style UR fill:#e3f2fd,stroke:#1565c0</code></pre>
@@ -1356,7 +1349,6 @@
 </div>
 </div>
 </div>
-<hr />
 <h2 id="32-reference-material-producer-referencematerialproducer">3.2 Reference Material Producer (<code>referenceMaterialProducer</code>)<a class="headerlink" href="#32-reference-material-producer-referencematerialproducer" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1408,7 +1400,7 @@
     CONTACT --&gt; LN["link"]
     CONTACT --&gt; LOC["location"]
 
-    style RMP fill:#3f51b5,color:#fff
+    style RMP fill:#e8eaf6,color:#000,stroke:#3f51b5
     style NAME fill:#c5cae9,stroke:#3f51b5
     style CONTACT fill:#c5cae9,stroke:#3f51b5
     style SEAL fill:#e8eaf6,stroke:#9fa8da
@@ -1448,7 +1440,6 @@
 </tbody>
 </table>
 </details>
-<hr />
 <h3 id="321-name">3.2.1 Name<a class="headerlink" href="#321-name" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1486,7 +1477,6 @@
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>Bundesanstalt<span class="w"> </span>fuer<span class="w"> </span>Materialforschung<span class="w"> </span>und<span class="w"> </span>-pruefung<span class="w"> </span>(BAM)<span class="nt">&lt;/dcc:content&gt;</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nt">&lt;/drmd:name&gt;</span>
 </span></code></pre></div>
-<hr />
 <h3 id="322-contact">3.2.2 Contact<a class="headerlink" href="#322-contact" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1593,7 +1583,6 @@
 </span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="nt">&lt;/drmd:contact&gt;</span>
 </span></code></pre></div>
 </details>
-<hr />
 <h3 id="323-descriptiondata-optional-attachment">3.2.3 descriptionData (Optional Attachment)<a class="headerlink" href="#323-descriptiondata-optional-attachment" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1624,7 +1613,6 @@
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">&lt;dcc:dataBase64&gt;</span>BASE64_ENCODED_BYTES_HERE==<span class="nt">&lt;/dcc:dataBase64&gt;</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nt">&lt;/dcc:descriptionData&gt;</span>
 </span></code></pre></div>
-<hr />
 <h3 id="324-cryptographic-capability-flags-optional-booleans">3.2.4 Cryptographic Capability Flags (Optional Booleans)<a class="headerlink" href="#324-cryptographic-capability-flags-optional-booleans" title="Permanent link">&para;</a></h3>
 <p>These flags are <strong>capability / policy hints</strong>, not proofs. They help consumers know what to expect from the producer's trust infrastructure.</p>
 <table>
@@ -1686,7 +1674,6 @@
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nt">&lt;drmd:cryptElectronicSignature&gt;</span>false<span class="nt">&lt;/drmd:cryptElectronicSignature&gt;</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">&lt;drmd:cryptElectronicTimeStamp&gt;</span>true<span class="nt">&lt;/drmd:cryptElectronicTimeStamp&gt;</span>
 </span></code></pre></div>
-<hr />
 <h3 id="325-organization-identifiers-optional-list">3.2.5 Organization Identifiers (Optional List)<a class="headerlink" href="#325-organization-identifiers-optional-list" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1768,7 +1755,6 @@
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nt">&lt;/drmd:organizationIdentifiers&gt;</span>
 </span></code></pre></div>
 </details>
-<hr />
 <h2 id="33-responsible-persons-resppersons">3.3 Responsible Persons (<code>respPersons</code>)<a class="headerlink" href="#33-responsible-persons-resppersons" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1788,7 +1774,7 @@
 </tr>
 <tr>
 <td><strong>Cardinality</strong></td>
-<td>CRM: <strong>Mandatory</strong> / RM: <strong>Optional</strong> <code>[0..1]</code></td>
+<td>CRM: <strong>Mandatory</strong> / ProductInformationSheet: <strong>Optional</strong> <code>[0..1]</code></td>
 </tr>
 </tbody>
 </table>
@@ -1818,7 +1804,7 @@
     P1 --&gt; PP["phone"]
     P1 --&gt; PL["link"]
 
-    style RP fill:#3f51b5,color:#fff
+    style RP fill:#e8eaf6,color:#000,stroke:#3f51b5
     style RP1 fill:#c5cae9,stroke:#3f51b5
     style RP2 fill:#c5cae9,stroke:#3f51b5
     style P1 fill:#e8eaf6,stroke:#9fa8da</code></pre>
@@ -1851,7 +1837,6 @@
 </tbody>
 </table>
 </details>
-<hr />
 <h3 id="331-responsible-person-entry-respperson">3.3.1 Responsible Person Entry (<code>respPerson</code>)<a class="headerlink" href="#331-responsible-person-entry-respperson" title="Permanent link">&para;</a></h3>
 <p>Each <code>dcc:respPerson</code> entry captures <strong>who is responsible</strong> and optionally <strong>what role they play</strong>.</p>
 <p><strong>Attributes (identity &amp; linking):</strong></p>
@@ -1940,7 +1925,6 @@
 <p class="admonition-title">Best Practice</p>
 <p>If you have a signing workflow, set exactly <strong>one</strong> <code>mainSigner=true</code>. Always set <code>@id</code> so other elements can reference the person consistently.</p>
 </div>
-<hr />
 <h3 id="332-person-details-dccperson">3.3.2 Person Details (<code>dcc:person</code>)<a class="headerlink" href="#332-person-details-dccperson" title="Permanent link">&para;</a></h3>
 <p>The <code>dcc:person</code> element uses type <code>dcc:contactNotStrictType</code>, meaning <strong>location is optional</strong> (unlike <code>dcc:contactType</code> where location is required).</p>
 <table>
@@ -1997,7 +1981,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="333-complete-responsible-persons-example">3.3.3 Complete Responsible Persons Example<a class="headerlink" href="#333-complete-responsible-persons-example" title="Permanent link">&para;</a></h3>
 <details class="example" open="open">
 <summary>Full XML Example with Two Responsible Persons</summary>
@@ -2044,7 +2027,6 @@
 </span><span id="__span-12-41"><a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="nt">&lt;/drmd:respPersons&gt;</span>
 </span></code></pre></div>
 </details>
-<hr />
 <h2 id="business-rules-summary">Business Rules Summary<a class="headerlink" href="#business-rules-summary" title="Permanent link">&para;</a></h2>
 <p>The following Schematron business rules apply specifically to the <strong>Administrative Data</strong> block. Full compliance requires passing both XSD and Schematron validation.</p>
 <table>
@@ -2090,7 +2072,6 @@
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Both steps MUST pass for a document to be considered fully compliant.
 </span></code></pre></div>
 </div>
-<hr />
 <h2 id="complete-administrative-data-example">Complete Administrative Data Example<a class="headerlink" href="#complete-administrative-data-example" title="Permanent link">&para;</a></h2>
 <details class="example">
 <summary>Full administrativeData Block (Click to Expand)</summary>

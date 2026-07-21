@@ -6,43 +6,45 @@ This guide provides comprehensive instructions for machine manufacturers, refere
 
 <style>
 .drmd-acronym-container {
-    display: flex;
-    gap: 40px;
-    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
     align-items: flex-start;
 }
 .drmd-column {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .drmd-letter-heading {
-    border-bottom: 3px solid #000;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     align-items: baseline;
     white-space: nowrap;
 }
 .drmd-big-letter {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: #d32f2f;
-    line-height: 0.8;
+    line-height: 0.85;
 }
 .drmd-rest-word {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #000;
     margin-left: 2px;
 }
 .drmd-desc {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     line-height: 1.6;
-    color: #212121;
+    color: #333;
 }
 @media (max-width: 768px) {
     .drmd-acronym-container {
-        flex-direction: column;
-        gap: 30px;
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 }
 </style>

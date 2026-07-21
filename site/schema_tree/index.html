@@ -720,7 +720,7 @@ function initSchemaTree() {
     const treeNav = document.querySelector("#tree-nav");
     if (!treeNav) return; // Not on the schema tree page
     // Prevent double initialization if navigating back
-    if (treeNav.innerHTML.trim() !== "") return;
+    if (treeNav.children.length > 0) return;
 
     let globalData = null;
     let selectedNode = null;

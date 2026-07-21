@@ -717,8 +717,10 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 function initSchemaTree() {
+    const treeNav = document.querySelector("#tree-nav");
+    if (!treeNav) return; // Not on the schema tree page
     // Prevent double initialization if navigating back
-    if (document.querySelector("#tree-nav").innerHTML.trim() !== "") return;
+    if (treeNav.innerHTML.trim() !== "") return;
 
     let globalData = null;
     let selectedNode = null;

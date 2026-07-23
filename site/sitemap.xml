@@ -2,18 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://punitharumilli.github.io/DRMD_Schema/</loc>
-         <lastmod>2026-07-21</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://punitharumilli.github.io/DRMD_Schema/administrative_data/</loc>
-         <lastmod>2026-07-21</lastmod>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://punitharumilli.github.io/DRMD_Schema/architecture/</loc>
-         <lastmod>2026-07-21</lastmod>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/checklists/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/comments_documents/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/cross_references/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/digital_signature/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/interoperability_profiles/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/materials/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/parsing_guide/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/properties/</loc>
+         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
          <loc>https://punitharumilli.github.io/DRMD_Schema/schema_tree/</loc>
-         <lastmod>2026-07-21</lastmod>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/security_trust/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/statements/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/units_quantities/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/validation_rules/</loc>
+         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+         <loc>https://punitharumilli.github.io/DRMD_Schema/versioning/</loc>
+         <lastmod>2026-07-23</lastmod>
     </url>
 </urlset>

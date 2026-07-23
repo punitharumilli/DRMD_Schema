@@ -12,29 +12,31 @@
         <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
       
       
-        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/">
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/security_trust/">
       
       
+        <link rel="prev" href="../parsing_guide/">
       
-        <link rel="next" href="architecture/">
+      
+        <link rel="next" href="../versioning/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Digital Reference Material Document (DRMD)</title>
+        <title>14. Security & Trust Model - Digital Reference Material Document (DRMD)</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-overview" class="md-skip">
+        <a href="#security-trust-model" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Home
+              14. Security & Trust Model
             
           </span>
         </div>
@@ -220,7 +222,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -235,37 +237,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -281,87 +256,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-drmd-ecosystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The DRMD Ecosystem
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The DRMD Ecosystem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How it works
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#target-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target Audience
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-3-tier-validation-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The 3-Tier Validation Model
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-read-this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to read this guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -373,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         
   
   
@@ -400,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="administrative_data/" class="md-nav__link">
+      <a href="../administrative_data/" class="md-nav__link">
         
   
   
@@ -427,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="materials/" class="md-nav__link">
+      <a href="../materials/" class="md-nav__link">
         
   
   
@@ -454,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="properties/" class="md-nav__link">
+      <a href="../properties/" class="md-nav__link">
         
   
   
@@ -481,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statements/" class="md-nav__link">
+      <a href="../statements/" class="md-nav__link">
         
   
   
@@ -508,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="comments_documents/" class="md-nav__link">
+      <a href="../comments_documents/" class="md-nav__link">
         
   
   
@@ -535,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="digital_signature/" class="md-nav__link">
+      <a href="../digital_signature/" class="md-nav__link">
         
   
   
@@ -562,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interoperability_profiles/" class="md-nav__link">
+      <a href="../interoperability_profiles/" class="md-nav__link">
         
   
   
@@ -589,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cross_references/" class="md-nav__link">
+      <a href="../cross_references/" class="md-nav__link">
         
   
   
@@ -616,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="units_quantities/" class="md-nav__link">
+      <a href="../units_quantities/" class="md-nav__link">
         
   
   
@@ -643,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="validation_rules/" class="md-nav__link">
+      <a href="../validation_rules/" class="md-nav__link">
         
   
   
@@ -670,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="parsing_guide/" class="md-nav__link">
+      <a href="../parsing_guide/" class="md-nav__link">
         
   
   
@@ -694,10 +588,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="security_trust/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Security & Trust Model
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -713,6 +634,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#141-trust-store-certificate-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Trust Store &amp; Certificate Governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-handling-embedded-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Handling Embedded Documents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2 Handling Embedded Documents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-implementation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Implementation Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#143-transport-storage-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Transport &amp; Storage Integrity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#144-summary-of-security-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4 Summary of Security Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -724,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="versioning/" class="md-nav__link">
+      <a href="../versioning/" class="md-nav__link">
         
   
   
@@ -751,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="checklists/" class="md-nav__link">
+      <a href="../checklists/" class="md-nav__link">
         
   
   
@@ -778,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schema_tree/" class="md-nav__link">
+      <a href="../schema_tree/" class="md-nav__link">
         
   
   
@@ -825,22 +827,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-drmd-ecosystem" class="md-nav__link">
+  <a href="#141-trust-store-certificate-governance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The DRMD Ecosystem
+        14.1 Trust Store &amp; Certificate Governance
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The DRMD Ecosystem">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-handling-embedded-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Handling Embedded Documents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2 Handling Embedded Documents">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#security-implementation-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How it works
+        Security Implementation Rules
       
     </span>
   </a>
@@ -853,10 +866,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#target-audience" class="md-nav__link">
+  <a href="#143-transport-storage-integrity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Target Audience
+        14.3 Transport &amp; Storage Integrity
       
     </span>
   </a>
@@ -864,21 +877,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-3-tier-validation-model" class="md-nav__link">
+  <a href="#144-summary-of-security-responsibilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The 3-Tier Validation Model
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-read-this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to read this guide
+        14.4 Summary of Security Responsibilities
       
     </span>
   </a>
@@ -902,153 +904,70 @@
 
 
 
-<h1 id="introduction-overview">Introduction &amp; Overview<a class="headerlink" href="#introduction-overview" title="Permanent link">&para;</a></h1>
-<p>Welcome to the <strong>Best Practice Guidelines</strong> for the <strong>Digital Reference Material Document (DRMD)</strong>.</p>
-<p>This guide provides comprehensive instructions for machine manufacturers, reference material producers, and software developers to ensure consistent, interoperable, and automated handling of DRMD certificates across different platforms.</p>
-<style>
-.drmd-acronym-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 30px 0;
-    align-items: flex-start;
-}
-.drmd-column {
-    display: flex;
-    flex-direction: column;
-}
-.drmd-letter-heading {
-    border-bottom: 2px solid #000;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    white-space: nowrap;
-}
-.drmd-big-letter {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #d32f2f;
-    line-height: 0.85;
-}
-.drmd-rest-word {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #000;
-    margin-left: 2px;
-}
-.drmd-desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #333;
-    text-align: justify;
-}
-@media (max-width: 768px) {
-    .drmd-acronym-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
-</style>
-
-<div class="drmd-acronym-container">
-    <div class="drmd-column">
-        <div class="drmd-letter-heading">
-            <span class="drmd-big-letter">D</span><span class="drmd-rest-word">igital</span>
-        </div>
-        <div class="drmd-desc">
-            The term Digital represents our process of converting standard PDF formats into fully machine-readable formats for automated data processing.
-        </div>
-    </div>
-    <div class="drmd-column">
-        <div class="drmd-letter-heading">
-            <span class="drmd-big-letter">R</span><span class="drmd-rest-word">eference</span>
-            <span class="drmd-big-letter" style="margin-left: 12px;">M</span><span class="drmd-rest-word">aterial</span>
-        </div>
-        <div class="drmd-desc">
-            The Reference Material forms the core engine of this project, acting as the foundational source of truth for all data verification.
-        </div>
-    </div>
-    <div class="drmd-column">
-        <div class="drmd-letter-heading">
-            <span class="drmd-big-letter">D</span><span class="drmd-rest-word">ocument</span>
-        </div>
-        <div class="drmd-desc">
-            The Document signifies the final structured layout specifically designed to output Certified Reference Materials (CRM) and Product Information Sheets.
-        </div>
-    </div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">What is the DRMD?</p>
-<p>The DRMD is a standardized XML-based format designed to digitally represent reference material certificates in strict compliance with <strong>ISO 17034</strong> (Competence of reference material producers) and <strong>ISO 33401</strong> (Reference materials - Guidance for characterization and assessment of homogeneity and stability).</p>
-</div>
-<h2 id="the-drmd-ecosystem">The DRMD Ecosystem<a class="headerlink" href="#the-drmd-ecosystem" title="Permanent link">&para;</a></h2>
-<p>The DRMD schema transforms static PDF certificates into a machine-readable ecosystem. By moving to structured data, it enables:</p>
+<h1 id="security-trust-model">Security &amp; Trust Model<a class="headerlink" href="#security-trust-model" title="Permanent link">&para;</a></h1>
+<p>The trust model ensures that technical data (values, units, uncertainties) remains authentic and entirely unaltered from the moment of issuance by the Reference Material Producer (RMP) to the moment of automated consumption by an analytical instrument or Laboratory Information Management System (LIMS).</p>
+<p>While structural validation and Schematron business rules ensure the document makes sense, the Security &amp; Trust Model ensures the document has not been tampered with.</p>
+<hr />
+<h2 id="141-trust-store-certificate-governance">14.1 Trust Store &amp; Certificate Governance<a class="headerlink" href="#141-trust-store-certificate-governance" title="Permanent link">&para;</a></h2>
+<p>Digital signatures (as defined in Chapter 8) are only as strong as the cryptographic infrastructure supporting them.</p>
 <ul>
-<li><strong>Automated parsing</strong> without manual data entry.</li>
-<li><strong>Seamless LIMS integration</strong> for analytical laboratories.</li>
-<li><strong>Standardized data exchange</strong> between producers and end-users.</li>
-<li><strong>Regulatory compliance</strong> through structured traceability and uncertainty data.</li>
+<li><strong>Trust Anchors:</strong> Consumers (laboratories and software applications) must maintain a "Trust Store" of authorized Root Certificates from recognized Reference Material Producers (e.g., BAM, NIST, ERM).</li>
+<li><strong>Identity Verification:</strong> RMPs should use organizational certificates (Electronic Seals) issued by Qualified Trust Service Providers (TSPs) to ensure the signature is legally linked to the institution, not just an individual.</li>
+<li><strong>Public Key Distribution:</strong> Producers should publish their public keys or certificate fingerprints on official, secure websites (HTTPS) to allow software vendors to pre-configure trust.</li>
+<li><strong>Revocation Checks:</strong> Software implementations should periodically check Certificate Revocation Lists (CRL) or use Online Certificate Status Protocol (OCSP) to ensure a producer's signing key hasn't been compromised.</li>
 </ul>
-<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
-    %% Styles
-    classDef producer fill:#e3f2fd,stroke:#0288d1,stroke-width:2px;
-    classDef schema fill:#f3e5f5,stroke:#e65100,stroke-width:2px;
-    classDef user fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-
-    P[RM Producer]:::producer --&gt;|Generates XML| XSD[(DRMD Schema &amp;&lt;br&gt;Schematron Validation)]:::schema
-    XSD --&gt;|Validates &amp; Ingests| U[LIMS &amp; Instruments]:::user</code></pre>
-<h2 id="target-audience">Target Audience<a class="headerlink" href="#target-audience" title="Permanent link">&para;</a></h2>
-<p>This best practice guide is designed for multiple stakeholders across the quality infrastructure:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Machine Manufacturers &amp; Software</label><label for="__tabbed_1_2">Reference Material Producers</label><label for="__tabbed_1_3">End-Users &amp; Laboratories</label><label for="__tabbed_1_4">Auditors &amp; Regulators</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Developers of LIMS, ELN, and analytical instrument software who need to confidently import, parse, and process DRMD certificates.</p>
-</div>
-<div class="tabbed-block">
-<p>Organizations certified according to ISO 17034 who generate and distribute DRMD certificates. This guide ensures your output achieves maximum interoperability.</p>
-</div>
-<div class="tabbed-block">
-<p>Quality control departments and calibration facilities that load DRMD certificates into their systems and require a deep understanding of the certificate structure.</p>
-</div>
-<div class="tabbed-block">
-<p>Quality Assurance personnel responsible for verifying data integrity, cryptographic signatures, and maintaining audit trails for compliance.</p>
-</div>
-</div>
-</div>
 <hr />
-<h2 id="the-3-tier-validation-model">The 3-Tier Validation Model<a class="headerlink" href="#the-3-tier-validation-model" title="Permanent link">&para;</a></h2>
-<p>To ensure machine-readability and compliance with ISO 33401:2024, the DRMD schema utilizes a powerful companion <strong>Schematron</strong> validation file (<code>drmd-business-rules.sch</code>). </p>
-<p>We have implemented a strict <strong>3-Tier Severity Model</strong> that maps directly to ISO requirement categories. When you validate an XML document, you will see one of the following outputs:</p>
-<div class="admonition failure">
-<p class="admonition-title">Hard Error (Must not accept)</p>
-<p><strong>(ISO Requirement: Mandatory)</strong><br />
-If a document violates a Hard Error rule (e.g., missing a <code>titleOfTheDocument</code> or a mandatory <code>uniqueIdentifier</code>), it is completely non-compliant and must fail conformance validation.</p>
-</div>
+<h2 id="142-handling-embedded-documents">14.2 Handling Embedded Documents<a class="headerlink" href="#142-handling-embedded-documents" title="Permanent link">&para;</a></h2>
+<p>The DRMD schema allows embedding binary files like PDFs and images within the <code>drmd:document</code> element. Because these are "untrusted" data streams traversing the network, they require strict security processing.</p>
 <div class="admonition warning">
-<p class="admonition-title">Conditional Error</p>
-<p><strong>(ISO Requirement: Mandatory whenever applicable)</strong><br />
-Rules that must be followed under specific conditions. For example, <code>procedures</code> must be documented whenever measurands are operationally defined. If the condition is met but the data is missing, validation fails.</p>
+<p class="admonition-title">Strict Payload Processing</p>
+<p>Failure to properly sanitize embedded Base64 documents can result in malware execution or Denial-of-Service (DoS) attacks via memory exhaustion.</p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">Warning (Advisory)</p>
-<p><strong>(ISO Requirement: Recommended)</strong><br />
-The document is structurally valid, but is missing recommended fields (e.g., <code>healthAndSafetyInformation</code> or highest-tier D-SI unit classes). It is acceptable but reduces interoperability.</p>
-</div>
-<hr />
-<h2 id="how-to-read-this-guide">How to read this guide<a class="headerlink" href="#how-to-read-this-guide" title="Permanent link">&para;</a></h2>
-<p>In the following chapters, we will break down the DRMD schema into its <strong>Six Core Containers</strong>, providing you with best-practice examples, XML snippets, and strict rules for implementation:</p>
+<h3 id="security-implementation-rules">Security Implementation Rules<a class="headerlink" href="#security-implementation-rules" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Administrative Data</strong></li>
-<li><strong>Materials</strong></li>
-<li><strong>Properties List</strong></li>
-<li><strong>Statements</strong></li>
-<li><strong>Comments &amp; Documents</strong></li>
-<li><strong>Digital Signature</strong></li>
+<li><strong>Size Limits:</strong> To prevent "XML bomb" or memory exhaustion attacks, parsers should enforce a maximum size for <code>dcc:dataBase64</code> elements (e.g., a hard limit of 50 MB).</li>
+<li><strong>Malware Scanning:</strong> All extracted attachments <strong>MUST</strong> be scanned for viruses and malicious macros before being opened by the end-user or saved to disk.</li>
+<li><strong>MIME-Type Whitelisting:</strong> Systems should only process a restricted list of safe formats (e.g., <code>application/pdf</code>, <code>image/png</code>, <code>image/jpeg</code>). Executable files (e.g., <code>.exe</code>, <code>.bat</code>, <code>.js</code>) MUST be outright rejected.</li>
+<li><strong>Content Consistency:</strong> Software should verify that the <code>dcc:fileName</code> extension matches the declared <code>dcc:mimeType</code> to prevent "extension spoofing".</li>
 </ol>
-<p>Click <strong>Next</strong> below to dive into the Schema Overview &amp; Architecture!</p>
+<hr />
+<h2 id="143-transport-storage-integrity">14.3 Transport &amp; Storage Integrity<a class="headerlink" href="#143-transport-storage-integrity" title="Permanent link">&para;</a></h2>
+<p>Even with a digital signature present, the operational environment must protect the DRMD from accidental or malicious corruption during its lifecycle.</p>
+<ul>
+<li><strong>Secure Transport:</strong> DRMDs should always be exchanged over encrypted channels (e.g., HTTPS, SFTP, or TLS-encrypted API calls).</li>
+<li><strong>Storage Immutability:</strong> Once a DRMD is imported into a LIMS or instrument library, it should be marked as <strong>Read-Only</strong>. Any changes to the data must require the issuance of a new DRMD with a completely new <code>uniqueIdentifier</code>.</li>
+<li><strong>Hashing for Quick Verification:</strong> Systems should generate and store a cryptographic hash (e.g., SHA-256) of the entire DRMD file upon import. This allows for rapid integrity checks without performing a full, expensive XMLDSig verification every time the file is accessed.</li>
+<li><strong>Audit Trail Requirements:</strong> All security-relevant events—such as signature verification success/failure, certificate expiration warnings, and attachment extractions—must be logged in a local system audit trail for regulatory review.</li>
+</ul>
+<hr />
+<h2 id="144-summary-of-security-responsibilities">14.4 Summary of Security Responsibilities<a class="headerlink" href="#144-summary-of-security-responsibilities" title="Permanent link">&para;</a></h2>
+<p>Security is a shared responsibility across the entire supply chain. </p>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Primary Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference Material Producer</strong></td>
+<td>Signs the document with a valid, non-expired organizational seal. Securely distributes their public keys.</td>
+</tr>
+<tr>
+<td><strong>Software Developer</strong></td>
+<td>Implements automated signature validation, strict XML parsing, and attachment malware scanning.</td>
+</tr>
+<tr>
+<td><strong>Laboratory (End User)</strong></td>
+<td>Maintains the local trust store and reviews system audit logs for any signature failures.</td>
+</tr>
+<tr>
+<td><strong>Auditor</strong></td>
+<td>Verifies that the digital "Chain of Trust" is intact, logged, and policy-compliant.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1085,15 +1004,31 @@ The document is structurally valid, but is missing recommended fields (e.g., <co
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../parsing_guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 13. Parsing &amp; Data Extraction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                13. Parsing & Data Extraction
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Overview &amp; Architecture">
+          <a href="../versioning/" class="md-footer__link md-footer__link--next" aria-label="Next: 15. Versioning">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                2. Overview & Architecture
+                15. Versioning
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1130,10 +1065,10 @@ The document is structurally valid, but is missing recommended fields (e.g., <co
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

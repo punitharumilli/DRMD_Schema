@@ -12,13 +12,13 @@
         <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
       
       
-        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/architecture/">
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/parsing_guide/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../validation_rules/">
       
       
-        <link rel="next" href="../administrative_data/">
+        <link rel="next" href="../security_trust/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>2. Overview & Architecture - Digital Reference Material Document (DRMD)</title>
+        <title>13. Parsing & Data Extraction - Digital Reference Material Document (DRMD)</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#schema-overview-architecture" class="md-skip">
+        <a href="#parsing-data-extraction-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Overview & Architecture
+              13. Parsing & Data Extraction
             
           </span>
         </div>
@@ -264,37 +264,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2. Overview & Architecture
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
         
   
   
@@ -310,59 +283,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-six-core-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Six Core Containers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xml-namespaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🌐 XML Namespaces
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning-compatibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔄 Versioning &amp; Compatibility
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -641,10 +561,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../parsing_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Parsing & Data Extraction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -660,6 +607,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#131-namespace-handling-parser-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Namespace Handling &amp; Parser Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1 Namespace Handling &amp; Parser Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1311-prefix-independence-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1.1 Prefix-Independence (Critical)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1312-recommended-parser-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1.2 Recommended Parser Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-data-normalization-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Data Normalization Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.2 Data Normalization Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1321-multilingual-text-fallback-dcctexttype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2.1 Multilingual Text Fallback (dcc:textType)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1322-identifier-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2.2 Identifier Normalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1323-numeric-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2.3 Numeric Precision
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-the-quantity-extraction-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 The Quantity Extraction Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#134-recommended-internal-object-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Recommended Internal Object Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -799,10 +877,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-six-core-containers" class="md-nav__link">
+  <a href="#131-namespace-handling-parser-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Six Core Containers
+        13.1 Namespace Handling &amp; Parser Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1 Namespace Handling &amp; Parser Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1311-prefix-independence-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1.1 Prefix-Independence (Critical)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1312-recommended-parser-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1.2 Recommended Parser Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-data-normalization-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Data Normalization Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.2 Data Normalization Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1321-multilingual-text-fallback-dcctexttype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2.1 Multilingual Text Fallback (dcc:textType)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1322-identifier-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2.2 Identifier Normalization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1323-numeric-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2.3 Numeric Precision
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-the-quantity-extraction-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 The Quantity Extraction Algorithm
       
     </span>
   </a>
@@ -810,21 +977,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#xml-namespaces" class="md-nav__link">
+  <a href="#134-recommended-internal-object-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🌐 XML Namespaces
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning-compatibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔄 Versioning &amp; Compatibility
+        13.4 Recommended Internal Object Model
       
     </span>
   </a>
@@ -848,46 +1004,138 @@
 
 
 
-<h1 id="schema-overview-architecture">🏗️ Schema Overview &amp; Architecture<a class="headerlink" href="#schema-overview-architecture" title="Permanent link">&para;</a></h1>
-<p>The DRMD schema is carefully engineered to be both human-readable and strictly machine-parsable. It is organized into <strong>six interconnected containers</strong>, each serving a specific function in representing a complete reference material certificate.</p>
-<h2 id="the-six-core-containers">The Six Core Containers<a class="headerlink" href="#the-six-core-containers" title="Permanent link">&para;</a></h2>
-<div class="admonition abstract">
-<p class="admonition-title">1. Administrative Data (<code>administrativeData</code>)</p>
-<p>Captures essential document metadata and organizational information required for certificate identification and traceability. This includes the document title, unique identifier, validity period, producer contact details, and responsible person signatures.</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">2. Materials (<code>materials</code>)</p>
-<p>Defines the reference materials covered by the certificate. It includes the material name, detailed description, classification, minimum sample sizes, and item quantity information.</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">3. Material Properties (<code>materialProperties</code>)</p>
-<p>The core data payload. Documents the <strong>certified</strong> and <strong>informational</strong> properties of the material. It includes measurement procedures, results (values, units, and uncertainties), and metrological traceability.</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">4. Statements (<code>statements</code>)</p>
-<p>Provides essential non-numerical guidelines including intended use, storage requirements, handling instructions, health and safety information, and legal notices.</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">5. Comments &amp; Documents (<code>comments</code>, <code>document</code>)</p>
-<p>Allows for supplementary free-text comments and the embedding of binary files (such as a Base64-encoded PDF rendition of the original certificate).</p>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">6. Digital Signature (<code>ds:Signature</code>)</p>
-<p>Provides cryptographic digital signatures (XMLDSig) that guarantee the authenticity, integrity, and non-repudiation of the DRMD certificate.</p>
-</div>
+<h1 id="parsing-data-extraction-guide">Parsing &amp; Data Extraction Guide<a class="headerlink" href="#parsing-data-extraction-guide" title="Permanent link">&para;</a></h1>
+<p>This chapter provides implementation guidance for software developers—such as those building LIMS (Laboratory Information Management Systems), ELNs (Electronic Lab Notebooks), or analytical instrument software—to reliably parse DRMD documents and extract data for automated workflows.</p>
+<p>Because the DRMD schema is built upon DCC and SI namespaces, and supports multilingual text and optional attachments, a robust parser must be designed to handle these variables gracefully.</p>
 <hr />
-<h2 id="xml-namespaces">🌐 XML Namespaces<a class="headerlink" href="#xml-namespaces" title="Permanent link">&para;</a></h2>
-<p>DRMD certificates utilize multiple XML namespaces to securely organize different types of information and borrow from established international standards:</p>
+<h2 id="131-namespace-handling-parser-configuration">13.1 Namespace Handling &amp; Parser Configuration<a class="headerlink" href="#131-namespace-handling-parser-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="1311-prefix-independence-critical">13.1.1 Prefix-Independence (Critical)<a class="headerlink" href="#1311-prefix-independence-critical" title="Permanent link">&para;</a></h3>
+<p>XML prefixes are not significant and can change depending on how the document was generated. <strong>Your code MUST match elements by Namespace URI + Local Name, never by prefix string.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Namespace</th>
+<th>Recommended URI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DRMD</strong></td>
+<td><code>https://example.org/drmd</code></td>
+</tr>
+<tr>
+<td><strong>DCC</strong></td>
+<td><code>https://ptb.de/dcc</code></td>
+</tr>
+<tr>
+<td><strong>SI</strong></td>
+<td><code>https://ptb.de/si</code></td>
+</tr>
+<tr>
+<td><strong>XMLDSig</strong></td>
+<td><code>http://www.w3.org/2000/09/xmldsig#</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="1312-recommended-parser-configuration">13.1.2 Recommended Parser Configuration<a class="headerlink" href="#1312-recommended-parser-configuration" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><code>drmd</code></strong> (<code>https://example.org/drmd</code>): Contains the primary DRMD-specific elements.</li>
-<li><strong><code>dcc</code></strong> (<code>https://ptb.de/dcc</code>): Provides common data elements shared across digital certificate standards (Digital Calibration Certificate).</li>
-<li><strong><code>si</code></strong> (<code>https://ptb.de/si</code>): Handles scientific and metrological data including numerical values and units (Digital System of Units).</li>
-<li><strong><code>ds</code></strong> (<code>http://www.w3.org/2000/09/xmldsig#</code>): Defines the standard XML Digital Signature elements.</li>
+<li>Use a fully namespace-aware XML parser.</li>
+<li><strong>Disable external entity resolution</strong> (XXE protection) to ensure security.</li>
+<li>If performing structural validation, resolve schema imports from trusted offline bundles rather than external URLs.</li>
 </ul>
 <hr />
-<h2 id="versioning-compatibility">🔄 Versioning &amp; Compatibility<a class="headerlink" href="#versioning-compatibility" title="Permanent link">&para;</a></h2>
-<p>Every DRMD document MUST declare its schema specification version in the root element (e.g., <code>@schemaVersion="0.3.0"</code>). </p>
-<p>Software parsing DRMD certificates should implement version checking logic to ensure backward compatibility and prevent misinterpretation of data during major schema upgrades.</p>
+<h2 id="132-data-normalization-strategies">13.2 Data Normalization Strategies<a class="headerlink" href="#132-data-normalization-strategies" title="Permanent link">&para;</a></h2>
+<h3 id="1321-multilingual-text-fallback-dcctexttype">13.2.1 Multilingual Text Fallback (<code>dcc:textType</code>)<a class="headerlink" href="#1321-multilingual-text-fallback-dcctexttype" title="Permanent link">&para;</a></h3>
+<p>Many strings appear as <code>dcc:content</code> with an optional <code>@lang</code> attribute (ISO 639-1). Implement the following fallback algorithm for UI display:</p>
+<ol>
+<li>If the application requests a specific language (e.g., <code>en</code>), select all <code>dcc:content[@lang='en']</code>.</li>
+<li>If none match, look for <code>dcc:content</code> elements without a <code>@lang</code> attribute (treat as default).</li>
+<li>If still none match, use the very first available <code>dcc:content</code> block regardless of language.</li>
+</ol>
+<h3 id="1322-identifier-normalization">13.2.2 Identifier Normalization<a class="headerlink" href="#1322-identifier-normalization" title="Permanent link">&para;</a></h3>
+<p>When extracting <code>(scheme, value)</code> identifier pairs:
+- Trim all whitespace.
+- Normalize the <code>scheme</code> spelling (e.g., lowercasing).
+- <strong>Keep raw values unchanged</strong> (as some identifier values are case-sensitive).</p>
+<h3 id="1323-numeric-precision">13.2.3 Numeric Precision<a class="headerlink" href="#1323-numeric-precision" title="Permanent link">&para;</a></h3>
+<p>Store extracted values as high-precision numeric types (double or decimal). <strong>Do not round values upon import.</strong> Preserve the original lexical form to ensure round-trip integrity, and apply rounding logic only at the UI/display layer.</p>
+<hr />
+<h2 id="133-the-quantity-extraction-algorithm">13.3 The Quantity Extraction Algorithm<a class="headerlink" href="#133-the-quantity-extraction-algorithm" title="Permanent link">&para;</a></h2>
+<p>The <code>drmd:quantity</code> element can carry its payload in several different XML types. A robust parser should implement a unified algorithm to extract the value, unit, and uncertainty based on the provided choice.</p>
+<pre class="mermaid"><code>graph TD
+    Q["Extract drmd:quantity"]
+
+    Q --&gt; CHK{Determine Payload Type}
+
+    CHK --&gt;|si:real| S_REAL["Extract:&lt;br/&gt;1. si:value&lt;br/&gt;2. si:unit&lt;br/&gt;3. si:measurementUncertaintyUnivariate"]
+    CHK --&gt;|si:realListXMLList| S_LIST["Extract:&lt;br/&gt;1. si:valueXMLList&lt;br/&gt;2. si:unitXMLList"]
+    CHK --&gt;|dcc:noQuantity| N_QUANT["Extract text from:&lt;br/&gt;dcc:content&lt;br/&gt;&lt;i&gt;(Treat as non-numeric)&lt;/i&gt;"]
+    CHK --&gt;|dcc:charsXMLList| C_LIST["Extract space-separated string"]
+
+    S_REAL --&gt; ID["Extract propertyIdentifiers (Scheme/Value)"]
+    S_LIST --&gt; ID
+    N_QUANT --&gt; ID
+    C_LIST --&gt; ID
+
+    style Q fill:#e8eaf6,color:#000,stroke:#283593
+    style CHK fill:#c5cae9,color:#000,stroke:#3949ab
+    style S_REAL fill:#e3f2fd,color:#000,stroke:#1565c0
+    style S_LIST fill:#e3f2fd,color:#000,stroke:#1565c0
+    style N_QUANT fill:#e3f2fd,color:#000,stroke:#1565c0
+    style C_LIST fill:#e3f2fd,color:#000,stroke:#1565c0
+    style ID fill:#9fa8da,color:#000,stroke:#303f9f</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Getting Certified Values</p>
+<p>To query for certified values, filter your XPath to only include quantities descending from:
+<code>/drmd:digitalReferenceMaterialDocument/drmd:materialPropertiesList/drmd:materialProperties[@isCertified='true']</code></p>
+</div>
+<hr />
+<h2 id="134-recommended-internal-object-model">13.4 Recommended Internal Object Model<a class="headerlink" href="#134-recommended-internal-object-model" title="Permanent link">&para;</a></h2>
+<p>When parsing the DRMD XML into your software's backend, it is highly recommended to map the XML structure into a simplified internal object model consisting of a few core entities.</p>
+<pre class="mermaid"><code>classDiagram
+    DRMDDocument "1" *-- "many" Material
+    DRMDDocument "1" *-- "many" MaterialPropertySet
+    MaterialPropertySet "1" *-- "many" Result
+    Result "1" *-- "many" Quantity
+    Quantity "1" *-- "many" Identifier
+
+    class DRMDDocument {
+        +String schemaVersion
+        +CoreData coreData
+        +Producer producer
+        +List statements
+        +List signatures
+    }
+
+    class Material {
+        +String name
+        +String description
+        +Quantity minimumSampleSize
+        +List identifiers
+    }
+
+    class MaterialPropertySet {
+        +String name
+        +Boolean isCertified
+        +List procedures
+    }
+
+    class Result {
+        +String name
+    }
+
+    class Quantity {
+        +String payloadType
+        +Float value
+        +String unit
+        +Uncertainty uncertainty
+    }
+
+    class Identifier {
+        +String scheme
+        +String value
+        +String link
+    }</code></pre>
 
 
 
@@ -925,7 +1173,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Home">
+          <a href="../validation_rules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 12. Validation Rules">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -935,20 +1183,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                1. Home
+                12. Validation Rules
               </div>
             </div>
           </a>
         
         
           
-          <a href="../administrative_data/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Administrative Data">
+          <a href="../security_trust/" class="md-footer__link md-footer__link--next" aria-label="Next: 14. Security &amp; Trust Model">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                3. Administrative Data
+                14. Security & Trust Model
               </div>
             </div>
             <div class="md-footer__button md-icon">

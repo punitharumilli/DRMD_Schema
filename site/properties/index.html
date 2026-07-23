@@ -1,0 +1,2105 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Best Practice Guidelines for the DRMD XML Schema (ISO 33401:2024)">
+      
+      
+        <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
+      
+      
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/properties/">
+      
+      
+        <link rel="prev" href="../materials/">
+      
+      
+        <link rel="next" href="../statements/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>5. Properties - Digital Reference Material Document (DRMD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#properties" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Reference Material Document (DRMD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Properties
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Digital Reference Material Document (DRMD)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Overview & Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administrative_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Administrative Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Properties
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-purpose-and-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Purpose and Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-properties-list-propertieslist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Properties List (propertiesList)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-properties-block-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Properties Block (properties)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Properties Block (properties)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-child-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 Child Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-technical-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Technical Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-results-list-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Results List (results)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-result-type-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Result Type (result)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-data-type-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Data Type (data)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-list-type-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 List Type (list)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-quantity-type-quantity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Quantity Type (quantity)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8 Quantity Type (quantity)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#581-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.1 Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#582-example-quantity-with-si-and-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.2 Example: Quantity with SI and Identifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-property-identifiers-propertyidentifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Property Identifiers (propertyIdentifiers)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#510-procedures-measurement-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10 Procedures &amp; Measurement Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.10 Procedures &amp; Measurement Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5101-procedures-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.1 Procedures (procedures)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5102-measurement-metadata-measurementmetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.2 Measurement Metadata (measurementMetaData)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#511-property-values-from-si" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11 Property Values from SI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.11 Property Values from SI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5111-sireal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.1 si:real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5112-sireallistxmllist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.2 si:realListXMLList
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comments_documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Comments & Documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital_signature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Digital Signature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interoperability_profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Interoperability Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Cross-reference Conventions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units_quantities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Units, Quantities & Uncertainty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Validation Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parsing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Parsing & Data Extraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security_trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Security & Trust Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Implementation Checklists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Schema Interactive Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-purpose-and-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Purpose and Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-properties-list-propertieslist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Properties List (propertiesList)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-properties-block-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Properties Block (properties)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Properties Block (properties)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-child-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 Child Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-technical-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Technical Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-results-list-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Results List (results)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-result-type-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Result Type (result)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-data-type-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Data Type (data)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-list-type-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 List Type (list)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-quantity-type-quantity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Quantity Type (quantity)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8 Quantity Type (quantity)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#581-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.1 Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#582-example-quantity-with-si-and-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8.2 Example: Quantity with SI and Identifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-property-identifiers-propertyidentifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Property Identifiers (propertyIdentifiers)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#510-procedures-measurement-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10 Procedures &amp; Measurement Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.10 Procedures &amp; Measurement Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5101-procedures-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.1 Procedures (procedures)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5102-measurement-metadata-measurementmetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10.2 Measurement Metadata (measurementMetaData)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#511-property-values-from-si" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11 Property Values from SI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.11 Property Values from SI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5111-sireal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.1 si:real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5112-sireallistxmllist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.11.2 si:realListXMLList
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h1>
+<p>The <strong>Properties</strong> block (<code>propertiesList</code>, previously known as <code>materialPropertiesList</code>) is the core metrological repository structuring certified and informational measurement data tables, uncertainties, D-SI units, and substance mapping keys. </p>
+<p>It provides the structured, machine-readable representation of:</p>
+<ul>
+<li>Certified and non-certified (informative) property sets (distinguished by the <code>@isCertified</code> attribute).</li>
+<li>Results grouped into logical sections (e.g., <em>Mass fraction</em>, <em>Density</em>, <em>Sputter factor</em>).</li>
+<li>Numeric values with units and uncertainties using the SI (D-SI) structures (e.g., <code>si:real</code>, <code>si:realListXMLList</code>).</li>
+<li>Property identifiers for each quantity (<code>propertyIdentifiers</code>) so software can reliably interpret what a value refers to (e.g., element/compound/property codes).</li>
+<li>Procedures (methods) and measurement metadata that provide provenance and interpretation context (method references, traceability statements, conventions, validity notes, responsible authority, etc.).</li>
+</ul>
+<h2 id="structure-at-a-glance">Structure at a Glance<a class="headerlink" href="#structure-at-a-glance" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    PL["propertiesList&lt;br/&gt;&lt;i&gt;drmd:propertiesListType [1..1]&lt;/i&gt;"]
+    P["properties&lt;br/&gt;&lt;i&gt;drmd:propertiesType [1..∞]&lt;/i&gt;"]
+
+    PL --&gt; P
+
+    P --&gt; NAME["name&lt;br/&gt;&lt;i&gt;dcc:textType [1..1]&lt;/i&gt;"]
+    P --&gt; DESC["description&lt;br/&gt;&lt;i&gt;dcc:richContentType [0..1]&lt;/i&gt;"]
+    P --&gt; PROC["procedures&lt;br/&gt;&lt;i&gt;dcc:usedMethodListType [0..1]&lt;/i&gt;"]
+    P --&gt; RESL["results&lt;br/&gt;&lt;i&gt;drmd:resultListType [1..1]&lt;/i&gt;"]
+    P --&gt; MMD["measurementMetaData&lt;br/&gt;&lt;i&gt;dcc:measurementMetaDataListType [0..1]&lt;/i&gt;"]
+
+    RESL --&gt; RES["result&lt;br/&gt;&lt;i&gt;drmd:resultType [1..∞]&lt;/i&gt;"]
+
+    RES --&gt; RNAME["name [1..1]"]
+    RES --&gt; RDESC["description [0..1]"]
+    RES --&gt; DATA["data [1..1]"]
+
+    DATA --&gt;|Choice| LIST["list&lt;br/&gt;&lt;i&gt;drmd:listType&lt;/i&gt;"]
+    DATA --&gt;|Choice| QUANT["quantity&lt;br/&gt;&lt;i&gt;drmd:quantityType&lt;/i&gt;"]
+
+    LIST --&gt; LQUANT["quantity&lt;br/&gt;&lt;i&gt;drmd:quantityType [1..∞]&lt;/i&gt;"]
+
+    LQUANT --&gt; SI["SI Value&lt;br/&gt;&lt;i&gt;si:real, etc.&lt;/i&gt;"]
+    LQUANT --&gt; PID["propertyIdentifiers&lt;br/&gt;&lt;i&gt;drmd:propertyIdentifierListType [0..1]&lt;/i&gt;"]
+
+    QUANT --&gt; QSI["SI Value&lt;br/&gt;&lt;i&gt;si:real, etc.&lt;/i&gt;"]
+    QUANT --&gt; QPID["propertyIdentifiers&lt;br/&gt;&lt;i&gt;drmd:propertyIdentifierListType [0..1]&lt;/i&gt;"]
+
+    style PL fill:#e8eaf6,color:#000,stroke:#283593
+    style P fill:#c5cae9,color:#000,stroke:#3949ab
+    style NAME fill:#e8eaf6,stroke:#3f51b5
+    style DESC fill:#e8eaf6,stroke:#3f51b5
+    style PROC fill:#e8eaf6,stroke:#3f51b5
+    style RESL fill:#c5cae9,stroke:#3949ab
+    style MMD fill:#e8eaf6,stroke:#3f51b5
+    style RES fill:#c5cae9,stroke:#3949ab
+    style DATA fill:#fff3e0,stroke:#ff9800
+    style LIST fill:#e8f5e9,stroke:#4caf50
+    style QUANT fill:#e8f5e9,stroke:#4caf50
+    style LQUANT fill:#e8f5e9,stroke:#4caf50
+    style SI fill:#e3f2fd,stroke:#1565c0
+    style PID fill:#e3f2fd,stroke:#1565c0
+    style QSI fill:#e3f2fd,stroke:#1565c0
+    style QPID fill:#e3f2fd,stroke:#1565c0</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Dual Validation Required</p>
+<p>The DRMD schema relies on a dual-profile architecture. The XSD defines the structure, but profile-specific mandatory requirements (e.g., the presence of <code>@isCertified="true"</code>, or mandatory uncertainties for certified values) are enforced by the companion <strong>Schematron business rules</strong> (<code>drmd-business-rules.sch</code>).</p>
+</div>
+<hr />
+<h2 id="51-purpose-and-use">5.1 Purpose and Use<a class="headerlink" href="#51-purpose-and-use" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use the Properties Block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference Material Producer (RMP)</strong></td>
+<td>Publishes the authoritative dataset of certified values and clearly separates informative values. Provides transparency (uncertainty conventions, measurement procedures, metadata needed for audits).</td>
+</tr>
+<tr>
+<td><strong>Laboratories / End Users</strong></td>
+<td>Retrieve the correct values for their intended use (certified vs informative). Understand uncertainty meaning (coverage factor/probability) and measurement context needed for correct reporting. Use property identifiers to avoid ambiguity.</td>
+</tr>
+<tr>
+<td><strong>Instrument / Machine Manufacturers</strong></td>
+<td>Ingest property tables for calibration/verification workflows and instrument libraries. Use units and uncertainties for automated validation, warnings, and calculation logic.</td>
+</tr>
+<tr>
+<td><strong>Software Developers / LIMS / ELN</strong></td>
+<td>Parse results into structured records and map quantities to analytes using <code>propertyIdentifiers</code>. Use <code>@id</code>/<code>@refId</code> conventions to link property blocks to the correct material definition when multiple materials exist. Filter datasets by <code>@isCertified</code>.</td>
+</tr>
+<tr>
+<td><strong>Regulators / Auditors</strong></td>
+<td>Verify that certified values are clearly distinguished from informative values. Confirm that measurement provenance, conventions, and traceability statements are recorded in a structured form.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="52-properties-list-propertieslist">5.2 Properties List (<code>propertiesList</code>)<a class="headerlink" href="#52-properties-list-propertieslist" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Element</strong></td>
+<td><code>drmd:propertiesList</code></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/drmd:digitalReferenceMaterialDocument/drmd:propertiesList</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:propertiesListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code> at root</td>
+</tr>
+<tr>
+<td><strong>Contents</strong></td>
+<td>One or more <code>drmd:properties</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A required top-level list of property blocks, each bundling semantic titles, context, procedures, results, and measurement metadata.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use multiple <code>drmd:properties</code> blocks to separate:<ul>
+<li>Certified vs informative values (using <code>@isCertified</code>).</li>
+<li>Different analytical methods.</li>
+<li>Different property families (composition vs density vs sputter factors).</li>
+</ul>
+</li>
+<li>Assign <code>@id</code> to each block for deterministic references.</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;drmd:propertiesList&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&lt;drmd:properties&gt;</span>...<span class="nt">&lt;/drmd:properties&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&lt;drmd:properties&gt;</span>...<span class="nt">&lt;/drmd:properties&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">&lt;/drmd:propertiesList&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="53-properties-block-properties">5.3 Properties Block (<code>properties</code>)<a class="headerlink" href="#53-properties-block-properties" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Element</strong></td>
+<td><code>drmd:properties</code></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:propertiesList/drmd:properties</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:propertiesType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><code>[1..∞]</code> within <code>drmd:propertiesList</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>properties</code> block acts as a "chapter subsection" that groups results into a coherent dataset (e.g., "Certified values", "Informative values").</p>
+<h3 id="531-child-elements">5.3.1 Child Elements<a class="headerlink" href="#531-child-elements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><code>dcc:textType</code></td>
+<td>Yes</td>
+<td>The descriptive title of the characterization section</td>
+</tr>
+<tr>
+<td><strong>description</strong></td>
+<td><code>dcc:richContentType</code></td>
+<td>No</td>
+<td>Global contextual definitions applying broadly across nested measurements</td>
+</tr>
+<tr>
+<td><strong>procedures</strong></td>
+<td><code>dcc:usedMethodListType</code></td>
+<td>Conditional</td>
+<td>Laboratory methods, hardware systems. Mandatory when applicable (DRMD-014)</td>
+</tr>
+<tr>
+<td><strong>results</strong></td>
+<td><code>drmd:resultListType</code></td>
+<td>Yes</td>
+<td>The structured measurement value tables</td>
+</tr>
+<tr>
+<td><strong>measurementMetaData</strong></td>
+<td><code>dcc:measurementMetaDataListType</code></td>
+<td>No</td>
+<td>Metadata formalizing institutional confidence, valid periods, etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="532-technical-attributes">5.3.2 Technical Attributes<a class="headerlink" href="#532-technical-attributes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@id</code></td>
+<td><code>xs:ID</code></td>
+<td>Internal anchor for cross-referencing</td>
+</tr>
+<tr>
+<td><code>@refId</code></td>
+<td><code>xs:IDREFS</code></td>
+<td>Reference to another node (e.g., linking a property block to a specific material ID)</td>
+</tr>
+<tr>
+<td><code>@refType</code></td>
+<td><code>drmd:refTypesType</code></td>
+<td>Enum classifying the reference type</td>
+</tr>
+<tr>
+<td><strong><code>@isCertified</code></strong></td>
+<td><code>xs:boolean</code></td>
+<td><strong>Critical flag governing metrological automated ingestion policies.</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Certification Rules (Schematron)</p>
+<ul>
+<li><strong>CRM Profile (<code>RMC-002</code>)</strong>: At least one <code>properties</code> block <strong>MUST</strong> have <code>@isCertified="true"</code>.</li>
+<li><strong>PIS Profile (<code>PIS-001</code>)</strong>: No <code>properties</code> block may have <code>@isCertified="true"</code>.</li>
+<li>Omitting the attribute entirely evaluates to <code>false</code> (informative).</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;drmd:properties</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;mp_certified&quot;</span><span class="w"> </span><span class="na">isCertified=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;drmd:name&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Certified<span class="w"> </span>Values<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&lt;/drmd:name&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&lt;drmd:description&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">&lt;dcc:name&gt;&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Uncertainty<span class="w"> </span>convention<span class="nt">&lt;/dcc:content&gt;&lt;/dcc:name&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>U<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>estimated<span class="w"> </span>expanded<span class="w"> </span>uncertainty<span class="w"> </span>with<span class="w"> </span>coverage<span class="w"> </span>factor<span class="w"> </span>k=2<span class="w"> </span>(~95%).<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">&lt;/drmd:description&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="cm">&lt;!-- ... procedures, results, metadata ... --&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">&lt;/drmd:properties&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="54-results-list-results">5.4 Results List (<code>results</code>)<a class="headerlink" href="#54-results-list-results" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:properties/drmd:results</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:resultListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code> inside properties</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A required list of results in this dataset. It allows the producer to define multiple result sections like "Mass fraction", "Density", "Sputter factor". Software renders each result as a separate section or table.</p>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-009</p>
+<p>Each <code>properties</code> block <strong>MUST</strong> contain at least one <code>result</code> inside <code>results</code>.</p>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;drmd:results&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;drmd:result&gt;</span>...<span class="nt">&lt;/drmd:result&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;drmd:result&gt;</span>...<span class="nt">&lt;/drmd:result&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nt">&lt;/drmd:results&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="55-result-type-result">5.5 Result Type (<code>result</code>)<a class="headerlink" href="#55-result-type-result" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:results/drmd:result</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:resultType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><code>[1..∞]</code> inside results</td>
+</tr>
+</tbody>
+</table>
+<p>A named result container. </p>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><code>dcc:textType</code></td>
+<td>Yes</td>
+<td>Result section name (e.g., "Mass fraction")</td>
+</tr>
+<tr>
+<td><strong>description</strong></td>
+<td><code>dcc:richContentType</code></td>
+<td>No</td>
+<td>Specific context for this result</td>
+</tr>
+<tr>
+<td><strong>data</strong></td>
+<td><code>drmd:dataType</code></td>
+<td>Yes</td>
+<td>The actual numeric payload</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Put shared wording (e.g., uncertainty definition) at the <code>properties</code> description level if it applies everywhere; only repeat here if it is result-specific.</li>
+<li>Use <code>@refType="basic_measuredValue"</code> if you want to label results as measured values in a controlled way.</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;drmd:result</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;res_massFraction&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_measuredValue&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&lt;drmd:name&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Mass<span class="w"> </span>fraction<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&lt;/drmd:name&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">&lt;drmd:description&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Values<span class="w"> </span>are<span class="w"> </span>given<span class="w"> </span>as<span class="w"> </span>percent<span class="w"> </span>by<span class="w"> </span>mass.<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">&lt;/drmd:description&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nt">&lt;drmd:data&gt;</span>...<span class="nt">&lt;/drmd:data&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nt">&lt;/drmd:result&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="56-data-type-data">5.6 Data Type (<code>data</code>)<a class="headerlink" href="#56-data-type-data" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:result/drmd:data</code></td>
+</tr>
+<tr>
+<td><strong>Choice</strong></td>
+<td><strong>Exactly one:</strong> <code>drmd:list</code> OR <code>drmd:quantity</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code> inside result</td>
+</tr>
+</tbody>
+</table>
+<p>An operational choice node regulating structural measurement representations.</p>
+<ul>
+<li><strong><code>list</code></strong> (<code>drmd:listType</code>): Use for compositional tables (many elements, multi-row tables).</li>
+<li><strong><code>quantity</code></strong> (<code>drmd:quantityType</code>): Use for single-value properties (e.g., density).</li>
+</ul>
+<hr />
+<h2 id="57-list-type-list">5.7 List Type (<code>list</code>)<a class="headerlink" href="#57-list-type-list" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:data/drmd:list</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:listType</code></td>
+</tr>
+<tr>
+<td><strong>Contents</strong></td>
+<td><code>[1..∞]</code> <code>drmd:quantity</code> elements</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A sequential index of repeating quantity rows. Serves as the structural framework for compositional tables where every unique analyte row encapsulates individual D-SI unit records, uncertainty fields, and identity codes.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;drmd:list&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&lt;drmd:quantity&gt;</span>...<span class="nt">&lt;/drmd:quantity&gt;</span><span class="w"> </span><span class="cm">&lt;!-- e.g., Al --&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&lt;drmd:quantity&gt;</span>...<span class="nt">&lt;/drmd:quantity&gt;</span><span class="w"> </span><span class="cm">&lt;!-- e.g., Fe --&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nt">&lt;/drmd:list&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="58-quantity-type-quantity">5.8 Quantity Type (<code>quantity</code>)<a class="headerlink" href="#58-quantity-type-quantity" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:data/drmd:quantity</code> OR <code>.../drmd:list/drmd:quantity</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:quantityType</code> (extends <code>dcc:primitiveQuantityType</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>This is the core measurement container. It inherits all properties of a DCC <code>primitiveQuantityType</code> and adds DRMD-specific property identifiers.</p>
+<h3 id="581-structure">5.8.1 Structure<a class="headerlink" href="#581-structure" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong><code>dcc:name</code></strong> (optional) - Label for the quantity (e.g., "Al").</li>
+<li><strong><code>dcc:description</code></strong> (optional) - Description (e.g., "Mass fraction of Aluminium").</li>
+<li><strong>Value Choice (Exactly One)</strong>:<ul>
+<li><code>si:real</code>, <code>dcc:noQuantity</code>, <code>si:realListXMLList</code>, <code>dcc:charsXMLList</code>, <code>si:hybrid</code>, <code>si:complex</code>, <code>si:constant</code>, <code>si:complexListXMLList</code>.</li>
+</ul>
+</li>
+<li><strong><code>drmd:propertyIdentifiers</code></strong> (optional) - Stable keys mapping the quantity to an analyte registry (e.g., CAS numbers).</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use <code>si:real</code> for single values with unit.</li>
+<li>Provide <code>drmd:propertyIdentifiers</code> for each analyte/property in tables for robust machine mapping.</li>
+</ul>
+</div>
+<h3 id="582-example-quantity-with-si-and-identifier">5.8.2 Example: Quantity with SI and Identifier<a class="headerlink" href="#582-example-quantity-with-si-and-identifier" title="Permanent link">&para;</a></h3>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;drmd:quantity</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;q_al&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;propertyRow&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Al<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">&lt;dcc:description&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Mass<span class="w"> </span>fraction<span class="w"> </span>of<span class="w"> </span>Aluminium.<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="nt">&lt;/dcc:description&gt;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="nt">&lt;si:label&gt;</span>mass<span class="w"> </span>fraction<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nt">&lt;si:quantityTypeQUDT&gt;</span>MassFraction<span class="nt">&lt;/si:quantityTypeQUDT&gt;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nt">&lt;si:value&gt;</span>49.5<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nt">&lt;si:unit&gt;</span>\percent<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="nt">&lt;si:measurementUncertaintyUnivariate&gt;</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="nt">&lt;si:expandedMU&gt;</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="nt">&lt;si:valueExpandedMU&gt;</span>1.3<span class="nt">&lt;/si:valueExpandedMU&gt;</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="nt">&lt;si:coverageFactor&gt;</span>2<span class="nt">&lt;/si:coverageFactor&gt;</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="nt">&lt;si:coverageProbability&gt;</span>0.95<span class="nt">&lt;/si:coverageProbability&gt;</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">        </span><span class="nt">&lt;si:distribution&gt;</span>normal<span class="nt">&lt;/si:distribution&gt;</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">      </span><span class="nt">&lt;/si:expandedMU&gt;</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="nt">&lt;/si:measurementUncertaintyUnivariate&gt;</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">  </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">  </span><span class="nt">&lt;drmd:propertyIdentifiers&gt;</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="nt">&lt;drmd:propertyIdentifier</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;pid_al_cas&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_measuredValue&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">      </span><span class="nt">&lt;drmd:scheme&gt;</span>CAS<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">      </span><span class="nt">&lt;drmd:value&gt;</span>7429-90-5<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">      </span><span class="nt">&lt;drmd:link&gt;</span>https://commonchemistry.cas.org/detail?cas_rn=7429-90-5<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">    </span><span class="nt">&lt;/drmd:propertyIdentifier&gt;</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">  </span><span class="nt">&lt;/drmd:propertyIdentifiers&gt;</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="nt">&lt;/drmd:quantity&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="59-property-identifiers-propertyidentifiers">5.9 Property Identifiers (<code>propertyIdentifiers</code>)<a class="headerlink" href="#59-property-identifiers-propertyidentifiers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:quantity/drmd:propertyIdentifiers</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:propertyIdentifierListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>A list of identifiers that identify what property this quantity represents (e.g., element, compound, property kind).</p>
+<p><strong>Purpose:</strong> Makes "Fe mass fraction" machine-readable, reducing ambiguity in multi-analyte tables and ensuring robust mapping to analyte registries.</p>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>scheme</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>Naming authority (e.g., "CAS", "IUPAC")</td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>The code (e.g., "7439-89-6")</td>
+</tr>
+<tr>
+<td><strong>link</strong></td>
+<td><code>xs:anyURI</code></td>
+<td>No</td>
+<td>Web link to definition</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="510-procedures-measurement-metadata">5.10 Procedures &amp; Measurement Metadata<a class="headerlink" href="#510-procedures-measurement-metadata" title="Permanent link">&para;</a></h2>
+<h3 id="5101-procedures-procedures">5.10.1 Procedures (<code>procedures</code>)<a class="headerlink" href="#5101-procedures-procedures" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:properties/drmd:procedures</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:usedMethodListType</code></td>
+</tr>
+</tbody>
+</table>
+<p>Provides traceability and reproducibility of property assignment. </p>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-014</p>
+<p>Procedures are <strong>mandatory whenever applicable</strong>. Rule <code>RMC-005</code> additionally provides a warning if procedures are omitted for certified property blocks.</p>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;drmd:procedures&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&lt;dcc:usedMethod</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;m1&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&lt;dcc:name&gt;&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>ICP-OES<span class="nt">&lt;/dcc:content&gt;&lt;/dcc:name&gt;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&lt;dcc:description&gt;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Elemental<span class="w"> </span>analysis<span class="w"> </span>by<span class="w"> </span>inductively<span class="w"> </span>coupled<span class="w"> </span>plasma<span class="w"> </span>optical<span class="w"> </span>emission<span class="w"> </span>spectrometry.<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">&lt;/dcc:description&gt;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">&lt;dcc:norm&gt;</span>ISO<span class="w"> </span>11885<span class="nt">&lt;/dcc:norm&gt;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nt">&lt;dcc:link&gt;</span>https://www.iso.org/standard/56153.html<span class="nt">&lt;/dcc:link&gt;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="nt">&lt;/dcc:usedMethod&gt;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="nt">&lt;/drmd:procedures&gt;</span>
+</span></code></pre></div>
+<h3 id="5102-measurement-metadata-measurementmetadata">5.10.2 Measurement Metadata (<code>measurementMetaData</code>)<a class="headerlink" href="#5102-measurement-metadata-measurementmetadata" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:properties/drmd:measurementMetaData</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:measurementMetaDataListType</code></td>
+</tr>
+</tbody>
+</table>
+<p>Attach structured declarations: traceability, conventions, validity. This allows labs to interpret confidence statements and software to enable filters like <code>traceable=true</code>.</p>
+<hr />
+<h2 id="511-property-values-from-si">5.11 Property Values from SI<a class="headerlink" href="#511-property-values-from-si" title="Permanent link">&para;</a></h2>
+<h3 id="5111-sireal">5.11.1 <code>si:real</code><a class="headerlink" href="#5111-sireal" title="Permanent link">&para;</a></h3>
+<p>The most common value type. Requires <code>value</code> (double) and <code>unit</code> (string). Can optionally include a <code>measurementUncertaintyUnivariate</code> block.</p>
+<div class="admonition danger">
+<p class="admonition-title">Uncertainty Rules (Schematron)</p>
+<p>For any CRM document, if <code>@isCertified="true"</code>, the <code>si:real</code> payload <strong>MUST</strong> include uncertainty (<code>measurementUncertaintyUnivariate</code>, <code>expandedUnc</code>, or <code>coverageInterval</code>). This is enforced by Schematron rules <code>RMC-006</code> to <code>RMC-009</code>.</p>
+</div>
+<h3 id="5112-sireallistxmllist">5.11.2 <code>si:realListXMLList</code><a class="headerlink" href="#5112-sireallistxmllist" title="Permanent link">&para;</a></h3>
+<p>Provides compact lists of numbers. Includes unbounded <code>valueXMLList</code> and <code>unitXMLList</code> elements.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;si:realListXMLList&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&lt;si:valueXMLList&gt;</span>0.81<span class="nt">&lt;/si:valueXMLList&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&lt;si:valueXMLList&gt;</span>0.82<span class="nt">&lt;/si:valueXMLList&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&lt;si:unitXMLList&gt;</span>\one<span class="nt">&lt;/si:unitXMLList&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">&lt;si:unitXMLList&gt;</span>\one<span class="nt">&lt;/si:unitXMLList&gt;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nt">&lt;/si:realListXMLList&gt;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="business-rules-summary">Business Rules Summary<a class="headerlink" href="#business-rules-summary" title="Permanent link">&para;</a></h2>
+<p>The following Schematron rules govern the Properties section to ensure document integrity:</p>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DRMD-003</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Every DRMD MUST contain at least one <code>properties</code> block.</td>
+</tr>
+<tr>
+<td><strong>DRMD-009</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Each <code>properties</code> block MUST contain <code>results</code>.</td>
+</tr>
+<tr>
+<td><strong>DRMD-014</strong></td>
+<td>All documents</td>
+<td>Conditional Error</td>
+<td>Each <code>properties</code> block MUST include <code>procedures</code> whenever applicable.</td>
+</tr>
+<tr>
+<td><strong>RMC-002</strong></td>
+<td>CRM only</td>
+<td>Error</td>
+<td>At least one <code>properties</code> block MUST have <code>@isCertified="true"</code>.</td>
+</tr>
+<tr>
+<td><strong>RMC-005</strong></td>
+<td>CRM only</td>
+<td>Warning</td>
+<td>Certified <code>properties</code> SHOULD document measurement procedures.</td>
+</tr>
+<tr>
+<td><strong>RMC-006 to 009</strong></td>
+<td>CRM only</td>
+<td>Error</td>
+<td>All certified quantity payloads (<code>si:real</code>, <code>si:realListXMLList</code>, <code>si:hybrid</code>) MUST include uncertainty.</td>
+</tr>
+<tr>
+<td><strong>PIS-001</strong></td>
+<td>PIS only</td>
+<td>Error</td>
+<td>Product Information Sheets MUST NOT have <code>@isCertified="true"</code> on any <code>properties</code> block.</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph LR
+    DOC["DRMD Document"]
+    DOC --&gt;|"DRMD-003"| PROPS["propertiesList"]
+    PROPS --&gt;|"DRMD-009"| RESULTS["results/result"]
+    PROPS --&gt;|"DRMD-014"| PROC["procedures&lt;br/&gt;&lt;i&gt;when applicable&lt;/i&gt;"]
+
+    PROPS -.-&gt;|"RMC-002&lt;br/&gt;&lt;i&gt;CRM only&lt;/i&gt;"| CERT["@isCertified='true'"]
+    CERT --&gt;|"RMC-006..009&lt;br/&gt;&lt;i&gt;CRM only&lt;/i&gt;"| UNCERT["Uncertainty Required"]
+    CERT -.-&gt;|"RMC-005&lt;br/&gt;&lt;i&gt;CRM only&lt;/i&gt;"| PROC2["procedures Warning"]
+
+    PROPS -.-&gt;|"PIS-001&lt;br/&gt;&lt;i&gt;PIS only&lt;/i&gt;"| NOCERT["@isCertified='true' FORBIDDEN"]
+
+    style DOC fill:#e8eaf6,color:#000,stroke:#283593
+    style PROPS fill:#c5cae9,color:#000,stroke:#3949ab
+    style RESULTS fill:#ffebee,color:#000,stroke:#f44336
+    style PROC fill:#fff3e0,color:#000,stroke:#ff9800
+    style CERT fill:#e3f2fd,color:#000,stroke:#1565c0
+    style UNCERT fill:#ffebee,color:#000,stroke:#f44336
+    style PROC2 fill:#fff3e0,color:#000,stroke:#ff9800
+    style NOCERT fill:#ffebee,color:#000,stroke:#f44336</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../materials/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Materials">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4. Materials
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../statements/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Statements">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. Statements
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

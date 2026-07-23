@@ -1,0 +1,1338 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Best Practice Guidelines for the DRMD XML Schema (ISO 33401:2024)">
+      
+      
+        <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
+      
+      
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/digital_signature/">
+      
+      
+        <link rel="prev" href="../comments_documents/">
+      
+      
+        <link rel="next" href="../interoperability_profiles/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>8. Digital Signature - Digital Reference Material Document (DRMD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-signature" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Reference Material Document (DRMD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8. Digital Signature
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Digital Reference Material Document (DRMD)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Overview & Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administrative_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Administrative Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../materials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comments_documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Comments & Documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Digital Signature
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Digital Signature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-purpose-and-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Purpose and Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-schema-and-offline-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Schema and Offline Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-recommended-signing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Recommended Signing Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Recommended Signing Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-signature-by-producer-recommended-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One signature by producer (Recommended Default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-signatures-when-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple signatures (When needed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to sign?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-stub-vs-production-xmldsig-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Stub vs Production XMLDSig Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 Stub vs Production XMLDSig Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offline-validation-with-xsd-stub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline validation (with XSD stub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-validation-real-signature-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production validation (real signature verification)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-best-practices-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Best Practices &amp; Example
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5 Best Practices &amp; Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interoperability_profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Interoperability Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Cross-reference Conventions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units_quantities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Units, Quantities & Uncertainty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Validation Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parsing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Parsing & Data Extraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security_trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Security & Trust Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Implementation Checklists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Schema Interactive Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-purpose-and-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Purpose and Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-schema-and-offline-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Schema and Offline Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-recommended-signing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Recommended Signing Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Recommended Signing Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-signature-by-producer-recommended-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One signature by producer (Recommended Default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-signatures-when-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple signatures (When needed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to sign?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-stub-vs-production-xmldsig-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Stub vs Production XMLDSig Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 Stub vs Production XMLDSig Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offline-validation-with-xsd-stub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline validation (with XSD stub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-validation-real-signature-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Production validation (real signature verification)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-best-practices-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 Best Practices &amp; Example
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5 Best Practices &amp; Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="digital-signature">Digital Signature<a class="headerlink" href="#digital-signature" title="Permanent link">&para;</a></h1>
+<p>The <strong>Digital Signature</strong> section allows the DRMD to carry one or more XML Digital Signature blocks (<code>ds:Signature</code>) at the document root. A digital signature is used to protect:</p>
+<ul>
+<li><strong>Authenticity</strong>: Verifying who issued/signed the document.</li>
+<li><strong>Integrity</strong>: Guaranteeing that the XML content has not been modified after signing.</li>
+<li><strong>Non-repudiation / Auditability</strong>: Providing verifiable evidence depending on organizational policy and legal frameworks.</li>
+</ul>
+<p>In the DRMD schema, <code>ds:Signature</code> is <strong>optional and repeatable</strong>, enabling multiple signatures (e.g., a producer seal plus a responsible person's signature).</p>
+<h2 id="structure-at-a-glance">Structure at a Glance<a class="headerlink" href="#structure-at-a-glance" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    ROOT["digitalReferenceMaterialDocument&lt;br/&gt;&lt;i&gt;Root&lt;/i&gt;"]
+
+    ROOT --&gt; SIG["ds:Signature&lt;br/&gt;&lt;i&gt;[0..∞]&lt;/i&gt;"]
+
+    SIG --&gt; SINFO["SignedInfo&lt;br/&gt;&lt;i&gt;Reference, Digest, etc.&lt;/i&gt;"]
+    SIG --&gt; SVAL["SignatureValue&lt;br/&gt;&lt;i&gt;Cryptographic Hash&lt;/i&gt;"]
+    SIG --&gt; KINFO["KeyInfo&lt;br/&gt;&lt;i&gt;Certificate details&lt;/i&gt;"]
+
+    style ROOT fill:#e8eaf6,color:#000,stroke:#283593
+    style SIG fill:#c5cae9,color:#000,stroke:#3949ab
+    style SINFO fill:#e3f2fd,stroke:#1565c0
+    style SVAL fill:#e3f2fd,stroke:#1565c0
+    style KINFO fill:#e3f2fd,stroke:#1565c0</code></pre>
+<hr />
+<h2 id="81-purpose-and-use">8.1 Purpose and Use<a class="headerlink" href="#81-purpose-and-use" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use Digital Signatures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference Material Producer (RMP)</strong></td>
+<td>Digitally seals the DRMD to make the XML an authoritative, tamper-evident certificate artifact. Supports controlled issuance and traceability for revisions.</td>
+</tr>
+<tr>
+<td><strong>Laboratories / End Users</strong></td>
+<td>Verify that the DRMD came from the expected producer and was not altered. Store and present verifiable evidence in audits/accreditation processes.</td>
+</tr>
+<tr>
+<td><strong>Software Developers / LIMS</strong></td>
+<td>Automate signature verification on import. Enforce policies such as: "only accept certified values if the signature validates."</td>
+</tr>
+<tr>
+<td><strong>Regulators / Auditors</strong></td>
+<td>Use signature verification as part of evidence review and trust establishment.</td>
+</tr>
+<tr>
+<td><strong>Instrument / Machine Manufacturers</strong></td>
+<td>Optionally verify the signature to ensure calibration libraries are loaded from trusted sources.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="82-schema-and-offline-validation">8.2 Schema and Offline Validation<a class="headerlink" href="#82-schema-and-offline-validation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Element</strong></td>
+<td><code>ds:Signature</code></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/drmd:digitalReferenceMaterialDocument/ds:Signature</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><code>[0..∞]</code> (Optional, multiple signatures allowed)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Important note about the XMLDSig schema stub</p>
+<p>The DRMD schema imports a minimal stub (<code>xmldsig-core-schema.xsd</code>) for offline validation. In that stub, <code>ds:SignatureType</code> allows any content (<code>xs:any</code>, <code>processContents="lax"</code>).</p>
+<p>Consequently, the XSD will not enforce the real XMLDSig structure (e.g., <code>SignedInfo</code>, <code>SignatureValue</code>, <code>KeyInfo</code>). This is intentional for offline validation, but it means:</p>
+<ol>
+<li><strong>Schema validity ≠ cryptographic validity.</strong></li>
+<li>A document can be "XSD-valid" while containing a non-functional or malformed signature block.</li>
+</ol>
+</div>
+<hr />
+<h2 id="83-recommended-signing-patterns">8.3 Recommended Signing Patterns<a class="headerlink" href="#83-recommended-signing-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="one-signature-by-producer-recommended-default">One signature by producer (Recommended Default)<a class="headerlink" href="#one-signature-by-producer-recommended-default" title="Permanent link">&para;</a></h3>
+<p>Add exactly <strong>one</strong> <code>ds:Signature</code> created with the producer's organizational certificate (electronic seal). 
+<em>Why it is recommended:</em> It provides a clear trust anchor ("issued by the producer"), creates an easy verification policy for consumers, and minimizes ambiguity.</p>
+<h3 id="multiple-signatures-when-needed">Multiple signatures (When needed)<a class="headerlink" href="#multiple-signatures-when-needed" title="Permanent link">&para;</a></h3>
+<p>Use multiple <code>ds:Signature</code> blocks if you have a defined governance model, such as:
+- Producer organizational seal <strong>AND</strong> signature by a responsible person.
+- Timestamping authority signature.</p>
+<p><em>Best practice:</em> If multiple signatures exist, explicitly document your verification rule for consumers (e.g., "at least one producer seal must validate").</p>
+<h3 id="what-to-sign">What to sign?<a class="headerlink" href="#what-to-sign" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sign the whole document (Recommended):</strong> The safest default is to sign the entire DRMD root element content so that materials, properties, statements, and attachments are all integrity-protected.</li>
+<li><strong>Include embedded documents carefully:</strong> Signing the whole XML will also protect embedded PDFs (<code>drmd:document</code>). <em>Note that this increases signature verification cost due to document size.</em></li>
+<li><strong>Operational best practice:</strong> If performance becomes an issue, consider keeping <code>drmd:document</code> external (linked) and sign a hash of it elsewhere, OR keep the embedded PDF and accept the higher verification cost.</li>
+</ul>
+<hr />
+<h2 id="84-stub-vs-production-xmldsig-validation">8.4 Stub vs Production XMLDSig Validation<a class="headerlink" href="#84-stub-vs-production-xmldsig-validation" title="Permanent link">&para;</a></h2>
+<h3 id="offline-validation-with-xsd-stub">Offline validation (with XSD stub)<a class="headerlink" href="#offline-validation-with-xsd-stub" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use XSD validation to ensure <code>ds:Signature</code> is allowed and placed in the correct location.</li>
+<li><strong>Do not</strong> treat success of XSD validation as evidence of authentic signing.</li>
+</ul>
+<h3 id="production-validation-real-signature-verification">Production validation (real signature verification)<a class="headerlink" href="#production-validation-real-signature-verification" title="Permanent link">&para;</a></h3>
+<p>In production systems, signature validation must be cryptographic and policy-driven:
+- Use a full XMLDSig library (and preferably canonical XML processing).
+- Validate the signature cryptographically, the certificate chain/trust store, and the revocation status (CRL/OCSP).
+- <strong>Best practice policy statement:</strong> "Accept DRMD as certified only if at least one trusted producer signature validates successfully."</p>
+<hr />
+<h2 id="85-best-practices-example">8.5 Best Practices &amp; Example<a class="headerlink" href="#85-best-practices-example" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Key Takeaways</p>
+<ul>
+<li>Prefer exactly one producer signature unless multi-signature is required.</li>
+<li>Define and publish a verification policy (trusted certificates, timestamp requirements, etc.).</li>
+<li>Ensure signing happens <strong>after</strong> the document is finalized (avoid post-sign modifications).</li>
+<li>If you publish a PDF in <code>drmd:document</code>, ensure it corresponds to the same version as the XML and that both are included in the signed scope.</li>
+</ul>
+</div>
+<h3 id="example-structure">Example Structure<a class="headerlink" href="#example-structure" title="Permanent link">&para;</a></h3>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;ds:Signature</span><span class="w"> </span><span class="na">xmlns:ds=</span><span class="s">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="cm">&lt;!-- Real XMLDSig content goes here --&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&lt;ds:SignedInfo&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;ds:CanonicalizationMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;ds:SignatureMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;ds:Reference</span><span class="w"> </span><span class="na">URI=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">&lt;ds:Transforms&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&lt;ds:Transform</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">&lt;/ds:Transforms&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">&lt;ds:DigestMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">&lt;ds:DigestValue&gt;</span>...<span class="nt">&lt;/ds:DigestValue&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;/ds:Reference&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">&lt;/ds:SignedInfo&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">&lt;ds:SignatureValue&gt;</span>...<span class="nt">&lt;/ds:SignatureValue&gt;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">&lt;ds:KeyInfo&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">&lt;ds:X509Data&gt;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">&lt;ds:X509Certificate&gt;</span>...<span class="nt">&lt;/ds:X509Certificate&gt;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nt">&lt;/ds:X509Data&gt;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">&lt;/ds:KeyInfo&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nt">&lt;/ds:Signature&gt;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../comments_documents/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7. Comments &amp; Documents">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                7. Comments & Documents
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../interoperability_profiles/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. Interoperability Profiles">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                9. Interoperability Profiles
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -12,29 +12,31 @@
         <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
       
       
-        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/">
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/versioning/">
       
       
+        <link rel="prev" href="../security_trust/">
       
-        <link rel="next" href="architecture/">
+      
+        <link rel="next" href="../checklists/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Digital Reference Material Document (DRMD)</title>
+        <title>15. Versioning - Digital Reference Material Document (DRMD)</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-overview" class="md-skip">
+        <a href="#versioning-backward-compatibility" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Home
+              15. Versioning
             
           </span>
         </div>
@@ -220,7 +222,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -235,37 +237,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -281,87 +256,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-drmd-ecosystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The DRMD Ecosystem
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The DRMD Ecosystem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How it works
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#target-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Target Audience
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-3-tier-validation-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The 3-Tier Validation Model
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-read-this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to read this guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -373,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="architecture/" class="md-nav__link">
+      <a href="../architecture/" class="md-nav__link">
         
   
   
@@ -400,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="administrative_data/" class="md-nav__link">
+      <a href="../administrative_data/" class="md-nav__link">
         
   
   
@@ -427,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="materials/" class="md-nav__link">
+      <a href="../materials/" class="md-nav__link">
         
   
   
@@ -454,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="properties/" class="md-nav__link">
+      <a href="../properties/" class="md-nav__link">
         
   
   
@@ -481,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statements/" class="md-nav__link">
+      <a href="../statements/" class="md-nav__link">
         
   
   
@@ -508,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="comments_documents/" class="md-nav__link">
+      <a href="../comments_documents/" class="md-nav__link">
         
   
   
@@ -535,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="digital_signature/" class="md-nav__link">
+      <a href="../digital_signature/" class="md-nav__link">
         
   
   
@@ -562,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="interoperability_profiles/" class="md-nav__link">
+      <a href="../interoperability_profiles/" class="md-nav__link">
         
   
   
@@ -589,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cross_references/" class="md-nav__link">
+      <a href="../cross_references/" class="md-nav__link">
         
   
   
@@ -616,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="units_quantities/" class="md-nav__link">
+      <a href="../units_quantities/" class="md-nav__link">
         
   
   
@@ -643,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="validation_rules/" class="md-nav__link">
+      <a href="../validation_rules/" class="md-nav__link">
         
   
   
@@ -670,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="parsing_guide/" class="md-nav__link">
+      <a href="../parsing_guide/" class="md-nav__link">
         
   
   
@@ -697,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="security_trust/" class="md-nav__link">
+      <a href="../security_trust/" class="md-nav__link">
         
   
   
@@ -721,10 +615,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="versioning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Versioning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -740,6 +661,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#151-breaking-vs-non-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Breaking vs. Non-Breaking Changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#152-handling-unknown-schema-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Handling Unknown Schema Versions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.2 Handling Unknown Schema Versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strict-vs-lenient-parsing-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strict vs. Lenient Parsing Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#153-migration-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 Migration Guidance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#154-deprecation-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.4 Deprecation Policy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#155-summary-for-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5 Summary for Stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -751,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="checklists/" class="md-nav__link">
+      <a href="../checklists/" class="md-nav__link">
         
   
   
@@ -778,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schema_tree/" class="md-nav__link">
+      <a href="../schema_tree/" class="md-nav__link">
         
   
   
@@ -825,22 +838,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-drmd-ecosystem" class="md-nav__link">
+  <a href="#151-breaking-vs-non-breaking-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The DRMD Ecosystem
+        15.1 Breaking vs. Non-Breaking Changes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The DRMD Ecosystem">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#152-handling-unknown-schema-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Handling Unknown Schema Versions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.2 Handling Unknown Schema Versions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#strict-vs-lenient-parsing-modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How it works
+        Strict vs. Lenient Parsing Modes
       
     </span>
   </a>
@@ -853,10 +877,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#target-audience" class="md-nav__link">
+  <a href="#153-migration-guidance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Target Audience
+        15.3 Migration Guidance
       
     </span>
   </a>
@@ -864,10 +888,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-3-tier-validation-model" class="md-nav__link">
+  <a href="#154-deprecation-policy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The 3-Tier Validation Model
+        15.4 Deprecation Policy
       
     </span>
   </a>
@@ -875,10 +899,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-read-this-guide" class="md-nav__link">
+  <a href="#155-summary-for-stakeholders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to read this guide
+        15.5 Summary for Stakeholders
       
     </span>
   </a>
@@ -902,153 +926,104 @@
 
 
 
-<h1 id="introduction-overview">Introduction &amp; Overview<a class="headerlink" href="#introduction-overview" title="Permanent link">&para;</a></h1>
-<p>Welcome to the <strong>Best Practice Guidelines</strong> for the <strong>Digital Reference Material Document (DRMD)</strong>.</p>
-<p>This guide provides comprehensive instructions for machine manufacturers, reference material producers, and software developers to ensure consistent, interoperable, and automated handling of DRMD certificates across different platforms.</p>
-<style>
-.drmd-acronym-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 30px 0;
-    align-items: flex-start;
-}
-.drmd-column {
-    display: flex;
-    flex-direction: column;
-}
-.drmd-letter-heading {
-    border-bottom: 2px solid #000;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    white-space: nowrap;
-}
-.drmd-big-letter {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #d32f2f;
-    line-height: 0.85;
-}
-.drmd-rest-word {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #000;
-    margin-left: 2px;
-}
-.drmd-desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #333;
-    text-align: justify;
-}
-@media (max-width: 768px) {
-    .drmd-acronym-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
-</style>
-
-<div class="drmd-acronym-container">
-    <div class="drmd-column">
-        <div class="drmd-letter-heading">
-            <span class="drmd-big-letter">D</span><span class="drmd-rest-word">igital</span>
-        </div>
-        <div class="drmd-desc">
-            The term Digital represents our process of converting standard PDF formats into fully machine-readable formats for automated data processing.
-        </div>
-    </div>
-    <div class="drmd-column">
-        <div class="drmd-letter-heading">
-            <span class="drmd-big-letter">R</span><span class="drmd-rest-word">eference</span>
-            <span class="drmd-big-letter" style="margin-left: 12px;">M</span><span class="drmd-rest-word">aterial</span>
-        </div>
-        <div class="drmd-desc">
-            The Reference Material forms the core engine of this project, acting as the foundational source of truth for all data verification.
-        </div>
-    </div>
-    <div class="drmd-column">
-        <div class="drmd-letter-heading">
-            <span class="drmd-big-letter">D</span><span class="drmd-rest-word">ocument</span>
-        </div>
-        <div class="drmd-desc">
-            The Document signifies the final structured layout specifically designed to output Certified Reference Materials (CRM) and Product Information Sheets.
-        </div>
-    </div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">What is the DRMD?</p>
-<p>The DRMD is a standardized XML-based format designed to digitally represent reference material certificates in strict compliance with <strong>ISO 17034</strong> (Competence of reference material producers) and <strong>ISO 33401</strong> (Reference materials - Guidance for characterization and assessment of homogeneity and stability).</p>
-</div>
-<h2 id="the-drmd-ecosystem">The DRMD Ecosystem<a class="headerlink" href="#the-drmd-ecosystem" title="Permanent link">&para;</a></h2>
-<p>The DRMD schema transforms static PDF certificates into a machine-readable ecosystem. By moving to structured data, it enables:</p>
-<ul>
-<li><strong>Automated parsing</strong> without manual data entry.</li>
-<li><strong>Seamless LIMS integration</strong> for analytical laboratories.</li>
-<li><strong>Standardized data exchange</strong> between producers and end-users.</li>
-<li><strong>Regulatory compliance</strong> through structured traceability and uncertainty data.</li>
-</ul>
-<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph LR
-    %% Styles
-    classDef producer fill:#e3f2fd,stroke:#0288d1,stroke-width:2px;
-    classDef schema fill:#f3e5f5,stroke:#e65100,stroke-width:2px;
-    classDef user fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-
-    P[RM Producer]:::producer --&gt;|Generates XML| XSD[(DRMD Schema &amp;&lt;br&gt;Schematron Validation)]:::schema
-    XSD --&gt;|Validates &amp; Ingests| U[LIMS &amp; Instruments]:::user</code></pre>
-<h2 id="target-audience">Target Audience<a class="headerlink" href="#target-audience" title="Permanent link">&para;</a></h2>
-<p>This best practice guide is designed for multiple stakeholders across the quality infrastructure:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Machine Manufacturers &amp; Software</label><label for="__tabbed_1_2">Reference Material Producers</label><label for="__tabbed_1_3">End-Users &amp; Laboratories</label><label for="__tabbed_1_4">Auditors &amp; Regulators</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Developers of LIMS, ELN, and analytical instrument software who need to confidently import, parse, and process DRMD certificates.</p>
-</div>
-<div class="tabbed-block">
-<p>Organizations certified according to ISO 17034 who generate and distribute DRMD certificates. This guide ensures your output achieves maximum interoperability.</p>
-</div>
-<div class="tabbed-block">
-<p>Quality control departments and calibration facilities that load DRMD certificates into their systems and require a deep understanding of the certificate structure.</p>
-</div>
-<div class="tabbed-block">
-<p>Quality Assurance personnel responsible for verifying data integrity, cryptographic signatures, and maintaining audit trails for compliance.</p>
-</div>
-</div>
-</div>
+<h1 id="versioning-backward-compatibility">Versioning &amp; Backward Compatibility<a class="headerlink" href="#versioning-backward-compatibility" title="Permanent link">&para;</a></h1>
+<p>Managing changes effectively prevents <strong>"digital decay"</strong>—where older certificates become unreadable by newer software, or newer certificates are suddenly rejected by legacy laboratory instruments.</p>
+<p>This chapter defines the semantic versioning logic of the DRMD schema and the operational rules for updating certificates.</p>
 <hr />
-<h2 id="the-3-tier-validation-model">The 3-Tier Validation Model<a class="headerlink" href="#the-3-tier-validation-model" title="Permanent link">&para;</a></h2>
-<p>To ensure machine-readability and compliance with ISO 33401:2024, the DRMD schema utilizes a powerful companion <strong>Schematron</strong> validation file (<code>drmd-business-rules.sch</code>). </p>
-<p>We have implemented a strict <strong>3-Tier Severity Model</strong> that maps directly to ISO requirement categories. When you validate an XML document, you will see one of the following outputs:</p>
-<div class="admonition failure">
-<p class="admonition-title">Hard Error (Must not accept)</p>
-<p><strong>(ISO Requirement: Mandatory)</strong><br />
-If a document violates a Hard Error rule (e.g., missing a <code>titleOfTheDocument</code> or a mandatory <code>uniqueIdentifier</code>), it is completely non-compliant and must fail conformance validation.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Conditional Error</p>
-<p><strong>(ISO Requirement: Mandatory whenever applicable)</strong><br />
-Rules that must be followed under specific conditions. For example, <code>procedures</code> must be documented whenever measurands are operationally defined. If the condition is met but the data is missing, validation fails.</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Warning (Advisory)</p>
-<p><strong>(ISO Requirement: Recommended)</strong><br />
-The document is structurally valid, but is missing recommended fields (e.g., <code>healthAndSafetyInformation</code> or highest-tier D-SI unit classes). It is acceptable but reduces interoperability.</p>
-</div>
+<h2 id="151-breaking-vs-non-breaking-changes">15.1 Breaking vs. Non-Breaking Changes<a class="headerlink" href="#151-breaking-vs-non-breaking-changes" title="Permanent link">&para;</a></h2>
+<p>The DRMD follows strict semantic versioning logic to signal the impact of schema updates to developers.</p>
+<table>
+<thead>
+<tr>
+<th>Change Type</th>
+<th>Version Increment</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breaking</strong></td>
+<td><strong>Major</strong> (e.g., <code>0.x</code> to <code>1.x</code>)</td>
+<td>Renaming mandatory elements, changing the data type of a value, or removing existing fields.</td>
+</tr>
+<tr>
+<td><strong>Non-Breaking</strong></td>
+<td><strong>Minor</strong> (e.g., <code>0.3</code> to <code>0.4</code>)</td>
+<td>Adding optional elements or introducing new identifier schemes. Existing parsers will not break.</td>
+</tr>
+<tr>
+<td><strong>Correction</strong></td>
+<td><strong>Patch</strong> (e.g., <code>0.3.0</code> to <code>0.3.1</code>)</td>
+<td>Fixing typos in documentation or schema annotations without changing the XML structure.</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="how-to-read-this-guide">How to read this guide<a class="headerlink" href="#how-to-read-this-guide" title="Permanent link">&para;</a></h2>
-<p>In the following chapters, we will break down the DRMD schema into its <strong>Six Core Containers</strong>, providing you with best-practice examples, XML snippets, and strict rules for implementation:</p>
+<h2 id="152-handling-unknown-schema-versions">15.2 Handling Unknown Schema Versions<a class="headerlink" href="#152-handling-unknown-schema-versions" title="Permanent link">&para;</a></h2>
+<p>Software <strong>MUST</strong> implement version checking by inspecting the <code>@schemaVersion</code> attribute on the <code>drmd:digitalReferenceMaterialDocument</code> root element.</p>
+<pre class="mermaid"><code>graph TD
+    IN["Incoming DRMD&lt;br/&gt;@schemaVersion"]
+
+    IN --&gt; CHECK{Compare to&lt;br/&gt;Supported Version}
+
+    CHECK --&gt;|Major Version is Higher| MAJOR["STOP Processing&lt;br/&gt;&lt;i&gt;(Breaking Changes Expected)&lt;/i&gt;"]
+    CHECK --&gt;|Minor/Patch is Higher| MINOR["Attempt to Parse&lt;br/&gt;&lt;i&gt;(Backward Compatible)&lt;/i&gt;"]
+    CHECK --&gt;|Version is Lower/Equal| EQUAL["Parse Normally"]
+
+    MINOR --&gt; LENIENT["&lt;b&gt;Lenient Mode (Archival)&lt;/b&gt;&lt;br/&gt;Read available data, ignore unknown fields."]
+    MINOR --&gt; STRICT["&lt;b&gt;Strict Mode (Calibration)&lt;/b&gt;&lt;br/&gt;Enforce 100% schema compliance."]
+
+    style IN fill:#e8eaf6,color:#000,stroke:#283593
+    style CHECK fill:#c5cae9,color:#000,stroke:#3949ab
+    style MAJOR fill:#ffebee,color:#000,stroke:#f44336
+    style MINOR fill:#e3f2fd,color:#000,stroke:#1565c0
+    style EQUAL fill:#e8f5e9,color:#000,stroke:#4caf50
+    style LENIENT fill:#f5f5f5,stroke:#9e9e9e
+    style STRICT fill:#f5f5f5,stroke:#9e9e9e</code></pre>
+<h3 id="strict-vs-lenient-parsing-modes">Strict vs. Lenient Parsing Modes<a class="headerlink" href="#strict-vs-lenient-parsing-modes" title="Permanent link">&para;</a></h3>
+<p>It is highly recommended that parsers offer two modes:
+- A <strong>lenient mode</strong> for archival viewing (reading whatever is possible, ignoring unknown optional fields added in minor updates).
+- A <strong>strict mode</strong> for automated machine calibration (ensuring 100% schema compliance before trusting the values).</p>
+<hr />
+<h2 id="153-migration-guidance">15.3 Migration Guidance<a class="headerlink" href="#153-migration-guidance" title="Permanent link">&para;</a></h2>
+<p>When a Reference Material Producer (RMP) updates a certificate or migrates to a new DRMD schema, the following operational rules apply:</p>
 <ol>
-<li><strong>Administrative Data</strong></li>
-<li><strong>Materials</strong></li>
-<li><strong>Properties List</strong></li>
-<li><strong>Statements</strong></li>
-<li><strong>Comments &amp; Documents</strong></li>
-<li><strong>Digital Signature</strong></li>
+<li><strong>Document Re-issuance:</strong> Any change to the technical content (e.g., a revised certified value) requires a completely new <code>uniqueIdentifier</code> (UUID) to be issued. You cannot quietly patch certified data.</li>
+<li><strong>Stable Identifiers:</strong> Even if a document is updated to a new version, the <code>materialIdentifiers</code> (like a batch number or catalog ID) SHOULD remain completely unchanged to maintain the link to the physical material.</li>
+<li><strong>Upgrading Stored DRMDs:</strong> When migrating a database of old DRMDs to a new schema version, software SHOULD preserve the original XML and the original digital signature as a "record of origin" before generating the transformed version.</li>
 </ol>
-<p>Click <strong>Next</strong> below to dive into the Schema Overview &amp; Architecture!</p>
+<hr />
+<h2 id="154-deprecation-policy">15.4 Deprecation Policy<a class="headerlink" href="#154-deprecation-policy" title="Permanent link">&para;</a></h2>
+<p>Fields or identifier schemes that are no longer recommended (e.g., an outdated unit string format or a decommissioned database link) will enter a strict "Deprecation" phase.</p>
+<ul>
+<li><strong>Warning Period:</strong> Deprecated fields will remain in the schema for at least one Minor version cycle but will trigger a <code>WARNING</code> during Schematron Profile validation.</li>
+<li><strong>Removal:</strong> Fields will only be actively removed in Major version updates.</li>
+<li><strong>Replacement:</strong> Official documentation MUST provide a clear mapping from the deprecated field to the new recommended field to assist developers in updating their parsers.</li>
+</ul>
+<hr />
+<h2 id="155-summary-for-stakeholders">15.5 Summary for Stakeholders<a class="headerlink" href="#155-summary-for-stakeholders" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Best Practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producers</strong></td>
+<td>Always use the latest patch version for stability; never reuse a UUID for a modified document.</td>
+</tr>
+<tr>
+<td><strong>Developers</strong></td>
+<td>Implement "Future-Proof" parsing that gracefully ignores unknown optional elements in minor version updates.</td>
+</tr>
+<tr>
+<td><strong>Laboratories</strong></td>
+<td>Ensure your LIMS can store multiple versions of a certificate to maintain a complete, unbroken audit trail.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1085,15 +1060,31 @@ The document is structurally valid, but is missing recommended fields (e.g., <co
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../security_trust/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 14. Security &amp; Trust Model">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                14. Security & Trust Model
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Overview &amp; Architecture">
+          <a href="../checklists/" class="md-footer__link md-footer__link--next" aria-label="Next: 16. Implementation Checklists">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                2. Overview & Architecture
+                16. Implementation Checklists
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1130,10 +1121,10 @@ The document is structurally valid, but is missing recommended fields (e.g., <co
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

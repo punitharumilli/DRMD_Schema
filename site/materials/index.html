@@ -1,0 +1,2558 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Best Practice Guidelines for the DRMD XML Schema (ISO 33401:2024)">
+      
+      
+        <meta name="author" content="BAM — Bundesanstalt für Materialforschung und -prüfung">
+      
+      
+        <link rel="canonical" href="https://punitharumilli.github.io/DRMD_Schema/materials/">
+      
+      
+        <link rel="prev" href="../administrative_data/">
+      
+      
+        <link rel="next" href="../properties/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>4. Materials - Digital Reference Material Document (DRMD)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#materials" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-header__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Reference Material Document (DRMD)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Materials
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Digital Reference Material Document (DRMD)" class="md-nav__button md-logo" aria-label="Digital Reference Material Document (DRMD)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Digital Reference Material Document (DRMD)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Overview & Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administrative_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Administrative Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Materials
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-purpose-and-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Purpose and Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-materials-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Materials List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-material-entry-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Material Entry (material)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Material Entry (material)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-name-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Name (name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-description-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Description (description)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-material-classification-materialclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Material Classification (materialClass)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-sample-size-and-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Sample Size and Quantities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Sample Size and Quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-minimum-sample-size-minimumsamplesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.1 Minimum Sample Size (minimumSampleSize)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-item-quantities-itemquantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.2 Item Quantities (itemQuantities)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-primitive-quantity-type-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Primitive Quantity Type (Deep Dive)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Primitive Quantity Type (Deep Dive)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-option-a-sireal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.1 Option A — si:real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-option-b-dccnoquantity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.2 Option B — dcc:noQuantity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#463-option-c-sireallistxmllist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.3 Option C — si:realListXMLList
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#464-option-d-dcccharsxmllist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.4 Option D — dcc:charsXMLList
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#465-options-eh-advancedrare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.5 Options E–H (Advanced/Rare)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-material-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Material Identifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Material Identifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-material-identifiers-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.1 Material Identifiers List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-material-identifier-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.2 Material Identifier Entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.3 Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#474-multi-material-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.4 Multi-Material Scenario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-material-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Material Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Properties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comments_documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Comments & Documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digital_signature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Digital Signature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interoperability_profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Interoperability Profiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Cross-reference Conventions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units_quantities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Units, Quantities & Uncertainty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation_rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Validation Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parsing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Parsing & Data Extraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security_trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Security & Trust Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Versioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Implementation Checklists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Schema Interactive Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-purpose-and-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Purpose and Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-materials-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Materials List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-material-entry-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Material Entry (material)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Material Entry (material)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-name-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Name (name)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-description-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Description (description)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-material-classification-materialclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Material Classification (materialClass)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-sample-size-and-quantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Sample Size and Quantities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Sample Size and Quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-minimum-sample-size-minimumsamplesize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.1 Minimum Sample Size (minimumSampleSize)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-item-quantities-itemquantities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5.2 Item Quantities (itemQuantities)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-primitive-quantity-type-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Primitive Quantity Type (Deep Dive)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Primitive Quantity Type (Deep Dive)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-option-a-sireal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.1 Option A — si:real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-option-b-dccnoquantity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.2 Option B — dcc:noQuantity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#463-option-c-sireallistxmllist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.3 Option C — si:realListXMLList
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#464-option-d-dcccharsxmllist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.4 Option D — dcc:charsXMLList
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#465-options-eh-advancedrare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6.5 Options E–H (Advanced/Rare)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-material-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Material Identifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 Material Identifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-material-identifiers-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.1 Material Identifiers List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-material-identifier-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.2 Material Identifier Entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.3 Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#474-multi-material-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7.4 Multi-Material Scenario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-material-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Material Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="materials">Materials<a class="headerlink" href="#materials" title="Permanent link">&para;</a></h1>
+<p>The <strong>Materials</strong> block (<code>materials</code>) is the authoritative catalogue of the physical reference material(s) that a DRMD document describes. It answers, in a machine-readable way:</p>
+<ul>
+<li><strong>What</strong> material(s) exist in this document (names, descriptions).</li>
+<li><strong>How</strong> they are classified (optional, repeatable material classes).</li>
+<li><strong>How</strong> they are identified externally (IDs such as BAM/CRM code, batch/lot, ROR, internal IDs).</li>
+<li><strong>What</strong> sample amount(s) are relevant for using the material (e.g., minimum sample size; optional additional item quantities).</li>
+</ul>
+<h2 id="structure-at-a-glance">Structure at a Glance<a class="headerlink" href="#structure-at-a-glance" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+    MAT["materials&lt;br/&gt;&lt;i&gt;drmd:materialListType [1..1]&lt;/i&gt;"]
+    M["material&lt;br/&gt;&lt;i&gt;drmd:materialType [1..∞]&lt;/i&gt;"]
+
+    MAT --&gt; M
+
+    M --&gt; NAME["name&lt;br/&gt;&lt;i&gt;dcc:textType [1..1]&lt;/i&gt;"]
+    M --&gt; DESC["description&lt;br/&gt;&lt;i&gt;dcc:richContentType [0..1]&lt;/i&gt;"]
+    M --&gt; MC["materialClass&lt;br/&gt;&lt;i&gt;drmd:materialClassType [0..∞]&lt;/i&gt;"]
+    M --&gt; MSS["minimumSampleSize&lt;br/&gt;&lt;i&gt;dcc:itemQuantityListType [0..1]&lt;/i&gt;"]
+    M --&gt; IQ["itemQuantities&lt;br/&gt;&lt;i&gt;dcc:itemQuantityListType [0..1]&lt;/i&gt;"]
+    M --&gt; MID["materialIdentifiers&lt;br/&gt;&lt;i&gt;drmd:materialIdentifierListType [0..1]&lt;/i&gt;"]
+
+    MC --&gt; REF["reference [1..1]"]
+    MC --&gt; CID["classID [1..1]"]
+    MC --&gt; LNK1["link [0..1]"]
+
+    MID --&gt; MI["materialIdentifier&lt;br/&gt;&lt;i&gt;drmd:identifierType [0..∞]&lt;/i&gt;"]
+    MI --&gt; SCH["scheme [1..1]"]
+    MI --&gt; VAL["value [1..1]"]
+    MI --&gt; LNK2["link [0..1]"]
+
+    style MAT fill:#e8eaf6,color:#000,stroke:#283593
+    style M fill:#c5cae9,color:#000,stroke:#3949ab
+    style NAME fill:#e8eaf6,stroke:#3f51b5
+    style DESC fill:#e8eaf6,stroke:#3f51b5
+    style MC fill:#e8eaf6,stroke:#3f51b5
+    style MSS fill:#e8eaf6,stroke:#3f51b5
+    style IQ fill:#e8eaf6,stroke:#3f51b5
+    style MID fill:#e8eaf6,stroke:#3f51b5
+    style REF fill:#e3f2fd,stroke:#1565c0
+    style CID fill:#e3f2fd,stroke:#1565c0
+    style LNK1 fill:#e3f2fd,stroke:#1565c0
+    style MI fill:#c5cae9,stroke:#3949ab
+    style SCH fill:#e3f2fd,stroke:#1565c0
+    style VAL fill:#e3f2fd,stroke:#1565c0
+    style LNK2 fill:#e3f2fd,stroke:#1565c0</code></pre>
+<p>The six child elements of each <code>material</code> entry are:</p>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td><code>dcc:textType</code></td>
+<td>Mandatory</td>
+<td>Human-readable product name</td>
+</tr>
+<tr>
+<td><strong>description</strong></td>
+<td><code>dcc:richContentType</code></td>
+<td>CRM: Mandatory / ProductInformationSheet: Optional</td>
+<td>Physical form, composition, matrix information</td>
+</tr>
+<tr>
+<td><strong>materialClass</strong></td>
+<td><code>drmd:materialClassType</code></td>
+<td>Optional (repeatable)</td>
+<td>Classification taxonomy assignment</td>
+</tr>
+<tr>
+<td><strong>minimumSampleSize</strong></td>
+<td><code>dcc:itemQuantityListType</code></td>
+<td>Mandatory whenever applicable</td>
+<td>Minimum quantity for valid use</td>
+</tr>
+<tr>
+<td><strong>itemQuantities</strong></td>
+<td><code>dcc:itemQuantityListType</code></td>
+<td>Optional</td>
+<td>Additional physical descriptors</td>
+</tr>
+<tr>
+<td><strong>materialIdentifiers</strong></td>
+<td><code>drmd:materialIdentifierListType</code></td>
+<td>Optional</td>
+<td>Canonical keys for matching/tracking</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Dual Validation Required</p>
+<p>The DRMD schema uses a <strong>dual-profile architecture</strong>. The XSD defines the structure, but profile-specific mandatory requirements (e.g., <code>description</code> being mandatory for CRM documents) are enforced by the companion <strong>Schematron business rules</strong> (<code>drmd-business-rules.sch</code>). Full compliance requires passing <strong>both</strong> validations.</p>
+</div>
+<h2 id="41-purpose-and-use">4.1 Purpose and Use<a class="headerlink" href="#41-purpose-and-use" title="Permanent link">&para;</a></h2>
+<details class="abstract">
+<summary>Who Uses This Block?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use the Materials Block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reference Material Producer (RMP)</strong></td>
+<td>Publishes the canonical product identity (name + identifiers) and how to handle it (sample size). Ensures traceability between digital document and physical packaging/labels, catalog entries, and internal inventory systems.</td>
+</tr>
+<tr>
+<td><strong>Laboratories / End Users</strong></td>
+<td>Know exactly which material the certified values apply to (especially crucial when there are multiple materials, lots, forms). Determine minimum sample size to plan method suitability, sample preparation, and replicate strategy.</td>
+</tr>
+<tr>
+<td><strong>Instrument / Machine Manufacturers</strong></td>
+<td>Can ingest standardized material metadata to preconfigure methods. Map "material name/identifier" to internal instrument libraries. Display correct sample requirements and warnings in UI.</td>
+</tr>
+<tr>
+<td><strong>Software Developers / LIMS / ELN</strong></td>
+<td>Use <code>materials/material/materialIdentifiers</code> to match DRMD content to database entities (product tables, lots, customer inventory). Use DCC quantity structures to reuse existing parsing/validation for numeric values and units.</td>
+</tr>
+<tr>
+<td><strong>Regulators / Auditors</strong></td>
+<td>Verify the document refers to a clearly identified material, and the declared minimum sample size and identifiers are consistent with external references and packaging.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Handling Multiple Materials</p>
+<p>When a DRMD contains multiple <code>drmd:material</code> entries, the identifiers declared in <code>/drmd:materials/drmd:material/materialIdentifiers</code> should be treated as the <strong>canonical keys</strong> for linking downstream information. In the next chapter (Material Properties), software can use these material identifiers as stable references (e.g., via <code>@id</code>/<code>@refId</code> patterns) to associate each set of properties with the correct material.</p>
+</div>
+<h2 id="42-materials-list">4.2 Materials List<a class="headerlink" href="#42-materials-list" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Element</strong></td>
+<td><code>drmd:materials</code></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/drmd:digitalReferenceMaterialDocument/drmd:materials</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:materialListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code> at root</td>
+</tr>
+<tr>
+<td><strong>Contents</strong></td>
+<td>One or more <code>drmd:material</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> The top-level container that holds the catalogue of all physical reference materials covered by this DRMD document.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Include <strong>exactly one</strong> <code>drmd:material</code> when the DRMD is for a single CRM/RM product.</li>
+<li>Use <strong>multiple</strong> <code>drmd:material</code> entries when:<ul>
+<li>The DRMD certifies multiple distinct materials.</li>
+<li>The product is a kit with distinct components.</li>
+<li>Variants/forms are treated as separate "materials" with separate sample size constraints or identifiers.</li>
+</ul>
+</li>
+<li>Keep identifiers <strong>stable across releases</strong>; if you revise the document, avoid changing identifiers unless the material itself changes.</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;drmd:materials&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&lt;drmd:material&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="cm">&lt;!-- ... material details ... --&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&lt;/drmd:material&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">&lt;/drmd:materials&gt;</span>
+</span></code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-002</p>
+<p>Every DRMD document <strong>MUST</strong> contain at least one <code>material</code> entry in the materials catalogue (ISO 33401:2024, §5.2.4). Severity: <strong>Error</strong> — the document is non-compliant without at least one material.</p>
+</div>
+<h2 id="43-material-entry-material">4.3 Material Entry (<code>material</code>)<a class="headerlink" href="#43-material-entry-material" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Element</strong></td>
+<td><code>drmd:material</code></td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/drmd:digitalReferenceMaterialDocument/drmd:materials/drmd:material</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:materialType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><code>[1..∞]</code> within <code>drmd:materials</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> Each <code>material</code> element represents a single physical reference material. It encapsulates everything needed to identify, describe, classify, and quantify the material.</p>
+<pre class="mermaid"><code>graph LR
+    M["material"] --&gt; NAME["name&lt;br/&gt;&lt;i&gt;Required&lt;/i&gt;"]
+    M --&gt; DESC["description&lt;br/&gt;&lt;i&gt;CRM: Required&lt;/i&gt;"]
+    M --&gt; MC["materialClass&lt;br/&gt;&lt;i&gt;0..∞&lt;/i&gt;"]
+    M --&gt; MSS["minimumSampleSize&lt;br/&gt;&lt;i&gt;Conditional&lt;/i&gt;"]
+    M --&gt; IQ["itemQuantities&lt;br/&gt;&lt;i&gt;Optional&lt;/i&gt;"]
+    M --&gt; MID["materialIdentifiers&lt;br/&gt;&lt;i&gt;Optional&lt;/i&gt;"]
+
+    style M fill:#e8eaf6,color:#000,stroke:#3f51b5
+    style NAME fill:#c5cae9,stroke:#3f51b5
+    style DESC fill:#c5cae9,stroke:#3f51b5
+    style MC fill:#e8eaf6,stroke:#9fa8da
+    style MSS fill:#fff3e0,stroke:#ff9800
+    style IQ fill:#e8eaf6,stroke:#9fa8da
+    style MID fill:#e8eaf6,stroke:#9fa8da</code></pre>
+<h3 id="431-name-name">4.3.1 Name (<code>name</code>)<a class="headerlink" href="#431-name-name" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:material/drmd:name</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:textType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Required</strong> <code>[1..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> The human-readable primary name of the material (e.g., "BAM-M308a", "AlZnMgCu1.5", "CRM XYZ-123").</p>
+<details class="abstract">
+<summary>Who Uses This Element?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producer</strong></td>
+<td>Public-facing product name</td>
+</tr>
+<tr>
+<td><strong>Lab</strong></td>
+<td>Selection of correct material in procedures and reports</td>
+</tr>
+<tr>
+<td><strong>Software</strong></td>
+<td>Display label and user selection (not a stable key — use identifiers for matching)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Provide at least one <code>dcc:content</code>.</li>
+<li>If multilingual usage is expected, include multiple <code>dcc:content</code> entries with <code>@lang</code>.</li>
+<li>Keep naming consistent with packaging/catalog.</li>
+<li>Keep the "material name" short; put extended marketing/narrative into <code>drmd:description</code>.</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;drmd:name&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Aluminium<span class="w"> </span>Alloy<span class="w"> </span>Disk<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>Aluminiumscheibe<span class="w"> </span>(Legierung)<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">&lt;/drmd:name&gt;</span>
+</span></code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-007</p>
+<p>Every material entry <strong>MUST</strong> include a <code>name</code> element (ISO 33401:2024, §5.2.4). Severity: <strong>Error</strong>.</p>
+</div>
+<h3 id="432-description-description">4.3.2 Description (<code>description</code>)<a class="headerlink" href="#432-description-description" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:material/drmd:description</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:richContentType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td>CRM: <strong>Mandatory</strong> / ProductInformationSheet: <strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> Structured descriptive content including narrative text, attachments, and formulas. Typically used for form factor, composition notes, packaging form, and hazards summary pointers.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use description to capture: physical form, dimensions, matrix, appearance, preparation hints.</li>
+<li>Keep long legal/health &amp; safety statements in <code>drmd:statements</code> (not here), but you may reference them.</li>
+<li>Use <code>dcc:content</code> for narrative.</li>
+<li>Use <code>dcc:file</code> for images/spec sheets only when needed (otherwise keep DRMD lean).</li>
+<li>Keep units/numerical constraints in <code>itemQuantities</code> or results sections rather than burying them only in narrative text.</li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Text-only Example</label><label for="__tabbed_1_2">With Attachment</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;drmd:description&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Material<span class="w"> </span>description<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span>The<span class="w"> </span>reference<span class="w"> </span>material<span class="w"> </span>is<span class="w"> </span>provided<span class="w"> </span>as<span class="w"> </span>discs
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span>(approx.<span class="w"> </span>65<span class="w"> </span>mm<span class="w"> </span>diameter,<span class="w"> </span>30<span class="w"> </span>mm<span class="w"> </span>height).
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span>Intended<span class="w"> </span>for<span class="w"> </span>establishing/checking<span class="w"> </span>calibration
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span>of<span class="w"> </span>spark<span class="w"> </span>OES<span class="w"> </span>and<span class="w"> </span>XRF<span class="w"> </span>methods<span class="w"> </span>for<span class="w"> </span>similar<span class="w"> </span>matrices.
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nt">&lt;/drmd:description&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;drmd:description&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>See<span class="w"> </span>the<span class="w"> </span>attached<span class="w"> </span>technical<span class="w"> </span>drawing
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>for<span class="w"> </span>geometry<span class="w"> </span>and<span class="w"> </span>tolerances.<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&lt;dcc:file&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">&lt;dcc:fileName&gt;</span>BAM-M308a-drawing.pdf<span class="nt">&lt;/dcc:fileName&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">&lt;dcc:mimeType&gt;</span>application/pdf<span class="nt">&lt;/dcc:mimeType&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">&lt;dcc:dataBase64&gt;</span>BASE64_PDF_BYTES_HERE==<span class="nt">&lt;/dcc:dataBase64&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nt">&lt;/dcc:file&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nt">&lt;/drmd:description&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: RMC-011</p>
+<p>Reference Material Certificates <strong>MUST</strong> include a description for each material (ISO 33401:2024, §5.3.2). Severity: <strong>Error</strong>. This rule does <strong>not</strong> apply to <code>productInformationSheet</code> documents, but a description is still recommended (PIS-005, Severity: <strong>Warning</strong>).</p>
+</div>
+<h2 id="44-material-classification-materialclass">4.4 Material Classification (<code>materialClass</code>)<a class="headerlink" href="#44-material-classification-materialclass" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:material/drmd:materialClass</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:materialClassType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong>, repeatable <code>[0..∞]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> A classification entry that ties the material to a classification scheme and a class identifier within that scheme.</p>
+<pre class="mermaid"><code>graph LR
+    MC["materialClass"] --&gt; REF["reference&lt;br/&gt;&lt;i&gt;Required&lt;/i&gt;"]
+    MC --&gt; CID["classID&lt;br/&gt;&lt;i&gt;Required&lt;/i&gt;"]
+    MC --&gt; LNK["link&lt;br/&gt;&lt;i&gt;Optional&lt;/i&gt;"]
+
+    style MC fill:#e8eaf6,color:#000,stroke:#3f51b5
+    style REF fill:#c5cae9,stroke:#3f51b5
+    style CID fill:#c5cae9,stroke:#3f51b5
+    style LNK fill:#e8eaf6,stroke:#9fa8da</code></pre>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>reference</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>Names the classification scheme (e.g., ISO, UNS, InternalCatalog, ECHA)</td>
+</tr>
+<tr>
+<td><strong>classID</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>The code within that scheme</td>
+</tr>
+<tr>
+<td><strong>link</strong></td>
+<td><code>xs:anyURI</code></td>
+<td>No</td>
+<td>A resolvable URL to the scheme definition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Technical Attributes:</strong> <code>@id</code> (xs:ID), <code>@refId</code> (xs:IDREFS), <code>@refType</code> (drmd:refTypesType) — all optional.</p>
+<details class="abstract">
+<summary>Who Uses This Element?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producer</strong></td>
+<td>Align product with internal classification or external taxonomy</td>
+</tr>
+<tr>
+<td><strong>Labs</strong></td>
+<td>Group/filter materials by matrix/type (e.g., alloy class, soil class)</td>
+</tr>
+<tr>
+<td><strong>Manufacturers/Software</strong></td>
+<td>Enable automated method suggestions or UI filters by class</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use <code>reference</code> for the scheme name (e.g., ISO, UNS, InternalCatalog, ECHA).</li>
+<li>Use <code>classID</code> for the scheme's code.</li>
+<li>Provide <code>link</code> when the scheme/class is resolvable online.</li>
+</ul>
+</div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;drmd:materialClass</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;mc-1&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&lt;drmd:reference&gt;</span>ISO<span class="w"> </span>12103-1<span class="nt">&lt;/drmd:reference&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&lt;drmd:classID&gt;</span>A2<span class="w"> </span>Fine<span class="w"> </span>Test<span class="w"> </span>Dust<span class="nt">&lt;/drmd:classID&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">&lt;drmd:link&gt;</span>https://www.iso.org/standard/30109.html<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nt">&lt;/drmd:materialClass&gt;</span>
+</span></code></pre></div>
+<h2 id="45-sample-size-and-quantities">4.5 Sample Size and Quantities<a class="headerlink" href="#45-sample-size-and-quantities" title="Permanent link">&para;</a></h2>
+<h3 id="451-minimum-sample-size-minimumsamplesize">4.5.1 Minimum Sample Size (<code>minimumSampleSize</code>)<a class="headerlink" href="#451-minimum-sample-size-minimumsamplesize" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:material/drmd:minimumSampleSize</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:itemQuantityListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Mandatory whenever applicable</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> The minimum quantity of sample needed to use the material as intended. Often depends on the method family; if so, use multiple <code>dcc:itemQuantity</code> entries with names/descriptions inside the quantity structure.</p>
+<details class="abstract">
+<summary>Who Uses This Element?</summary>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>How They Use It</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Labs</strong></td>
+<td>Compliance with certified use conditions; planning sample prep</td>
+</tr>
+<tr>
+<td><strong>Producer</strong></td>
+<td>Communicate minimum amount for valid use</td>
+</tr>
+<tr>
+<td><strong>Software / Instruments</strong></td>
+<td>Warnings if planned sample mass/volume is below minimum</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use <code>si:real</code> for numeric sample size + unit (e.g., 0.2 g).</li>
+<li>If multiple minima exist (e.g., OES vs wet chemistry), provide multiple <code>dcc:itemQuantity</code> entries and differentiate using the quantity's name/description.</li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Simple Minimum Sample Mass</label><label for="__tabbed_2_2">With Uncertainty</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;drmd:minimumSampleSize&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span><span class="nt">&lt;si:label&gt;</span>Minimum<span class="w"> </span>sample<span class="w"> </span>mass<span class="w"> </span>for<span class="w"> </span>wet<span class="w"> </span>chemical<span class="w"> </span>analysis<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="nt">&lt;si:value&gt;</span>0.2<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="nt">&lt;si:unit&gt;</span>\gram<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nt">&lt;/drmd:minimumSampleSize&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;drmd:minimumSampleSize&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">      </span><span class="nt">&lt;si:label&gt;</span>Minimum<span class="w"> </span>sample<span class="w"> </span>mass<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="nt">&lt;si:value&gt;</span>0.200<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">      </span><span class="nt">&lt;si:unit&gt;</span>\gram<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="nt">&lt;si:measurementUncertaintyUnivariate&gt;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="nt">&lt;si:expandedMU&gt;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">          </span><span class="nt">&lt;si:valueExpandedMU&gt;</span>0.005<span class="nt">&lt;/si:valueExpandedMU&gt;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">          </span><span class="nt">&lt;si:coverageFactor&gt;</span>2<span class="nt">&lt;/si:coverageFactor&gt;</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">          </span><span class="nt">&lt;si:coverageProbability&gt;</span>0.95<span class="nt">&lt;/si:coverageProbability&gt;</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">          </span><span class="nt">&lt;si:distribution&gt;</span>normal<span class="nt">&lt;/si:distribution&gt;</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="nt">&lt;/si:expandedMU&gt;</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">      </span><span class="nt">&lt;/si:measurementUncertaintyUnivariate&gt;</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">  </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="nt">&lt;/drmd:minimumSampleSize&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Schematron Rule: DRMD-008</p>
+<p>Each material entry <strong>MUST</strong> specify a <code>minimumSampleSize</code> whenever applicable to ensure representative sampling for homogeneity (ISO 33401:2024, §5.2.7). Severity: <strong>Conditional Error</strong> — absence may be valid if not applicable to the specific material, but absence of this field when a minimum sample size exists constitutes a violation.</p>
+</div>
+<h3 id="452-item-quantities-itemquantities">4.5.2 Item Quantities (<code>itemQuantities</code>)<a class="headerlink" href="#452-item-quantities-itemquantities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:material/drmd:itemQuantities</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>dcc:itemQuantityListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong> Additional quantities describing the material item (not necessarily "minimum"), such as nominal item mass, dimensions (diameter/height), number of units in package, or storage temperature limits.</p>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use this for quantitative descriptors of the material item/package.</li>
+<li>Avoid duplicating general statements that belong in <code>drmd:statements</code>.</li>
+</ul>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Dimensions + Mass</label><label for="__tabbed_3_2">Non-numeric Quantity</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;drmd:itemQuantities&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="nt">&lt;si:label&gt;</span>Diameter<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nt">&lt;si:value&gt;</span>65<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="nt">&lt;si:unit&gt;</span>mm<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="nt">&lt;si:label&gt;</span>Height<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="nt">&lt;si:value&gt;</span>30<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="nt">&lt;si:unit&gt;</span>mm<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">      </span><span class="nt">&lt;si:label&gt;</span>Approximate<span class="w"> </span>mass<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">      </span><span class="nt">&lt;si:value&gt;</span>250<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">      </span><span class="nt">&lt;si:unit&gt;</span>\gram<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">  </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="nt">&lt;/drmd:itemQuantities&gt;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&lt;drmd:itemQuantities&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&lt;dcc:noQuantity&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Item<span class="w"> </span>quantity<span class="w"> </span>not<span class="w"> </span>specified
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span>(varies<span class="w"> </span>by<span class="w"> </span>batch/packaging).<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">&lt;/dcc:noQuantity&gt;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nt">&lt;/drmd:itemQuantities&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="46-primitive-quantity-type-deep-dive">4.6 Primitive Quantity Type (Deep Dive)<a class="headerlink" href="#46-primitive-quantity-type-deep-dive" title="Permanent link">&para;</a></h2>
+<p>The <code>dcc:primitiveQuantityType</code> is the foundational container for every single quantitative statement in a DRMD. It is used inside both <code>minimumSampleSize</code> and <code>itemQuantities</code>. Understanding its structure is key to producing valid, interoperable data.</p>
+<pre class="mermaid"><code>graph TD
+    PQ["dcc:primitiveQuantityType"]
+    PQ --&gt; N["dcc:name&lt;br/&gt;&lt;i&gt;Optional&lt;/i&gt;"]
+    PQ --&gt; D["dcc:description&lt;br/&gt;&lt;i&gt;Optional&lt;/i&gt;"]
+    PQ --&gt; CHOICE{{"Choice (exactly 1)"}}
+
+    CHOICE --&gt; A["si:real&lt;br/&gt;&lt;i&gt;Number + Unit&lt;/i&gt;"]
+    CHOICE --&gt; B["dcc:noQuantity&lt;br/&gt;&lt;i&gt;Structured placeholder&lt;/i&gt;"]
+    CHOICE --&gt; C["si:realListXMLList&lt;br/&gt;&lt;i&gt;List of numbers&lt;/i&gt;"]
+    CHOICE --&gt; D2["dcc:charsXMLList&lt;br/&gt;&lt;i&gt;Token list&lt;/i&gt;"]
+    CHOICE --&gt; E["si:hybrid&lt;br/&gt;&lt;i&gt;Advanced&lt;/i&gt;"]
+    CHOICE --&gt; F["si:complex&lt;br/&gt;&lt;i&gt;Rare&lt;/i&gt;"]
+    CHOICE --&gt; G["si:constant&lt;br/&gt;&lt;i&gt;Rare&lt;/i&gt;"]
+    CHOICE --&gt; H["si:complexListXMLList&lt;br/&gt;&lt;i&gt;Rare&lt;/i&gt;"]
+
+    style PQ fill:#e8eaf6,color:#000,stroke:#283593
+    style N fill:#e3f2fd,stroke:#1565c0
+    style D fill:#e3f2fd,stroke:#1565c0
+    style CHOICE fill:#fff3e0,color:#000,stroke:#ff9800
+    style A fill:#e8f5e9,stroke:#4caf50
+    style B fill:#e8f5e9,stroke:#4caf50
+    style C fill:#e8f5e9,stroke:#4caf50
+    style D2 fill:#e8f5e9,stroke:#4caf50
+    style E fill:#e8eaf6,stroke:#9fa8da
+    style F fill:#e8eaf6,stroke:#9fa8da
+    style G fill:#e8eaf6,stroke:#9fa8da
+    style H fill:#e8eaf6,stroke:#9fa8da</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Provide <code>dcc:name</code> whenever a list contains multiple quantities (humans and software need labels).</li>
+<li><strong>Default to Option A</strong> (<code>si:real</code>) for numeric + unit (highest interoperability).</li>
+<li>Use Option C (<code>si:realListXMLList</code>) only when your ecosystem supports list parsing; otherwise model multiple <code>dcc:itemQuantity</code> entries each with <code>si:real</code>.</li>
+<li>Use Option B (<code>dcc:noQuantity</code>) only when numeric is truly not applicable.</li>
+<li>Use <code>dcc:charsXMLList</code> for controlled vocabulary / token lists — not for numbers.</li>
+<li>Treat <code>si:hybrid</code>, <code>si:complex</code>, <code>si:constant</code>, <code>si:complexListXMLList</code> as advanced/rare options.</li>
+</ul>
+</div>
+<h3 id="461-option-a-sireal">4.6.1 Option A — <code>si:real</code><a class="headerlink" href="#461-option-a-sireal" title="Permanent link">&para;</a></h3>
+<p>Use when you have <strong>one number with one unit</strong>. This is the most common and interoperable option.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Minimum<span class="w"> </span>sample<span class="w"> </span>size<span class="nt">&lt;/dcc:content&gt;&lt;/dcc:name&gt;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">&lt;si:value&gt;</span>0.2<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="nt">&lt;si:unit&gt;</span>g<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span></code></pre></div>
+<h3 id="462-option-b-dccnoquantity">4.6.2 Option B — <code>dcc:noQuantity</code><a class="headerlink" href="#462-option-b-dccnoquantity" title="Permanent link">&para;</a></h3>
+<p>Use when the value is <strong>intentionally not numeric</strong>, but you want a structured placeholder and explanation.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Minimum<span class="w"> </span>sample<span class="w"> </span>size<span class="nt">&lt;/dcc:content&gt;&lt;/dcc:name&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">&lt;dcc:noQuantity&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Not<span class="w"> </span>specified;<span class="w"> </span>depends<span class="w"> </span>on<span class="w"> </span>method.<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="nt">&lt;/dcc:noQuantity&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span></code></pre></div>
+<h3 id="463-option-c-sireallistxmllist">4.6.3 Option C — <code>si:realListXMLList</code><a class="headerlink" href="#463-option-c-sireallistxmllist" title="Permanent link">&para;</a></h3>
+<p>Use when one "quantity" is naturally a <strong>list of numbers</strong>, each paired with a unit entry.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Recommended<span class="w"> </span>test<span class="w"> </span>portions<span class="nt">&lt;/dcc:content&gt;&lt;/dcc:name&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">&lt;si:realListXMLList&gt;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">&lt;si:valueXMLList&gt;</span>0.1<span class="nt">&lt;/si:valueXMLList&gt;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nt">&lt;si:valueXMLList&gt;</span>0.2<span class="nt">&lt;/si:valueXMLList&gt;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="nt">&lt;si:unitXMLList&gt;</span>g<span class="nt">&lt;/si:unitXMLList&gt;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="nt">&lt;si:unitXMLList&gt;</span>g<span class="nt">&lt;/si:unitXMLList&gt;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nt">&lt;/si:realListXMLList&gt;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span></code></pre></div>
+<h3 id="464-option-d-dcccharsxmllist">4.6.4 Option D — <code>dcc:charsXMLList</code><a class="headerlink" href="#464-option-d-dcccharsxmllist" title="Permanent link">&para;</a></h3>
+<p>Use when the "quantity" is best represented as a <strong>list of tokens/strings</strong> (not numeric), e.g., categorical values, codes, labels.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">&lt;dcc:name&gt;&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Applicable<span class="w"> </span>methods<span class="nt">&lt;/dcc:content&gt;&lt;/dcc:name&gt;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">&lt;dcc:charsXMLList&gt;</span>ICP-OES<span class="w"> </span>XRF<span class="w"> </span>OES<span class="nt">&lt;/dcc:charsXMLList&gt;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span></code></pre></div>
+<h3 id="465-options-eh-advancedrare">4.6.5 Options E–H (Advanced/Rare)<a class="headerlink" href="#465-options-eh-advancedrare" title="Permanent link">&para;</a></h3>
+<p>These options exist for specialized use cases:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Element</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E</strong></td>
+<td><code>si:hybrid</code></td>
+<td>When you need a hybrid representation, typically when a plain double is insufficient</td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td><code>si:complex</code></td>
+<td>When the quantity is genuinely complex-valued (real + imaginary)</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td><code>si:constant</code></td>
+<td>When you need to represent a constant quantity as defined by the SI schema</td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td><code>si:complexListXMLList</code></td>
+<td>When you need a list of complex numbers in compact list form</td>
+</tr>
+</tbody>
+</table>
+<h2 id="47-material-identifiers">4.7 Material Identifiers<a class="headerlink" href="#47-material-identifiers" title="Permanent link">&para;</a></h2>
+<p>Material Identifiers provide the canonical, <strong>machine-actionable keys</strong> to uniquely (or strongly) identify a reference material across producers, lots/batches, catalogs, and downstream systems. Unlike free-text names, identifiers are intended to be <strong>stable</strong> and suitable for indexing, deduplication, traceability, and cross-document linking.</p>
+<pre class="mermaid"><code>graph LR
+    MID["materialIdentifiers"] --&gt; MI1["materialIdentifier #1"]
+    MID --&gt; MI2["materialIdentifier #2"]
+    MID --&gt; MIN["materialIdentifier #n"]
+
+    MI1 --&gt; S1["scheme: BAM"]
+    MI1 --&gt; V1["value: M308a"]
+    MI1 --&gt; L1["link: https://www.bam.de/"]
+
+    MI2 --&gt; S2["scheme: Lot"]
+    MI2 --&gt; V2["value: L2024-Q3-001"]
+
+    style MID fill:#e8eaf6,color:#000,stroke:#283593
+    style MI1 fill:#c5cae9,color:#000,stroke:#3949ab
+    style MI2 fill:#c5cae9,color:#000,stroke:#3949ab
+    style MIN fill:#c5cae9,color:#000,stroke:#3949ab
+    style S1 fill:#e3f2fd,stroke:#1565c0
+    style V1 fill:#e3f2fd,stroke:#1565c0
+    style L1 fill:#e3f2fd,stroke:#1565c0
+    style S2 fill:#e3f2fd,stroke:#1565c0
+    style V2 fill:#e3f2fd,stroke:#1565c0</code></pre>
+<h3 id="471-material-identifiers-list">4.7.1 Material Identifiers List<a class="headerlink" href="#471-material-identifiers-list" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../drmd:material/materialIdentifiers</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:materialIdentifierListType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><strong>Optional</strong> <code>[0..1]</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Provide this list whenever the material must be uniquely tracked (almost always recommended).</li>
+<li>Include at least one <strong>product-level identifier</strong> (e.g., catalog/material code) and one <strong>lot/batch-level identifier</strong> when the DRMD is specific to a batch/production run.</li>
+<li>Keep identifiers exactly as printed on packaging/certificate (case, punctuation, separators).</li>
+<li>Prefer persistent/resolvable identifier schemes (DOI, Handle, official producer page) whenever possible.</li>
+</ul>
+</div>
+<h3 id="472-material-identifier-entry">4.7.2 Material Identifier Entry<a class="headerlink" href="#472-material-identifier-entry" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>.../materialIdentifiers/drmd:materialIdentifier</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>drmd:identifierType</code></td>
+</tr>
+<tr>
+<td><strong>Cardinality</strong></td>
+<td><code>[0..∞]</code> within the list</td>
+</tr>
+</tbody>
+</table>
+<p>Each <code>drmd:materialIdentifier</code> is one identifier instance, expressed as a <strong>scheme + value</strong> pair, optionally with a link.</p>
+<table>
+<thead>
+<tr>
+<th>Child Element</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>scheme</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>Names the identifier system / namespace / issuing authority</td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td><code>dcc:notEmptyStringType</code></td>
+<td>Yes</td>
+<td>The identifier string itself</td>
+</tr>
+<tr>
+<td><strong>link</strong></td>
+<td><code>xs:anyURI</code></td>
+<td>No</td>
+<td>A resolvable URL for the identifier</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Recommended Scheme Values</p>
+<p>Use a controlled set of scheme names across your organization to avoid duplicates:</p>
+<table>
+<thead>
+<tr>
+<th>Scheme</th>
+<th>Category</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BAM</code>, <code>NIST</code>, <code>ERM</code>, <code>LGC</code></td>
+<td>Producer-specific</td>
+<td><code>M308a</code>, <code>SRM-610</code></td>
+</tr>
+<tr>
+<td><code>ERP</code>, <code>SAP</code>, <code>InternalMaterialID</code></td>
+<td>Internal enterprise</td>
+<td><code>MAT-2024-001</code></td>
+</tr>
+<tr>
+<td><code>CatalogNo</code>, <code>GTIN</code></td>
+<td>Commercial</td>
+<td><code>7640114565019</code></td>
+</tr>
+<tr>
+<td><code>Lot</code>, <code>Batch</code></td>
+<td>Batch identifiers</td>
+<td><code>L2024-Q3-001</code></td>
+</tr>
+<tr>
+<td><code>DOI</code>, <code>Handle</code>, <code>URL</code></td>
+<td>Persistent identifiers</td>
+<td><code>10.1234/bam-m308a</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="473-attributes">4.7.3 Attributes<a class="headerlink" href="#473-attributes" title="Permanent link">&para;</a></h3>
+<p>These attributes exist on each <code>drmd:materialIdentifier</code> and are useful for internal cross-references, merges, and structured linking patterns.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@id</code></td>
+<td><code>xs:ID</code></td>
+<td>Defines an internal XML identifier for this node. Use when you want to reference this exact element via <code>@refId</code> or want stable anchors for processing pipelines.</td>
+</tr>
+<tr>
+<td><code>@refId</code></td>
+<td><code>xs:IDREFS</code></td>
+<td>One or more references to <code>@id</code> values elsewhere in the document. Supports internal linking such as mapping identifiers or connecting imported/legacy IDs to canonical ones.</td>
+</tr>
+<tr>
+<td><code>@refType</code></td>
+<td><code>drmd:refTypesType</code></td>
+<td>Classifies the purpose/type of the reference. Enumeration values: <code>basic_certificateIdentification</code>, <code>basic_measuredValue</code>. Use only when you have a clear internal convention.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="474-multi-material-scenario">4.7.4 Multi-Material Scenario<a class="headerlink" href="#474-multi-material-scenario" title="Permanent link">&para;</a></h3>
+<p>When a DRMD contains <strong>multiple <code>drmd:material</code> entries</strong> (e.g., different lots, different physical forms), the identifiers declared under <code>/drmd:materials/drmd:material/materialIdentifiers</code> should be treated as the canonical keys for linking downstream information.</p>
+<pre class="mermaid"><code>graph TD
+    MATS["materials"]
+    M1["material #1&lt;br/&gt;&lt;i&gt;Disc Form&lt;/i&gt;"]
+    M2["material #2&lt;br/&gt;&lt;i&gt;Powder Form&lt;/i&gt;"]
+
+    MATS --&gt; M1
+    MATS --&gt; M2
+
+    M1 --&gt; ID1["scheme: BAM&lt;br/&gt;value: M308a-disc"]
+    M2 --&gt; ID2["scheme: BAM&lt;br/&gt;value: M308a-powder"]
+
+    ID1 -.-&gt;|"@refId links to"| PROPS1["Properties Block A&lt;br/&gt;&lt;i&gt;Certified values for disc&lt;/i&gt;"]
+    ID2 -.-&gt;|"@refId links to"| PROPS2["Properties Block B&lt;br/&gt;&lt;i&gt;Certified values for powder&lt;/i&gt;"]
+
+    style MATS fill:#e8eaf6,color:#000,stroke:#283593
+    style M1 fill:#c5cae9,color:#000,stroke:#3949ab
+    style M2 fill:#c5cae9,color:#000,stroke:#3949ab
+    style ID1 fill:#e3f2fd,stroke:#1565c0
+    style ID2 fill:#e3f2fd,stroke:#1565c0
+    style PROPS1 fill:#e8f5e9,stroke:#4caf50
+    style PROPS2 fill:#e8f5e9,stroke:#4caf50</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Implementation Options</p>
+<ul>
+<li><strong>XML-native approach:</strong> Assign <code>@id</code> on a chosen identifier element and reference it using <code>@refId</code> patterns where the schema permits.</li>
+<li><strong>Database approach:</strong> Map <code>(scheme, value)</code> pairs into normalized keys and use them as foreign keys across imported DRMD content.</li>
+</ul>
+</div>
+<details class="example" open="open">
+<summary>Complete Material Identifier Example</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;drmd:materialIdentifiers&gt;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&lt;drmd:materialIdentifier</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;matid_m308a&quot;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">      </span><span class="na">refId=</span><span class="s">&quot;mat_001&quot;</span><span class="w"> </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="nt">&lt;drmd:scheme&gt;</span>BAM<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="nt">&lt;drmd:value&gt;</span>M308a<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nt">&lt;drmd:link&gt;</span>https://www.bam.de/<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="nt">&lt;/drmd:materialIdentifier&gt;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="nt">&lt;/drmd:materialIdentifiers&gt;</span>
+</span></code></pre></div>
+</details>
+<h2 id="business-rules-summary">Business Rules Summary<a class="headerlink" href="#business-rules-summary" title="Permanent link">&para;</a></h2>
+<p>The following Schematron rules directly govern the Materials section:</p>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Scope</th>
+<th>Severity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DRMD-002</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Every DRMD <strong>MUST</strong> contain at least one <code>material</code> entry (ISO 33401:2024, §5.2.4)</td>
+</tr>
+<tr>
+<td><strong>DRMD-007</strong></td>
+<td>All documents</td>
+<td>Error</td>
+<td>Every <code>material</code> entry <strong>MUST</strong> include a <code>name</code> element (ISO 33401:2024, §5.2.4)</td>
+</tr>
+<tr>
+<td><strong>DRMD-008</strong></td>
+<td>All documents</td>
+<td>Conditional Error</td>
+<td>Each <code>material</code> <strong>MUST</strong> specify <code>minimumSampleSize</code> whenever applicable (ISO 33401:2024, §5.2.7)</td>
+</tr>
+<tr>
+<td><strong>RMC-011</strong></td>
+<td>CRM only</td>
+<td>Error</td>
+<td>Reference Material Certificates <strong>MUST</strong> include a <code>description</code> for each material (ISO 33401:2024, §5.3.2)</td>
+</tr>
+<tr>
+<td><strong>PIS-005</strong></td>
+<td>ProductInformationSheet only</td>
+<td>Warning</td>
+<td>Product Information Sheets <strong>SHOULD</strong> include a <code>description</code> for each material</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph LR
+    DOC["DRMD Document"]
+    DOC --&gt;|"DRMD-002"| MAT["At least 1 material"]
+    MAT --&gt;|"DRMD-007"| NAME["name required"]
+    MAT --&gt;|"DRMD-008"| MSS["minimumSampleSize&lt;br/&gt;&lt;i&gt;when applicable&lt;/i&gt;"]
+    MAT --&gt;|"RMC-011&lt;br/&gt;&lt;i&gt;CRM only&lt;/i&gt;"| DESC["description required"]
+    MAT -.-&gt;|"PIS-005&lt;br/&gt;&lt;i&gt;PIS only&lt;/i&gt;"| DESC2["description recommended"]
+
+    style DOC fill:#e8eaf6,color:#000,stroke:#283593
+    style MAT fill:#c5cae9,color:#000,stroke:#3949ab
+    style NAME fill:#ffebee,color:#000,stroke:#f44336
+    style MSS fill:#fff3e0,color:#000,stroke:#ff9800
+    style DESC fill:#ffebee,color:#000,stroke:#f44336
+    style DESC2 fill:#e8f5e9,color:#000,stroke:#4caf50</code></pre>
+<h2 id="complete-material-example">Complete Material Example<a class="headerlink" href="#complete-material-example" title="Permanent link">&para;</a></h2>
+<details class="example">
+<summary>Full materials Block (Click to Expand)</summary>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">&lt;drmd:materials&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&lt;drmd:material&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="cm">&lt;!-- Name (required) --&gt;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&lt;drmd:name&gt;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Aluminium<span class="w"> </span>Alloy<span class="w"> </span>Disk<span class="w"> </span>BAM-M308a<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;de&quot;</span><span class="nt">&gt;</span>Aluminiumlegierung<span class="w"> </span>Scheibe<span class="w"> </span>BAM-M308a<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nt">&lt;/drmd:name&gt;</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="cm">&lt;!-- Description (mandatory for CRM) --&gt;</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="nt">&lt;drmd:description&gt;</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">      </span><span class="nt">&lt;dcc:name&gt;</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>Material<span class="w"> </span>description<span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">      </span><span class="nt">&lt;/dcc:name&gt;</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">      </span><span class="nt">&lt;dcc:content</span><span class="w"> </span><span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">        </span>The<span class="w"> </span>reference<span class="w"> </span>material<span class="w"> </span>is<span class="w"> </span>provided<span class="w"> </span>as<span class="w"> </span>discs
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">        </span>(approx.<span class="w"> </span>65<span class="w"> </span>mm<span class="w"> </span>diameter,<span class="w"> </span>30<span class="w"> </span>mm<span class="w"> </span>height).
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">        </span>Intended<span class="w"> </span>for<span class="w"> </span>establishing/checking<span class="w"> </span>calibration
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">        </span>of<span class="w"> </span>spark<span class="w"> </span>OES<span class="w"> </span>and<span class="w"> </span>XRF<span class="w"> </span>methods<span class="w"> </span>for<span class="w"> </span>similar<span class="w"> </span>matrices.
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">      </span><span class="nt">&lt;/dcc:content&gt;</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">    </span><span class="nt">&lt;/drmd:description&gt;</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">    </span><span class="cm">&lt;!-- Classification (optional, repeatable) --&gt;</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">    </span><span class="nt">&lt;drmd:materialClass</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;mc-1&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">      </span><span class="nt">&lt;drmd:reference&gt;</span>ISO<span class="w"> </span>12103-1<span class="nt">&lt;/drmd:reference&gt;</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">      </span><span class="nt">&lt;drmd:classID&gt;</span>A2<span class="w"> </span>Fine<span class="w"> </span>Test<span class="w"> </span>Dust<span class="nt">&lt;/drmd:classID&gt;</span>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">      </span><span class="nt">&lt;drmd:link&gt;</span>https://www.iso.org/standard/30109.html<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">    </span><span class="nt">&lt;/drmd:materialClass&gt;</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">    </span><span class="cm">&lt;!-- Minimum Sample Size (mandatory whenever applicable) --&gt;</span>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">    </span><span class="nt">&lt;drmd:minimumSampleSize&gt;</span>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">      </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">        </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">          </span><span class="nt">&lt;si:label&gt;</span>Minimum<span class="w"> </span>sample<span class="w"> </span>mass<span class="w"> </span>for<span class="w"> </span>wet<span class="w"> </span>chemical<span class="w"> </span>analysis<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">          </span><span class="nt">&lt;si:value&gt;</span>0.2<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">          </span><span class="nt">&lt;si:unit&gt;</span>\gram<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">        </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">      </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">    </span><span class="nt">&lt;/drmd:minimumSampleSize&gt;</span>
+</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>
+</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="w">    </span><span class="cm">&lt;!-- Item Quantities (optional) --&gt;</span>
+</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">    </span><span class="nt">&lt;drmd:itemQuantities&gt;</span>
+</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="w">      </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="w">        </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-14-44"><a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="w">          </span><span class="nt">&lt;si:label&gt;</span>Diameter<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-14-45"><a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="w">          </span><span class="nt">&lt;si:value&gt;</span>65<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-14-46"><a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="w">          </span><span class="nt">&lt;si:unit&gt;</span>mm<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-14-47"><a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a><span class="w">        </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-14-48"><a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a><span class="w">      </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-49"><a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a><span class="w">      </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-50"><a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a><span class="w">        </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-14-51"><a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a><span class="w">          </span><span class="nt">&lt;si:label&gt;</span>Height<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-14-52"><a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a><span class="w">          </span><span class="nt">&lt;si:value&gt;</span>30<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-14-53"><a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a><span class="w">          </span><span class="nt">&lt;si:unit&gt;</span>mm<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-14-54"><a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a><span class="w">        </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-14-55"><a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a><span class="w">      </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-56"><a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a><span class="w">      </span><span class="nt">&lt;dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-57"><a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a><span class="w">        </span><span class="nt">&lt;si:real&gt;</span>
+</span><span id="__span-14-58"><a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a><span class="w">          </span><span class="nt">&lt;si:label&gt;</span>Approximate<span class="w"> </span>mass<span class="nt">&lt;/si:label&gt;</span>
+</span><span id="__span-14-59"><a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a><span class="w">          </span><span class="nt">&lt;si:value&gt;</span>250<span class="nt">&lt;/si:value&gt;</span>
+</span><span id="__span-14-60"><a id="__codelineno-14-60" name="__codelineno-14-60" href="#__codelineno-14-60"></a><span class="w">          </span><span class="nt">&lt;si:unit&gt;</span>\gram<span class="nt">&lt;/si:unit&gt;</span>
+</span><span id="__span-14-61"><a id="__codelineno-14-61" name="__codelineno-14-61" href="#__codelineno-14-61"></a><span class="w">        </span><span class="nt">&lt;/si:real&gt;</span>
+</span><span id="__span-14-62"><a id="__codelineno-14-62" name="__codelineno-14-62" href="#__codelineno-14-62"></a><span class="w">      </span><span class="nt">&lt;/dcc:itemQuantity&gt;</span>
+</span><span id="__span-14-63"><a id="__codelineno-14-63" name="__codelineno-14-63" href="#__codelineno-14-63"></a><span class="w">    </span><span class="nt">&lt;/drmd:itemQuantities&gt;</span>
+</span><span id="__span-14-64"><a id="__codelineno-14-64" name="__codelineno-14-64" href="#__codelineno-14-64"></a>
+</span><span id="__span-14-65"><a id="__codelineno-14-65" name="__codelineno-14-65" href="#__codelineno-14-65"></a><span class="w">    </span><span class="cm">&lt;!-- Material Identifiers (optional) --&gt;</span>
+</span><span id="__span-14-66"><a id="__codelineno-14-66" name="__codelineno-14-66" href="#__codelineno-14-66"></a><span class="w">    </span><span class="nt">&lt;drmd:materialIdentifiers&gt;</span>
+</span><span id="__span-14-67"><a id="__codelineno-14-67" name="__codelineno-14-67" href="#__codelineno-14-67"></a><span class="w">      </span><span class="nt">&lt;drmd:materialIdentifier</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;matid_m308a&quot;</span>
+</span><span id="__span-14-68"><a id="__codelineno-14-68" name="__codelineno-14-68" href="#__codelineno-14-68"></a><span class="w">          </span><span class="na">refId=</span><span class="s">&quot;mat_001&quot;</span>
+</span><span id="__span-14-69"><a id="__codelineno-14-69" name="__codelineno-14-69" href="#__codelineno-14-69"></a><span class="w">          </span><span class="na">refType=</span><span class="s">&quot;basic_certificateIdentification&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-14-70"><a id="__codelineno-14-70" name="__codelineno-14-70" href="#__codelineno-14-70"></a><span class="w">        </span><span class="nt">&lt;drmd:scheme&gt;</span>BAM<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-14-71"><a id="__codelineno-14-71" name="__codelineno-14-71" href="#__codelineno-14-71"></a><span class="w">        </span><span class="nt">&lt;drmd:value&gt;</span>M308a<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-14-72"><a id="__codelineno-14-72" name="__codelineno-14-72" href="#__codelineno-14-72"></a><span class="w">        </span><span class="nt">&lt;drmd:link&gt;</span>https://www.bam.de/<span class="nt">&lt;/drmd:link&gt;</span>
+</span><span id="__span-14-73"><a id="__codelineno-14-73" name="__codelineno-14-73" href="#__codelineno-14-73"></a><span class="w">      </span><span class="nt">&lt;/drmd:materialIdentifier&gt;</span>
+</span><span id="__span-14-74"><a id="__codelineno-14-74" name="__codelineno-14-74" href="#__codelineno-14-74"></a><span class="w">      </span><span class="nt">&lt;drmd:materialIdentifier&gt;</span>
+</span><span id="__span-14-75"><a id="__codelineno-14-75" name="__codelineno-14-75" href="#__codelineno-14-75"></a><span class="w">        </span><span class="nt">&lt;drmd:scheme&gt;</span>Lot<span class="nt">&lt;/drmd:scheme&gt;</span>
+</span><span id="__span-14-76"><a id="__codelineno-14-76" name="__codelineno-14-76" href="#__codelineno-14-76"></a><span class="w">        </span><span class="nt">&lt;drmd:value&gt;</span>L2024-Q3-001<span class="nt">&lt;/drmd:value&gt;</span>
+</span><span id="__span-14-77"><a id="__codelineno-14-77" name="__codelineno-14-77" href="#__codelineno-14-77"></a><span class="w">      </span><span class="nt">&lt;/drmd:materialIdentifier&gt;</span>
+</span><span id="__span-14-78"><a id="__codelineno-14-78" name="__codelineno-14-78" href="#__codelineno-14-78"></a><span class="w">    </span><span class="nt">&lt;/drmd:materialIdentifiers&gt;</span>
+</span><span id="__span-14-79"><a id="__codelineno-14-79" name="__codelineno-14-79" href="#__codelineno-14-79"></a><span class="w">  </span><span class="nt">&lt;/drmd:material&gt;</span>
+</span><span id="__span-14-80"><a id="__codelineno-14-80" name="__codelineno-14-80" href="#__codelineno-14-80"></a><span class="nt">&lt;/drmd:materials&gt;</span>
+</span></code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../administrative_data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. Administrative Data">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. Administrative Data
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../properties/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Properties">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Properties
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

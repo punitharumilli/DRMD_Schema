@@ -780,35 +780,24 @@
 }
 .tree-nav {
     font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 12px;
+    line-height: 1.2;
 }
 .tree-nav ul {
     list-style-type: none;
-    padding-left: 18px;
+    padding-left: 14px;
     margin: 0;
-    border-left: 1px dotted #bbb;
-    margin-left: 7px;
 }
-.tree-nav > ul { border-left: none; margin-left: 0; padding-left: 0; }
+.tree-nav > ul { padding-left: 0; }
 .tree-nav li {
-    margin: 2px 0;
+    margin: 0;
     position: relative;
     white-space: nowrap;
 }
-.tree-nav li::before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: -18px;
-    width: 15px;
-    border-top: 1px dotted #bbb;
-}
-.tree-nav > ul > li::before { display: none; }
 .node-wrapper {
     display: inline-flex;
     align-items: center;
-    padding: 2px 4px;
+    padding: 1px 2px;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -819,14 +808,14 @@
 }
 .node-icon {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
     text-align: center;
     border-radius: 2px;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
-    margin-right: 6px;
+    margin-right: 4px;
     color: #1565c0;
     background: #e3f2fd;
     border: 1px solid #90caf9;
@@ -836,29 +825,52 @@
     background: #fff3e0;
     border-color: #ffcc80;
 }
-.node-name { color: var(--md-typeset-color); }
-.node-card {
-    background: #f5f5f5;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    padding: 0 4px;
-    font-size: 10px;
-    margin: 0 6px;
-    color: #757575;
+.node-icon.ct {
+    color: #6a1b9a;
+    background: #f3e5f5;
+    border-color: #ce93d8;
 }
-.node-type { color: #757575; font-size: 11px; }
+.node-name { 
+    color: var(--md-typeset-color);
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.node-card {
+    background: #fff9c4;
+    border: 1px solid #fff59d;
+    border-radius: 3px;
+    padding: 0 4px;
+    font-size: 9px;
+    margin: 0 4px;
+    color: #f57f17;
+    font-weight: bold;
+}
+.node-type { 
+    color: #757575; 
+    font-size: 11px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+}
 .expander {
     cursor: pointer;
     display: inline-block;
-    width: 14px;
+    width: 10px;
     text-align: center;
-    margin-left: -18px;
-    margin-right: 4px;
+    margin-left: -12px;
+    margin-right: 2px;
     position: relative;
     z-index: 2;
-    background: var(--md-default-bg-color);
-    color: #757575;
-    font-size: 10px;
+    background: transparent;
+    color: #9e9e9e;
+    font-size: 9px;
 }
 
 /* Center Pane: D3 Graph */
@@ -1070,6 +1082,7 @@ function initSchemaTree() {
 
     let globalData = null;
     let selectedNode = null;
+    let resizeTimer = null;
 
     // Fetch data
     fetch("../schema_data/schema.json")
@@ -1083,6 +1096,19 @@ function initSchemaTree() {
             initD3Graph(data);
             initResizers(); // Hook up custom drag handlers
             selectNode(data); // select root by default
+
+            // Set up debounced ResizeObserver to redraw graph on container resize
+            const d3Container = document.getElementById("d3-graph");
+            const ro = new ResizeObserver(() => {
+                if (resizeTimer) clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (globalData) {
+                        initD3Graph(globalData);
+                        if (selectedNode) selectNode(selectedNode);
+                    }
+                }, 150); // Debounce to prevent duplicate render calls
+            });
+            ro.observe(d3Container);
         })
         .catch(err => {
             console.error("Error loading schema:", err);
@@ -1284,6 +1310,10 @@ function initSchemaTree() {
     // ==========================================
     function initD3Graph(data) {
         const container = document.getElementById("d3-graph");
+
+        // Clear previous SVG/DOM elements to prevent duplication
+        container.innerHTML = "";
+
         const width = container.clientWidth;
         const height = container.clientHeight;
 

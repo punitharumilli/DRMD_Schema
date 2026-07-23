@@ -41,7 +41,6 @@ hide:
     overflow-y: auto;
     padding: 10px;
     background: var(--md-default-bg-color);
-    resize: horizontal;
 }
 .tree-nav {
     font-family: 'Consolas', 'Courier New', monospace;
@@ -142,11 +141,18 @@ hide:
     overflow-y: auto;
     padding: 20px;
     background: var(--md-default-bg-color);
-    resize: horizontal;
-    direction: rtl; /* Allows resizing from the left edge */
 }
-.pane-right > * {
-    direction: ltr; /* Reset text direction for children */
+
+/* Custom JS Resizer Handles */
+.resizer {
+    width: 6px;
+    background: var(--md-default-fg-color--lightest);
+    cursor: col-resize;
+    z-index: 10;
+    transition: background 0.2s;
+}
+.resizer:hover, .resizer.dragging {
+    background: var(--md-primary-fg-color);
 }
 
 .details-title {
@@ -242,11 +248,11 @@ hide:
     <div class="pane-left" id="tree-nav">
         <!-- Vertical tree list -->
     </div>
-    
+    <div class="resizer" id="resizer-left"></div>
     <div class="pane-center" id="d3-graph">
         <!-- SVG Canvas -->
     </div>
-    
+    <div class="resizer" id="resizer-right"></div>
     <div class="pane-right" id="details-panel">
         <div class="details-title">Select an element</div>
         <div class="details-desc">Click on any node in the center graph or left tree to view its details, description, and validation rules.</div>
@@ -256,6 +262,70 @@ hide:
 <!-- Load D3.js -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
+function initResizers() {
+    const resizerLeft = document.getElementById('resizer-left');
+    const resizerRight = document.getElementById('resizer-right');
+    const paneLeft = document.getElementById('tree-nav');
+    const paneRight = document.getElementById('details-panel');
+    const container = document.querySelector('.schema-explorer');
+
+    let isResizingLeft = false;
+    let isResizingRight = false;
+    let startX;
+    let startWidthLeft;
+    let startWidthRight;
+
+    resizerLeft.addEventListener('mousedown', function(e) {
+        isResizingLeft = true;
+        startX = e.clientX;
+        startWidthLeft = paneLeft.getBoundingClientRect().width;
+        resizerLeft.classList.add('dragging');
+        document.body.style.cursor = 'col-resize';
+        e.preventDefault();
+    });
+
+    resizerRight.addEventListener('mousedown', function(e) {
+        isResizingRight = true;
+        startX = e.clientX;
+        startWidthRight = paneRight.getBoundingClientRect().width;
+        resizerRight.classList.add('dragging');
+        document.body.style.cursor = 'col-resize';
+        e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (!isResizingLeft && !isResizingRight) return;
+        
+        if (isResizingLeft) {
+            const newWidth = startWidthLeft + (e.clientX - startX);
+            if (newWidth > 150 && newWidth < (container.getBoundingClientRect().width - 300)) {
+                paneLeft.style.width = `${newWidth}px`;
+                paneLeft.style.flex = `0 0 ${newWidth}px`;
+            }
+        }
+        
+        if (isResizingRight) {
+            const newWidth = startWidthRight - (e.clientX - startX);
+            if (newWidth > 200 && newWidth < (container.getBoundingClientRect().width - 300)) {
+                paneRight.style.width = `${newWidth}px`;
+                paneRight.style.flex = `0 0 ${newWidth}px`;
+            }
+        }
+    });
+
+    document.addEventListener('mouseup', function(e) {
+        if (isResizingLeft) {
+            isResizingLeft = false;
+            resizerLeft.classList.remove('dragging');
+        }
+        if (isResizingRight) {
+            isResizingRight = false;
+            resizerRight.classList.remove('dragging');
+        }
+        document.body.style.cursor = '';
+    });
+}
+
 function initSchemaTree() {
     const treeNav = document.querySelector("#tree-nav");
     if (!treeNav) return; // Not on the schema tree page
@@ -275,6 +345,7 @@ function initSchemaTree() {
             globalData = data;
             initNavTree(data);
             initD3Graph(data);
+            initResizers(); // Hook up custom drag handlers
             selectNode(data); // select root by default
         })
         .catch(err => {

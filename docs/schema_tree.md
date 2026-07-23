@@ -49,7 +49,7 @@ hide:
 }
 .tree-nav ul {
     list-style-type: none;
-    padding-left: 14px;
+    padding-left: 12px;
     margin: 0;
 }
 .tree-nav > ul { padding-left: 0; }
@@ -128,7 +128,7 @@ hide:
     display: inline-block;
     width: 10px;
     text-align: center;
-    margin-left: -12px;
+    margin-left: -10px;
     margin-right: 2px;
     position: relative;
     z-index: 2;
@@ -410,6 +410,43 @@ function initSchemaTree() {
         'person': 'administrative_data/#332-person-details-dccperson',
         'mainSigner': 'administrative_data/#331-responsible-person-entry-respperson',
         'role': 'administrative_data/#331-responsible-person-entry-respperson',
+        'comment': 'comments_documents/#62-general-comment-comment',
+        'document': 'comments_documents/#61-document-attachment-document',
+        'materials': 'materials/#materials',
+        'material': 'materials/#43-material-entry-material',
+        'description': 'materials/#432-description-description',
+        'materialClass': 'materials/#44-material-classification-materialclass',
+        'minimumSampleSize': 'materials/#451-minimum-sample-size-minimumsamplesize',
+        'itemQuantities': 'materials/#452-item-quantities-itemquantities',
+        'real': 'materials/#461-option-a-sireal',
+        'noQuantity': 'materials/#462-option-b-dccnoquantity',
+        'realListXMLList': 'materials/#463-option-c-sireallistxmllist',
+        'charsXMLList': 'materials/#464-option-d-dcccharsxmllist',
+        'textType': 'parsing_guide/#1321-multilingual-text-fallback-dcctexttype',
+        'propertiesList': 'properties/#properties',
+        'properties': 'properties/#53-properties-block-properties',
+        'results': 'properties/#54-results-list-results',
+        'result': 'properties/#55-result-type-result',
+        'data': 'properties/#56-data-type-data',
+        'list': 'properties/#57-list-type-list',
+        'quantity': 'properties/#58-quantity-type-quantity',
+        'propertyIdentifiers': 'properties/#59-property-identifiers-propertyidentifiers',
+        'procedures': 'properties/#5101-procedures-procedures',
+        'measurementMetaData': 'properties/#5102-measurement-metadata-measurementmetadata',
+        'statements': 'statements/#statements',
+        'richContentType': 'statements/#62-common-content-model-dccrichcontenttype',
+        'intendedUse': 'statements/#631-intended-use-intendeduse',
+        'commutability': 'statements/#632-commutability-commutability',
+        'storageInformation': 'statements/#633-storage-information-storageinformation',
+        'instructionsForHandlingAndUse': 'statements/#634-instructions-for-handling-and-use-instructionsforhandlinganduse',
+        'metrologicalTraceability': 'statements/#635-metrological-traceability-metrologicaltraceability',
+        'healthAndSafetyInformation': 'statements/#636-health-and-safety-information-healthandsafetyinformation',
+        'subcontractors': 'statements/#637-subcontractors-subcontractors',
+        'legalNotice': 'statements/#638-legal-notice-legalnotice',
+        'referenceToCertificationReport': 'statements/#639-reference-to-certification-report-referencetocertificationreport',
+        'statement': 'statements/#6310-statement-catch-all-statement',
+        'unit': 'units_quantities/#111-unit-string-policy-siunit',
+        'Signature': 'signatures/#71-signature-element-signature',
     };
 
     function selectNode(d) {
@@ -481,10 +518,6 @@ function initSchemaTree() {
         
         function buildUL(nodeData, isRoot = false) {
             const ul = document.createElement('ul');
-            // Hide all children by default unless it's the very first root UL wrapper
-            if (!isRoot) {
-                ul.style.display = 'none';
-            }
             
             const li = document.createElement('li');
             li.id = `nav-${nodeData.name}`;
@@ -529,6 +562,7 @@ function initSchemaTree() {
             
             if (hasChildren) {
                 const childUl = document.createElement('ul');
+                childUl.style.display = 'none'; // Start completely collapsed
                 
                 // Add attributes first
                 if (nodeData.attributes) {

@@ -34,10 +34,36 @@ except Exception as e:
     print(f"Error parsing Schematron: {e}")
 
 def get_annotation(component):
+    docs = []
+    
+    # Try the component itself (element or attribute)
     if hasattr(component, 'annotation') and component.annotation:
-        docs = component.annotation.documentation
-        if docs:
-            return " ".join([d.text for d in docs if d.text]).replace('\n', ' ').strip()
+        if component.annotation.documentation:
+            docs.extend(component.annotation.documentation)
+            
+    # If it's an element reference, check the referred element
+    if not docs and hasattr(component, 'ref') and component.ref:
+        if hasattr(component.ref, 'annotation') and component.ref.annotation:
+             if component.ref.annotation.documentation:
+                 docs.extend(component.ref.annotation.documentation)
+
+    # Try the type of the component
+    if not docs and hasattr(component, 'type') and component.type:
+        if hasattr(component.type, 'annotation') and component.type.annotation:
+            if component.type.annotation.documentation:
+                docs.extend(component.type.annotation.documentation)
+                
+        # Try base type
+        if not docs and hasattr(component.type, 'base_type') and component.type.base_type:
+            bt = component.type.base_type
+            if hasattr(bt, 'annotation') and bt.annotation:
+                if bt.annotation.documentation:
+                    docs.extend(bt.annotation.documentation)
+                    
+    if docs:
+        text = " ".join([d.text for d in docs if getattr(d, 'text', None)]).replace('\n', ' ').strip()
+        import re
+        return re.sub(r'\s+', ' ', text)
     return ""
 
 def get_short_name(name):
@@ -82,8 +108,6 @@ def build_dict(element, processed=None, current_path=""):
     max_str = "*" if max_occurs is None or max_occurs > 100 else str(max_occurs)
     
     doc = get_annotation(element)
-    if not doc and element.type:
-        doc = get_annotation(element.type)
         
     # Find matching Schematron rules
     node_rules = []

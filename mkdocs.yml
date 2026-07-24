@@ -5,6 +5,8 @@ site_url: https://punitharumilli.github.io/DRMD_Schema/
 
 theme:
   name: material
+  logo: assets/BAM_Logo_RGB.jpg
+  favicon: assets/BAM_Logo_RGB.jpg
   palette:
     - scheme: default
       primary: indigo

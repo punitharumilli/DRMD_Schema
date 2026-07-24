@@ -516,19 +516,20 @@ function initSchemaTree() {
         const nav = document.createElement('div');
         nav.className = "tree-nav";
         
-        function buildUL(nodeData, isRoot = false) {
+        function buildUL(nodeData, depth = 0) {
             const ul = document.createElement('ul');
             
             const li = document.createElement('li');
             li.id = `nav-${nodeData.name}`;
             
             const hasChildren = (nodeData.children && nodeData.children.length > 0) || (nodeData.attributes && nodeData.attributes.length > 0);
+            const isOpenByDefault = depth <= 1;
             
             // Expander
             const exp = document.createElement('span');
             exp.className = 'expander';
             if (hasChildren) {
-                exp.innerText = '▶'; // Start closed
+                exp.innerText = isOpenByDefault ? '▼' : '▶'; // Open if depth <= 1
                 exp.onclick = (e) => {
                     e.stopPropagation();
                     const childUl = li.querySelector('ul');
@@ -562,7 +563,7 @@ function initSchemaTree() {
             
             if (hasChildren) {
                 const childUl = document.createElement('ul');
-                childUl.style.display = 'none'; // Start completely collapsed
+                childUl.style.display = isOpenByDefault ? 'block' : 'none';
                 
                 // Add attributes first
                 if (nodeData.attributes) {
@@ -590,7 +591,7 @@ function initSchemaTree() {
                 // Add children
                 if (nodeData.children) {
                     nodeData.children.forEach(child => {
-                        childUl.appendChild(buildUL(child).firstChild); // append the li
+                        childUl.appendChild(buildUL(child, depth + 1).firstChild); // append the li
                     });
                 }
                 li.appendChild(childUl);
@@ -599,7 +600,7 @@ function initSchemaTree() {
             return ul;
         }
         
-        nav.appendChild(buildUL(data, true));
+        nav.appendChild(buildUL(data, 0));
         container.appendChild(nav);
     }
 

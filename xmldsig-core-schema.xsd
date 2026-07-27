@@ -1,14 +1,474 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Minimal stub of XMLDSig schema to satisfy ds:Signature reference for offline validation. Not for production cryptographic validation. -->
+<!-- W3C XML Digital Signature Core Schema (Subset optimized for DRMD and Metrological Reference Documents) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://www.w3.org/2000/09/xmldsig#"
            xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+           targetNamespace="http://www.w3.org/2000/09/xmldsig#"
            elementFormDefault="qualified"
-           attributeFormDefault="unqualified">
-  <xs:element name="Signature" type="ds:SignatureType"/>
+           attributeFormDefault="unqualified"
+           version="0.1">
+
+  <xs:annotation>
+    <xs:documentation>
+      W3C XML Digital Signature Core Schema Definition.
+      Defines the structural syntax and cryptographic metadata containers for digital signatures embedded within DRMD documents.
+      Enables mathematical authentication of document integrity, non-repudiation, and issuer identity verification.
+    </xs:documentation>
+  </xs:annotation>
+
+  <!-- Root element -->
+  <xs:element name="Signature" type="ds:SignatureType">
+    <xs:annotation>
+      <xs:documentation>
+        The root element of an XML Digital Signature. Encapsulates the signed information, the cryptographic signature value, and key verification data.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
   <xs:complexType name="SignatureType">
+    <xs:annotation>
+      <xs:documentation>
+        Structure of the XML signature container holding SignedInfo, SignatureValue, KeyInfo, and optional signed Objects.
+      </xs:documentation>
+    </xs:annotation>
     <xs:sequence>
-      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+      <xs:element ref="ds:SignedInfo"/>
+      <xs:element ref="ds:SignatureValue"/>
+      <xs:element ref="ds:KeyInfo" minOccurs="0"/>
+      <xs:element ref="ds:Object" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional unique identifier for referencing this signature element within the document.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="SignedInfo" type="ds:SignedInfoType">
+    <xs:annotation>
+      <xs:documentation>
+        Contains the canonicalization algorithm, signature algorithm, and one or more references to signed document content along with their calculated digest values.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="SignedInfoType">
+    <xs:annotation>
+      <xs:documentation>
+        Structure defining what is signed and how it is canonicalized and hashed prior to cryptographic signing.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="ds:CanonicalizationMethod"/>
+      <xs:element ref="ds:SignatureMethod"/>
+      <xs:element ref="ds:Reference" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional identifier for referencing the SignedInfo block.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies the XML canonicalization algorithm applied to SignedInfo prior to signing (e.g., Exclusive XML Canonicalization C14N).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="CanonicalizationMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Algorithm specification for standardizing XML syntax formatting (removing whitespace/attribute ordering variance).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation>URI identifying the W3C canonicalization algorithm (e.g., 'http://www.w3.org/2001/10/xml-exc-c14n#').</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="SignatureMethod" type="ds:SignatureMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies the cryptographic signature algorithm used to generate the SignatureValue from the canonicalized SignedInfo (e.g., RSA-SHA256).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="SignatureMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Algorithm specification for cryptographic signing and verification.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="HMACOutputLength" type="ds:HMACOutputLengthType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Optional integer specifying the truncation length in bits for HMAC signature output.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation>URI identifying the signature algorithm (e.g., 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256').</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="HMACOutputLengthType">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+
+  <xs:element name="Reference" type="ds:ReferenceType">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies a target XML element or external resource being signed, the transform pipeline applied to it, and its calculated cryptographic hash digest.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="ReferenceType">
+    <xs:annotation>
+      <xs:documentation>
+        Structure defining a signed target resource, optional transformations (such as enveloped signature removal), and its hash digest.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="ds:Transforms" minOccurs="0"/>
+      <xs:element ref="ds:DigestMethod"/>
+      <xs:element ref="ds:DigestValue"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional unique identifier for this reference entry.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="URI" type="xs:anyURI" use="optional">
+      <xs:annotation>
+        <xs:documentation>Target URI referencing the signed element (e.g., '#document-root' or an external attachment URI).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Type" type="xs:anyURI" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional URI defining the semantic type of the target resource (e.g., W3C Object or Manifest).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="Transforms" type="ds:TransformsType">
+    <xs:annotation>
+      <xs:documentation>
+        Container for an ordered sequence of transformation algorithms applied to the reference data before digest hash calculation.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="TransformsType">
+    <xs:annotation>
+      <xs:documentation>
+        List of Transform elements executed sequentially on the input data stream.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="ds:Transform" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:element name="Transform" type="ds:TransformType">
+    <xs:annotation>
+      <xs:documentation>
+        A single transformation algorithm step, such as Enveloped Signature transform or XPath filtering.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="TransformType">
+    <xs:annotation>
+      <xs:documentation>
+        Specification of a transform algorithm and optional XPath expression parameters.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="XPath" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>An XPath expression used to filter or select specific nodes during transformation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation>URI identifying the transformation algorithm (e.g., 'http://www.w3.org/2000/09/xmldsig#enveloped-signature').</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="DigestMethod" type="ds:DigestMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies the cryptographic hashing algorithm used to calculate the DigestValue (e.g., SHA-256 or SHA-512).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="DigestMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Algorithm specification for cryptographic hash generation.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation>URI identifying the hash algorithm (e.g., 'http://www.w3.org/2001/04/xmlenc#sha256').</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="DigestValue" type="ds:DigestValueType">
+    <xs:annotation>
+      <xs:documentation>
+        The base64-encoded cryptographic hash value calculated from the transformed reference data.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:simpleType name="DigestValueType">
+    <xs:annotation>
+      <xs:documentation>Base64 binary string containing the calculated hash digest.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:base64Binary"/>
+  </xs:simpleType>
+
+  <xs:element name="SignatureValue" type="ds:SignatureValueType">
+    <xs:annotation>
+      <xs:documentation>
+        The actual base64-encoded cryptographic signature string generated by encrypting the SignedInfo hash with the signer's private key.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="SignatureValueType">
+    <xs:annotation>
+      <xs:documentation>Base64 binary signature payload with an optional identifier attribute.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="Id" type="xs:ID" use="optional">
+          <xs:annotation>
+            <xs:documentation>Optional unique identifier for the signature value string.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:element name="KeyInfo" type="ds:KeyInfoType">
+    <xs:annotation>
+      <xs:documentation>
+        Container for public keys, X.509 digital certificates, or key identifiers enabling verification of the signature.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="KeyInfoType">
+    <xs:annotation>
+      <xs:documentation>
+        Structure holding key verification data such as certificates (X509Data), RSA public modulus/exponents (KeyValue), or key names.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element ref="ds:KeyName"/>
+        <xs:element ref="ds:KeyValue"/>
+        <xs:element ref="ds:RetrievalMethod"/>
+        <xs:element ref="ds:X509Data"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional identifier for the KeyInfo container.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="KeyName" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>
+        A human-readable string identifier or key label (e.g., email address, key ID, or certificate alias).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="KeyValue" type="ds:KeyValueType">
+    <xs:annotation>
+      <xs:documentation>
+        Contains a single public key structure (such as RSA modulus and exponent values) for direct mathematical verification without certificate chain lookup.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="KeyValueType">
+    <xs:annotation>
+      <xs:documentation>Container for public key mathematical parameters.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="ds:RSAKeyValue"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="RSAKeyValue" type="ds:RSAKeyValueType">
+    <xs:annotation>
+      <xs:documentation>
+        RSA public key parameters containing the cryptographic modulus and exponent.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="RSAKeyValueType">
+    <xs:annotation>
+      <xs:documentation>RSA public modulus and exponent values encoded as base64 binary numbers.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Modulus" type="ds:CryptoBinary">
+        <xs:annotation>
+          <xs:documentation>The RSA public modulus integer encoded as base64 binary.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Exponent" type="ds:CryptoBinary">
+        <xs:annotation>
+          <xs:documentation>The RSA public exponent integer (typically 65537) encoded as base64 binary.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="CryptoBinary">
+    <xs:annotation>
+      <xs:documentation>Base64 binary encoding used for cryptographic integer parameters without leading zero padding.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:base64Binary"/>
+  </xs:simpleType>
+
+  <xs:element name="RetrievalMethod" type="ds:RetrievalMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        A reference URI pointing to externally stored KeyInfo verification data (such as a remote X.509 certificate repository).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="RetrievalMethodType">
+    <xs:annotation>
+      <xs:documentation>URI link and optional transform pipeline for retrieving remote key data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="ds:Transforms" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="URI" type="xs:anyURI" use="required">
+      <xs:annotation>
+        <xs:documentation>The URI where the external key information can be retrieved.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Type" type="xs:anyURI" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional URI defining the type of key data retrieved (e.g., X509Data).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="X509Data" type="ds:X509DataType">
+    <xs:annotation>
+      <xs:documentation>
+        Container for X.509 digital certificates, revocation lists, subject names, or issuer serial numbers used to authenticate the signer's identity.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="X509DataType">
+    <xs:annotation>
+      <xs:documentation>Collection of X.509 certificate credentials and identifiers.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="X509IssuerSerial" type="ds:X509IssuerSerialType">
+          <xs:annotation>
+            <xs:documentation>Identifies a certificate by its issuing CA name and unique serial number.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="X509SKI" type="xs:base64Binary">
+          <xs:annotation>
+            <xs:documentation>Subject Key Identifier (SKI) extension from an X.509 certificate encoded as base64.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="X509SubjectName" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>The X.500 Distinguished Name (DN) of the certificate subject entity.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="X509Certificate" type="xs:base64Binary">
+          <xs:annotation>
+            <xs:documentation>A DER-encoded X.509 digital certificate represented as a base64 binary string.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="X509CRL" type="xs:base64Binary">
+          <xs:annotation>
+            <xs:documentation>A base64-encoded X.509 Certificate Revocation List (CRL) for validation checking.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="X509IssuerSerialType">
+    <xs:annotation>
+      <xs:documentation>Pair of X.509 issuer distinguished name and serial number identifying a specific certificate.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="X509IssuerName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The X.500 Distinguished Name (DN) of the Certificate Authority that issued the certificate.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="X509SerialNumber" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>The unique integer serial number assigned to the certificate by the issuing CA.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Object" type="ds:ObjectType">
+    <xs:annotation>
+      <xs:documentation>
+        An optional container for embedding arbitrary data objects, manifests, timestamp seals, or signature properties directly within the signature block.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="ObjectType">
+    <xs:annotation>
+      <xs:documentation>Container for arbitrary signed data objects or cryptographic timestamp tokens.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:any namespace="##any" processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID" use="optional">
+      <xs:annotation>
+        <xs:documentation>Optional identifier for referencing this object container.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="MimeType" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>MIME media type describing the embedded payload data format.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Encoding" type="xs:anyURI" use="optional">
+      <xs:annotation>
+        <xs:documentation>URI specifying the data encoding method (e.g., base64 binary).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
 </xs:schema>

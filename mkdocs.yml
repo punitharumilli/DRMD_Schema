@@ -80,3 +80,18 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+extra:
+  alternate:
+    - name: English
+      link: "#en"
+      lang: en
+    - name: Deutsch
+      link: "#de"
+      lang: de
+
+extra_css:
+  - assets/css/translate.css
+
+extra_javascript:
+  - assets/js/translate.js

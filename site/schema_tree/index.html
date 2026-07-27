@@ -1107,8 +1107,9 @@ function initResizers() {
 function initSchemaTree() {
     const treeNav = document.querySelector("#tree-nav");
     if (!treeNav) return; // Not on the schema tree page
-    // Prevent double initialization if navigating back
-    if (treeNav.children.length > 0) return;
+    // Prevent double initialization if navigating back or if async fetch is already in progress
+    if (treeNav.children.length > 0 || treeNav.dataset.loading === "true") return;
+    treeNav.dataset.loading = "true";
 
     let globalData = null;
     let selectedNode = null;
@@ -1279,6 +1280,7 @@ function initSchemaTree() {
     // ==========================================
     function initNavTree(data) {
         const container = document.getElementById("tree-nav");
+        container.innerHTML = ""; // Clear existing navigation tree to prevent duplication from async fetch race condition
         const nav = document.createElement('div');
         nav.className = "tree-nav";
 

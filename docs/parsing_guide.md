@@ -76,7 +76,7 @@ graph TD
 
 !!! tip "Getting Certified Values"
     To query for certified values, filter your XPath to only include quantities descending from:
-    `/drmd:digitalReferenceMaterialDocument/drmd:materialPropertiesList/drmd:materialProperties[@isCertified='true']`
+    `/drmd:digitalReferenceMaterialDocument/drmd:propertiesList/drmd:properties[@isCertified='true']`
 
 ---
 

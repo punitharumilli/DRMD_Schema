@@ -27,7 +27,7 @@ Ensure every digital certificate you publish meets the exact technical and regul
 - [ ] **Classification:** The material is tied to a formal scheme using `reference` and `classID`.
 
 ### C. Technical Property Data
-- [ ] **Certification Flag:** Every `materialProperties` explicitly declares `@isCertified`.
+- [ ] **Certification Flag:** Every `properties` explicitly declares `@isCertified`.
 - [ ] **Property Identifiers:** Every quantity row includes a `propertyIdentifier`.
 - [ ] **D-SI Unit Quality:** Unit strings use strict D-SI format (e.g., `\gram`).
 - [ ] **Uncertainty Completeness:** Every certified value includes `valueExpandedMU` plus a coverage factor.

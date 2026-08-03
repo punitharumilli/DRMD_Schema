@@ -76,7 +76,7 @@ The six child elements of each `material` entry are:
     | **Regulators / Auditors** | Verify the document refers to a clearly identified material, and the declared minimum sample size and identifiers are consistent with external references and packaging. |
 
 !!! tip "Handling Multiple Materials"
-    When a DRMD contains multiple `drmd:material` entries, the identifiers declared in `/drmd:materials/drmd:material/materialIdentifiers` should be treated as the **canonical keys** for linking downstream information. In the next chapter (Material Properties), software can use these material identifiers as stable references (e.g., via `@id`/`@refId` patterns) to associate each set of properties with the correct material.
+    When a DRMD contains multiple `drmd:material` entries, the identifiers declared in `/drmd:materials/drmd:material/materialIdentifiers` should be treated as the **canonical keys** for linking downstream information. In the next chapter (Properties), software can use these material identifiers as stable references (e.g., via `@id`/`@refId` patterns) to associate each set of properties with the correct material.
 
 ## 4.2 Materials List
 

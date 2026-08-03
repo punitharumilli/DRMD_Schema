@@ -10,7 +10,7 @@ The DRMD schema is carefully engineered to be both human-readable and strictly m
 !!! abstract "2. Materials (`materials`)"
     Defines the reference materials covered by the certificate. It includes the material name, detailed description, classification, minimum sample sizes, and item quantity information.
 
-!!! abstract "3. Material Properties (`materialProperties`)"
+!!! abstract "3. Properties (`propertiesList`)"
     The core data payload. Documents the **certified** and **informational** properties of the material. It includes measurement procedures, results (values, units, and uncertainties), and metrological traceability.
 
 !!! abstract "4. Statements (`statements`)"
